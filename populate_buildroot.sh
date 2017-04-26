@@ -8,6 +8,6 @@ else
 	echo "n"
 fi
 
-cp CONFIG $BROOTPATH/.CONFIG
+cp buildroot_config $BROOTPATH/.config
 cp packages/gr-iio packages/libad9361-iio Config.in $BROOTPATH/packages
 cp packages/gnuradio_patches/* $BROOTPATH/gnuradio/
