@@ -51,19 +51,24 @@ extract the output after building:
 Environment Setup
 -----------------
 
-Login info:
+**Login info:**
 
 |user|password|
 |----|--------|
 |root|      |
 |fmcomms|fmcomms|
 
-User fmcomms is in the sudoers file and has access to dialout,sshd groups
+User fmcomms is in the sudoers file and has access to dialout,sshd groups and has a configured bashrc
 
-Default eth0 static ipv4 info:
+**Default eth0 static ipv4 info:**
 
 |ip|subnet|gateway|
 |--|------|-------|
 |192.168.0.20|255.255.255.0|192.168.0.1|
 
+**gnuradio**
+Platform has already been profiled by volk and is available in `/home/fmcomms/.volk/volk_profile`
 
+Scripts are pre-populated to test a loopback nbfm signal and stream the data to a host computer. 
+
+Gnuradio example files in: `/home/fmcomms/gnuradio/`
