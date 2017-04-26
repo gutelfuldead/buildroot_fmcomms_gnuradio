@@ -32,6 +32,8 @@ extract the output after building:
 Login Info
 ----------
 
+User FMCOMMS is in the sudoers file and has access to dialout,sshd groups.
+
 |user|password|
 |----|--------|
 |root|      |
