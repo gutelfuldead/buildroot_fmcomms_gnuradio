@@ -1,1 +1,1 @@
-fmcomms -1 fmcomms -1 =spacemicro /home/fmcomms /bin/sh dialout,sshd
+fmcomms -1 fmcomms -1 =fmcomms /home/fmcomms /bin/sh dialout,sshd
