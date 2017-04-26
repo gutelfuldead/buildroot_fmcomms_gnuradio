@@ -67,6 +67,7 @@ User fmcomms is in the sudoers file and has access to dialout,sshd groups and ha
 |192.168.0.20|255.255.255.0|192.168.0.1|
 
 **gnuradio**
+
 Platform has already been profiled by volk and is available in `/home/fmcomms/.volk/volk_profile`
 
 Scripts are pre-populated to test a loopback nbfm signal and stream the data to a host computer. 
