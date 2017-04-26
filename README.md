@@ -48,6 +48,7 @@ User fmcomms is in the sudoers file and has access to dialout,sshd groups
 Default eth0 static ipv4 info:
 
 |ip|subnet|gateway|
+|--|------|-------|
 |192.168.0.20|255.255.255.0|192.168.0.1|
 
 Login infO:
