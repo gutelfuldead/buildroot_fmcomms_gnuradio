@@ -28,3 +28,11 @@ extract the output after building:
 `cd /path/to/rootfs`
 
 `sudo tar -xvf /path/to/buildroot-2016.08-rc1/output/images/rootfs.tar ./`
+
+Login Info
+----------
+
+|user|password|
+|----|--------|
+|root|      |
+|fmcomms|fmcomms|
