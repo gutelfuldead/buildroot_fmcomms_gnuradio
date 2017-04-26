@@ -1,0 +1,11 @@
+config BR2_PACKAGE_GR_IIO
+	bool "gr-iio"
+	depends on BR2_PACKAGE_GNURADIO
+	depends on BR2_PACKAGE_LIBIIO
+	depends on BR2_PACKAGE_LIBAD9361_IIO
+	depends on BR2_PACKAGE_GNURADIO_ANALOG
+	select BR2_PACKAGE_GNURADIO_BLOCKS
+	help
+	  IIO blocks for GNU Radio
+		
+	  https://github.com/analogdevicesinc/gr-iio
