@@ -13,6 +13,17 @@ To auto-update buildroot run
 
 If no argument provided scripts assumes the relative path from this repository is `../buildroot-2016.08-rc1`
 
+Package Support Added
+---------------------
+
+* libad9361-iio
+
+* gr-iio
+
+* gnuradio modified packages enabled
+
+  * ZeroMQ
+
 Usage with SD Card
 ------------------
 
