@@ -9,9 +9,17 @@ Designed for ZedBoard Rev C with FMCOMMS2/3 SDR device. Includes proper drivers 
 
 To auto-update buildroot run
 
-`./populate_buildroot.sh ./path/to/buildroot-2016.08-rc1`
+`./populate_buildroot.sh`
 
-If no argument provided scripts assumes the relative path from this repository is `../buildroot-2016.08-rc1`
+Script assumes/requires folder hierarchy of:
+
+```
+|	./PWD
+|_______|	buildroot-2016.08-rc1
+|_______|	buildroot_fmcomms_gnuradio
+```
+
+Since the path to the users description and rootfs overlay are hardcoded in the config files this structure must be preserved.
 
 Package Support Added
 ---------------------
