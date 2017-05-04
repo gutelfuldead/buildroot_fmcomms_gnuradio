@@ -75,3 +75,7 @@ Scripts are pre-populated to test a loopback wbfm signal and stream the data to 
 Ensure ZedBoard is connected via hub with the PC and the PC is on the appropriate network settings to communicate with the aforementioned zedboard network settings.
 
 Gnuradio example files in: `/home/fmcomms/gnuradio/`
+
+Expected output as seen from PC. This image is obviously distorted and can be cleaned by a better modulation scheme; the concern here is simply hardware verification which this shows.
+
+![csp-sdr.wav waterfall output](https://github.com/gutelfuldead/buildroot_fmcomms_gnuradio/blob/master/pcstream/waterfall_csp_sdr.png)
