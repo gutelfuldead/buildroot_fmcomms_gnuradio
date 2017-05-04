@@ -83,7 +83,6 @@ Gnuradio example files in: `/home/fmcomms/gnuradio/` to run simply execute the `
 Expected output as seen from PC. This image is obviously distorted and can be cleaned by a better modulation scheme; the concern here is simply hardware verification which this shows.
 
 **WATERFALL OUTPUT**
-
 ![csp-sdr.wav waterfall output](https://github.com/gutelfuldead/buildroot_fmcomms_gnuradio/blob/master/pcstream/waterfall_csp_sdr.png)
 
 **ACTUAL SPECTRAL IMAGE**
