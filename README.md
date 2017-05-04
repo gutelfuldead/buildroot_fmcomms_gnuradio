@@ -1,5 +1,5 @@
 buildroot_fmcomms_gnuradio
-==================
+==========================
 
 Requires [buildroot-2016.08-rc1](https://buildroot.org/downloads/buildroot-2016.08-rc1.tar.gz)
 
@@ -11,7 +11,7 @@ To auto-update buildroot run
 
 `./populate_buildroot.sh`
 
-Script assumes/requires folder hierarchy of:
+Script requires folder hierarchy of:
 
 ```
 |	./PWD
@@ -24,18 +24,20 @@ Since the path to the users description and rootfs overlay are hardcoded in the 
 Package Support Added
 ---------------------
 
-* libad9361-iio
+* libad9361-iio (git commit `af541b1b3f1e2462d18abdba2a108df2bfd55647`)
 
-* gr-iio
+* gr-iio (git commit `9b58414b4db711823eb7e5d6e11aa39bfcaf2bac`)
 
 * gnuradio modified packages enabled
 
   * ZeroMQ
 
+  * GRC
+
 Usage with SD Card
 ------------------
 
-Make sure compatible filesystem exists
+Make sure compatible filesystem exists on SD card
 
 |name  |filesystem|size|
 |------|----------|----|
@@ -47,6 +49,8 @@ extract the output after building:
 `cd /path/to/rootfs`
 
 `sudo tar -xvf /path/to/buildroot-2016.08-rc1/output/images/rootfs.tar ./`
+
+Files for the BOOT partition can be found in `./buildroot_fmcomms_gnuradio/BOOT`
 
 Environment Setup
 -----------------
@@ -74,4 +78,4 @@ Scripts are pre-populated to test a loopback wbfm signal and stream the data to 
 
 Ensure ZedBoard is connected via hub with the PC and the PC is on the appropriate network settings to communicate with the aforementioned zedboard network settings.
 
-Gnuradio example files in: `/home/fmcomms/gnuradio/`
+Gnuradio example files in: `/home/fmcomms/gnuradio/` to run simply execute the `.py` file
