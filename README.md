@@ -80,10 +80,12 @@ Ensure ZedBoard is connected via hub with the PC and the PC is on the appropriat
 
 Gnuradio example files in: `/home/fmcomms/gnuradio/` to run simply execute the `.py` file
 
-Expected output as seen from PC. This image is obviously distorted and can be cleaned by a better modulation scheme; the concern here is simply hardware verification which this shows.
+`sin_f10e3_tcp_wbfm_stream.grc` expected output:
 
-**WATERFALL OUTPUT**
+![sin test](https://github.com/gutelfuldead/buildroot_fmcomms_gnuradio/blob/master/pcstream/sin_output.png)
+
+`loopback_tcp_wbfm_stream.py` expected output:
 ![csp-sdr.wav waterfall output](https://github.com/gutelfuldead/buildroot_fmcomms_gnuradio/blob/master/pcstream/waterfall_csp_sdr.png)
 
-**ACTUAL SPECTRAL IMAGE**
+Actual Spectral Image:
 ![csp-sdr.wav spectral](https://github.com/gutelfuldead/buildroot_fmcomms_gnuradio/blob/master/pcstream/spectral_sdr_csp.png)
