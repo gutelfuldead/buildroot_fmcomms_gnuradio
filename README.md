@@ -70,6 +70,8 @@ User fmcomms is in the sudoers file and has access to dialout,sshd groups and ha
 
 Platform has already been profiled by volk and is available in `/home/fmcomms/.volk/volk_config`
 
-Scripts are pre-populated to test a loopback nbfm signal and stream the data to a host computer. 
+Scripts are pre-populated to test a loopback wbfm signal and stream the data to a host computer. The GNU Radio flowchart to be used on the host PC can be found in `buildroot_fmcomms_gnuradio/pcstream`.
+
+Ensure ZedBoard is connected via hub with the PC and the PC is on the appropriate network settings to communicate with the aforementioned zedboard network settings.
 
 Gnuradio example files in: `/home/fmcomms/gnuradio/`
