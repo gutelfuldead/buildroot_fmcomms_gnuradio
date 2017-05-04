@@ -37,10 +37,10 @@ Usage with SD Card
 
 Make sure compatible filesystem exists
 
-|name|filesystem|size|
-|----|----------|----|
-|BOOT|fat16|36Mb|
-|rootfs|ext4|max|
+|name  |filesystem|size|
+|------|----------|----|
+|BOOT  |  fat16   |36Mb|
+|rootfs|  ext4    |max |
 
 extract the output after building:
 
@@ -53,17 +53,17 @@ Environment Setup
 
 **Login info:**
 
-|user|password|
-|----|--------|
-|root|      |
-|fmcomms|fmcomms|
+|user   |password|
+|-------|--------|
+|root   |        |
+|fmcomms| fmcomms|
 
 User fmcomms is in the sudoers file and has access to dialout,sshd groups and has a configured bashrc
 
 **Default eth0 static ipv4 info:**
 
-|ip|subnet|gateway|
-|--|------|-------|
+|   ip       | subnet      |gateway    |
+|------------|-------------|-----------|
 |192.168.0.20|255.255.255.0|192.168.0.1|
 
 **gnuradio**
