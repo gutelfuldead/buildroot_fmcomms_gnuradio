@@ -145,4 +145,10 @@ else
 GNURADIO_CONF_OPTS += -DENABLE_GR_ZEROMQ=OFF
 endif
 
+ifeq ($(BR2_PACKAGE_GRC),y)
+GNURADIO_CONF_OPTS += -DENABLE_GRC=ON
+else
+GNURADIO_CONF_OPTS += -DENABLE_GRC=OFF
+endif
+
 $(eval $(cmake-package))

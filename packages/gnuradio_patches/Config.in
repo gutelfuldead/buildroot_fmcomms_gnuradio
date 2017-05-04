@@ -129,5 +129,10 @@ config BR2_PACKAGE_GNURADIO_ZEROMQ
 	help
 	  ZeroMQ support
 
+config BR2_PACKAGE_GRC
+	bool "gnuradio-companion support"
+	help
+	  Provides support for TCP/IP source/sink blocks
+
 endif
 endif
