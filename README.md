@@ -70,6 +70,10 @@ User fmcomms is in the sudoers file and has access to dialout,sshd groups and ha
 |------------|-------------|-----------|
 |192.168.0.20|255.255.255.0|192.168.0.1|
 
+**Physical Connections**
+
+![zedboardconnections](https://github.com/gutelfuldead/buildroot_fmcomms_gnuradio/blob/master/images/zedboard_fmcomms3.jpg)
+
 **gnuradio**
 
 Platform has already been profiled by volk and is available in `/home/fmcomms/.volk/volk_config`
@@ -82,10 +86,10 @@ Gnuradio example files in: `/home/fmcomms/gnuradio/` to run simply execute the `
 
 `sin_f10e3_tcp_wbfm_stream.grc` expected output:
 
-![sin test](https://github.com/gutelfuldead/buildroot_fmcomms_gnuradio/blob/master/pcstream/sin_output.png)
+![sin test](https://github.com/gutelfuldead/buildroot_fmcomms_gnuradio/blob/master/images/sin_output.png)
 
 `loopback_tcp_wbfm_stream.py` expected output:
-![csp-sdr.wav waterfall output](https://github.com/gutelfuldead/buildroot_fmcomms_gnuradio/blob/master/pcstream/waterfall_csp_sdr.png)
+![csp-sdr.wav waterfall output](https://github.com/gutelfuldead/buildroot_fmcomms_gnuradio/blob/master/images/waterfall_csp_sdr.png)
 
 Actual Spectral Image:
-![csp-sdr.wav spectral](https://github.com/gutelfuldead/buildroot_fmcomms_gnuradio/blob/master/pcstream/spectral_sdr_csp.png)
+![csp-sdr.wav spectral](https://github.com/gutelfuldead/buildroot_fmcomms_gnuradio/blob/master/images/spectral_sdr_csp.png)
