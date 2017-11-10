@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BROOTPATH=../buildroot-2016.08-rc1
+BROOTPATH=./buildroot-2016.08-rc1
 
 echo ">>> Copying all files into $BROOTPATH"
 cp ./config_files/buildroot_config $BROOTPATH/.config
