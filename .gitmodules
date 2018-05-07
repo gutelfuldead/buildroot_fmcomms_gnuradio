@@ -1,0 +1,4 @@
+[submodule "linux"]
+	path = linux
+	url = https://github.com/analogdevicesinc/linux
+	branch = 2016_R2
