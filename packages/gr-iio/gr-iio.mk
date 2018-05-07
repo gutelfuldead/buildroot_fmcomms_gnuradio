@@ -6,7 +6,7 @@
 #
 ################################################################################
 
-GR_IIO_VERSION = 9b58414b4db711823eb7e5d6e11aa39bfcaf2bac 
+GR_IIO_VERSION = 7079c1a60206fba4b37beb239bf25438ec8d9778 
 GR_IIO_SITE = $(call github,analogdevicesinc,gr-iio,$(GR_IIO_VERSION))
 GR_IIO_LICENSE = GPLv3
 GR_IIO_LICENSE_FILES = COPYING
