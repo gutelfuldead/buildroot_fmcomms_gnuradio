@@ -1,6 +1,11 @@
 #!/bin/bash
 
-BROOTPATH=./buildroot-2016.08-rc1
+BROOTPATH=./buildroot
+
+git submodule update --init buildroot &&
+cd buildroot
+git checkout 2016.08.x
+cd ..
 
 echo ">>> Copying all files into $BROOTPATH"
 cp ./config_files/buildroot_config $BROOTPATH/.config
