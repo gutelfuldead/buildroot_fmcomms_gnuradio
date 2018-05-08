@@ -1,8 +1,0 @@
-[submodule "linux"]
-	path = linux
-	url = https://github.com/analogdevicesinc/linux
-	branch = 2017_R1
-[submodule "hdl"]
-	path = hdl
-	url = https://github.com/analogdevicesinc/hdl
-	branch = 2017_R1
