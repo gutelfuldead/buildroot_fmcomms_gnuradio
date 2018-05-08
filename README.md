@@ -21,6 +21,16 @@ Script requires folder hierarchy of:
 
 Since the path to the users description and rootfs overlay are hardcoded in the config files this structure must be preserved.
 
+Compiling Linux Kernel
+---------------------
+
+```
+export ARCH=arm 
+export CROSS_COMPILE=arm-xilinx-linux-gnueabi-
+make zynq_xcomm_adv7511_defconfig
+make UIMAGE_LOADADDR=0x8000 uImage
+```
+
 Package Support Added
 ---------------------
 
