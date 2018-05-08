@@ -23,12 +23,22 @@ Since the path to the users description and rootfs overlay are hardcoded in the 
 
 Compiling Linux Kernel
 ---------------------
+The Linux Kernel is stored in the `linux` folder submodule (Using Branch 2017_R1)
+
 
 ```
 export ARCH=arm 
 export CROSS_COMPILE=arm-xilinx-linux-gnueabi-
 make zynq_xcomm_adv7511_defconfig
 make UIMAGE_LOADADDR=0x8000 uImage
+```
+
+Creating Vivado Project
+-----------------------
+The project is stored in the `hdl` folder submodule (Using Branch 2017_R1; requires Vivado 2016.4+)
+```
+cd projects/fmcomms2/zed
+make
 ```
 
 Package Support Added
