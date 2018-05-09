@@ -6,7 +6,3 @@
 	path = hdl
 	url = git@github.com:analogdevicesinc/hdl.git
 	branch = 2017_r1
-[submodule "buildroot"]
-	path = buildroot
-	url = git@github.com:buildroot/buildroot.git
-	branch = 2016.08.x
