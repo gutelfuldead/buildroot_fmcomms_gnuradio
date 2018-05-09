@@ -1,11 +1,9 @@
 #!/bin/bash
 
-BROOTPATH=./buildroot
+BROOTPATH=./buildroot-2018.02.2
 
-git submodule update --init buildroot &&
-cd buildroot
-git checkout 2016.08.x
-cd ..
+wget https://buildroot.org/downloads/buildroot-2018.02.2.tar.gz &&
+tar -xvzf buildroot-2018.02.2.tar.gz &&
 
 echo ">>> Copying all files into $BROOTPATH"
 cp ./config_files/buildroot_config $BROOTPATH/.config
@@ -13,4 +11,5 @@ cp ./config_files/package_config $BROOTPATH/package/Config.in
 
 cp -r ./packages/gr-iio packages/libad9361-iio $BROOTPATH/package
 cp -r ./packages/gnuradio_patches/* $BROOTPATH/package/gnuradio/
+cp -r ./packages/libiio_patch/* $BROOTPATH/package/libiio/
 

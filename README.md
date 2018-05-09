@@ -1,25 +1,17 @@
 buildroot_fmcomms_gnuradio
 ==========================
 
-Requires [buildroot-2016.08-rc1](https://buildroot.org/downloads/buildroot-2016.08-rc1.tar.gz)
-
-Configuration files and packages for buildroot. 
+Currently set to use 2017_R1
 
 Designed for ZedBoard Rev C with FMCOMMS2/3 SDR device. Includes proper drivers for SDR device and full gnuradio build. Supports SSH.
 
-To auto-update buildroot run
+To create the buildroot design
 
 `./populate_buildroot.sh`
 
-Script requires folder hierarchy of:
+[Notes on Generating HW Files](https://wiki.analog.com/resources/tools-software/linux-software/build-the-zynq-boot-image)
 
-```
-|	./PWD
-|_______|	buildroot-2016.08-rc1
-|_______|	buildroot_fmcomms_gnuradio
-```
-
-Since the path to the users description and rootfs overlay are hardcoded in the config files this structure must be preserved.
+[Downloading HW Files](https://wiki.analog.com/resources/tools-software/linux-software/zynq_images)
 
 Compiling Linux Kernel
 ---------------------
@@ -44,9 +36,11 @@ make
 Package Support Added
 ---------------------
 
-* libad9361-iio (git commit `af541b1b3f1e2462d18abdba2a108df2bfd55647`)
+* libad9361-iio (git commit `b98b1cd2280d73ced04cb4cf9482b2d2d91e31a2`)
 
-* gr-iio (git commit `9b58414b4db711823eb7e5d6e11aa39bfcaf2bac`)
+* gr-iio (git commit `7079c1a60206fba4b37beb239bf25438ec8d9778`)
+
+* libiio Updated to use v0.15
 
 * gnuradio modified packages enabled
 
