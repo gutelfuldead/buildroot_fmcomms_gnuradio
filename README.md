@@ -17,14 +17,12 @@ Compiling Linux Kernel
 ---------------------
 The Linux Kernel is stored in the `linux` folder submodule (Using Branch 2017_R1)
 
-
 ```
 export ARCH=arm 
 export CROSS_COMPILE=arm-xilinx-linux-gnueabi-
 make zynq_xcomm_adv7511_defconfig
 make UIMAGE_LOADADDR=0x8000 uImage
 ```
-
 Creating Vivado Project
 -----------------------
 The project is stored in the `hdl` folder submodule (Using Branch 2017_R1; requires Vivado 2016.4+)
@@ -66,6 +64,11 @@ extract the output after building:
 
 Files for the BOOT partition can be found in `./buildroot_fmcomms_gnuradio/BOOT`
 
+Cross Compiling on the Target
+-----------------------------
+
+An example cross compilation Makefile (`example_makefile_cross_compile`) provided which was used to generate the iiostream file.
+
 Environment Setup
 -----------------
 
@@ -88,6 +91,10 @@ User fmcomms is in the sudoers file and has access to dialout,sshd groups and ha
 
 ![zedboardconnections](https://github.com/gutelfuldead/buildroot_fmcomms_gnuradio/blob/master/images/zedboard_fmcomms3.jpg)
 
+**IIO Stream Example**
+
+An example compiled IIO Stream for the AD9361 is included in ~/c_example_code/iiostream
+
 **gnuradio**
 
 Platform has already been profiled by volk and is available in `/home/fmcomms/.volk/volk_config`
@@ -107,3 +114,77 @@ Gnuradio example files in: `/home/fmcomms/gnuradio/` to run simply execute the `
 
 Actual Spectral Image:
 ![csp-sdr.wav spectral](https://github.com/gutelfuldead/buildroot_fmcomms_gnuradio/blob/master/images/spectral_sdr_csp.png)
+
+File Structure
+-------------
+
+.
+├── BOOT
+│   ├── BOOT.BIN
+│   ├── devicetree.dtb
+│   ├── uEnv.txt
+│   ├── uImage
+│   └── VERSION
+├── config_files
+│   ├── buildroot_config
+│   ├── package_config
+│   └── users.desc
+├── example_makefile_cross_compile
+├── gnuradio_designs
+│   └── qpsk_ber_fmcomms
+│       ├── ber_simulation.py
+│       ├── peak_detector_random_number_gen.py
+│       ├── peak_detector_random_number_gen_test.grc
+│       ├── qpsk_modem_fmcomms.grc
+│       ├── qpsk_modem_fmcomms.py
+│       ├── qpsk_modem_loopback.grc
+│       ├── qpsk_modem_pc.grc
+│       └── qpsk_modem_pc.py
+├── hdl
+├── images
+│   ├── sin_output.png
+│   ├── spectral_sdr_csp.png
+│   ├── waterfall_csp_sdr.png
+│   └── zedboard_fmcomms3.jpg
+├── import_submodules.sh
+├── linux
+├── packages
+│   ├── gnuradio_patches
+│   │   ├── Config.in
+│   │   └── gnuradio.mk
+│   ├── gr-iio
+│   │   ├── Config.in
+│   │   └── gr-iio.mk
+│   ├── libad9361-iio
+│   │   ├── Config.in
+│   │   └── libad9361-iio.mk
+│   └── libiio_patch
+│       ├── libiio.hash
+│       └── libiio.mk
+├── pcstream
+│   └── pc_stream.grc
+├── populate_buildroot.sh
+├── README.md
+└── rootfs_overlay
+    ├── etc
+    │   ├── network
+    │   │   └── interfaces
+    │   ├── profile
+    │   └── sudoers
+    └── home
+        └── fmcomms
+            ├── c_example_code
+            │   ├── ad9361-iiostream.c
+            │   ├── hello
+            │   ├── hello.c
+            │   ├── iiostream
+            │   └── Makefile
+            └── gnuradio
+                ├── loopback_tcp_wbfm_stream.grc
+                ├── loopback_tcp_wbfm_stream.py
+                ├── sdr-csp.wav
+                ├── sin_f10e3_tcp_wbfm_stream.grc
+                └── sin_f10e3_tcp_wbfm_stream.py
+
+20 directories, 46 files
+
