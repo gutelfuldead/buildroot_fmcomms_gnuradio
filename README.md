@@ -117,7 +117,7 @@ Actual Spectral Image:
 
 File Structure
 -------------
-
+```
 .
 ├── BOOT
 │   ├── BOOT.BIN
@@ -187,4 +187,5 @@ File Structure
                 └── sin_f10e3_tcp_wbfm_stream.py
 
 20 directories, 46 files
+```
 
