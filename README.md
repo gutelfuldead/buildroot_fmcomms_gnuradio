@@ -36,11 +36,6 @@ Includes proper drivers for SDR device and full gnuradio build.
 │       ├── qpsk_modem_pc.grc
 │       └── qpsk_modem_pc.py
 ├── hdl
-├── images
-│   ├── sin_output.png
-│   ├── spectral_sdr_csp.png
-│   ├── waterfall_csp_sdr.png
-│   └── zedboard_fmcomms3.jpg
 ├── import_submodules.sh
 ├── linux
 ├── packages
@@ -81,7 +76,7 @@ Includes proper drivers for SDR device and full gnuradio build.
                 ├── sin_f10e3_tcp_wbfm_stream.grc
                 └── sin_f10e3_tcp_wbfm_stream.py
 
-21 directories, 46 files
+20 directories, 42 files
 ```
 
 --------------------------------------------------------------------------------------
@@ -168,10 +163,6 @@ User fmcomms is in the sudoers file and has access to dialout,sshd groups and ha
 
 ## rootfs overlay included files
 
-**Physical Connections**
-
-![zedboardconnections](https://github.com/gutelfuldead/buildroot_fmcomms_gnuradio/blob/master/images/zedboard_fmcomms3.jpg)
-
 **IIO Stream Example**
 
 An example compiled IIO Stream for the AD9361 is included in ~/c_example_code/iiostream
@@ -185,16 +176,6 @@ Scripts are pre-populated to test a loopback wbfm signal and stream the data to 
 Ensure ZedBoard is connected via hub with the PC and the PC is on the appropriate network settings to communicate with the aforementioned zedboard network settings.
 
 Gnuradio example files in: `/home/fmcomms/gnuradio/` to run simply execute the `.py` file
-
-`sin_f10e3_tcp_wbfm_stream.grc` expected output:
-
-![sin test](https://github.com/gutelfuldead/buildroot_fmcomms_gnuradio/blob/master/images/sin_output.png)
-
-`loopback_tcp_wbfm_stream.py` expected output:
-![csp-sdr.wav waterfall output](https://github.com/gutelfuldead/buildroot_fmcomms_gnuradio/blob/master/images/waterfall_csp_sdr.png)
-
-Actual Spectral Image:
-![csp-sdr.wav spectral](https://github.com/gutelfuldead/buildroot_fmcomms_gnuradio/blob/master/images/spectral_sdr_csp.png)
 
 --------------------------------------------------------------------------------------
 
