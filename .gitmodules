@@ -1,4 +1,0 @@
-[submodule "hdl"]
-	path = hdl
-	url = git@github.com:analogdevicesinc/hdl.git
-	branch = 2017_r1
