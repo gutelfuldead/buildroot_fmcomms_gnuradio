@@ -6,7 +6,7 @@ Buildroot version 2018.02.2
 
 Designed for ZedBoard Rev C with FMCOMMS2/3 SDR device. 
 
-Includes proper drivers for SDR device and full gnuradio build.
+This repo creates the rootfs buildroot linux filesystem which installs basic tools, IIO Stream, GNU Radio, and the GNU Radio support for IIO Stream. The platform is pre-volk profiled for the hw.
 
 --------------------------------------------------------------------------------------
 
