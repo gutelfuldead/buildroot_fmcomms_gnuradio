@@ -35,9 +35,7 @@ Includes proper drivers for SDR device and full gnuradio build.
 │       ├── qpsk_modem_loopback.grc
 │       ├── qpsk_modem_pc.grc
 │       └── qpsk_modem_pc.py
-├── hdl
 ├── import_submodules.sh
-├── linux
 ├── packages
 │   ├── gnuradio_patches
 │   │   ├── Config.in
@@ -65,10 +63,7 @@ Includes proper drivers for SDR device and full gnuradio build.
         └── fmcomms
             ├── c_example_code
             │   ├── ad9361-iiostream.c
-            │   ├── hello
-            │   ├── hello.c
-            │   ├── iiostream
-            │   └── Makefile
+            │   └── iiostream
             └── gnuradio
                 ├── loopback_tcp_wbfm_stream.grc
                 ├── loopback_tcp_wbfm_stream.py
@@ -76,7 +71,8 @@ Includes proper drivers for SDR device and full gnuradio build.
                 ├── sin_f10e3_tcp_wbfm_stream.grc
                 └── sin_f10e3_tcp_wbfm_stream.py
 
-20 directories, 42 files
+18 directories, 39 files
+
 ```
 
 --------------------------------------------------------------------------------------
@@ -163,11 +159,17 @@ User fmcomms is in the sudoers file and has access to dialout,sshd groups and ha
 
 ## rootfs overlay included files
 
-**IIO Stream Example**
+### IIO Stream Example
 
 An example compiled IIO Stream for the AD9361 is included in ~/c_example_code/iiostream
 
-**gnuradio**
+```
+su
+cd ~/c_example_code
+./iiostream
+```
+
+### gnuradio
 
 Platform has already been profiled by volk and is available in `/home/fmcomms/.volk/volk_config`
 
