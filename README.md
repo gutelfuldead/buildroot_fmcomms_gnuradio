@@ -1,13 +1,36 @@
 buildroot_fmcomms_gnuradio
 ==========================
 
-Currently set to use 2017_R1
+Currently set to use Analog Devices and Xilinx builds : 2017_R1. 
+
+Buildroot version 2018.02.2
 
 Designed for ZedBoard Rev C with FMCOMMS2/3 SDR device. Includes proper drivers for SDR device and full gnuradio build. Supports SSH.
 
 To create the buildroot design
 
 `./populate_buildroot.sh`
+
+This will create `./buildroot-2018.02.2` subdirectory. To generate the filesystem,
+
+`cd buildroot-2018.02.2 && make`
+
+A sample Makefile to generate executables for this target is in `./cross_compile`
+
+Buildroot Output Products
+-------------------------
+
+Generated Filesystem,
+
+`buildroot-2018.02.2/output/images/rootfs.tar`
+
+Generated uImage (Created from AD Linux Distribution)
+
+`buildroot-2018.02.2/output/images/uImage`
+
+
+Useful Links
+------------
 
 [Notes on Generating HW Files](https://wiki.analog.com/resources/tools-software/linux-software/build-the-zynq-boot-image)
 
@@ -19,8 +42,9 @@ g++
 libssl-dev
 libncurses5-dev
 
-Compiling Linux Kernel
----------------------
+Compiling Linux Kernel DEPRECATED
+---------------------------------
+
 The Linux Kernel is stored in the `linux` folder submodule (Using Branch 2017_R1)
 
 ```
@@ -29,6 +53,7 @@ export CROSS_COMPILE=arm-xilinx-linux-gnueabi-
 make zynq_xcomm_adv7511_defconfig
 make UIMAGE_LOADADDR=0x8000 uImage
 ```
+
 Creating Vivado Project
 -----------------------
 The project is stored in the `hdl` folder submodule (Using Branch 2017_R1; requires Vivado 2016.4+)
@@ -135,7 +160,8 @@ File Structure
 │   ├── buildroot_config
 │   ├── package_config
 │   └── users.desc
-├── example_makefile_cross_compile
+├── cross_compile
+│   └── Makefile
 ├── gnuradio_designs
 │   └── qpsk_ber_fmcomms
 │       ├── ber_simulation.py
@@ -192,6 +218,6 @@ File Structure
                 ├── sin_f10e3_tcp_wbfm_stream.grc
                 └── sin_f10e3_tcp_wbfm_stream.py
 
-20 directories, 46 files
+21 directories, 46 files
 ```
 
