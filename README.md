@@ -146,7 +146,7 @@ Files for the BOOT partition can be found in `./buildroot_fmcomms_gnuradio/BOOT`
 
 ## Build Root Environment
 
-**Login info:**
+### Login info
 
 |user   |password|
 |-------|--------|
@@ -155,7 +155,7 @@ Files for the BOOT partition can be found in `./buildroot_fmcomms_gnuradio/BOOT`
 
 User fmcomms is in the sudoers file and has access to dialout,sshd groups and has a configured bashrc
 
-**Default eth0 static ipv4 info:**
+### Default eth0 static ipv4 info
 
 |   ip       | subnet      |gateway    |
 |------------|-------------|-----------|
