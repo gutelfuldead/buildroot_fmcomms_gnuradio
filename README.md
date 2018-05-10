@@ -13,6 +13,12 @@ To create the buildroot design
 
 [Downloading HW Files](https://wiki.analog.com/resources/tools-software/linux-software/zynq_images)
 
+Required Packages for Buildroot
+-------------------------------
+g++
+libssl-dev
+libncurses5-dev
+
 Compiling Linux Kernel
 ---------------------
 The Linux Kernel is stored in the `linux` folder submodule (Using Branch 2017_R1)
