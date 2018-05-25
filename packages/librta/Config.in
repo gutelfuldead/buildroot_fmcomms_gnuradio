@@ -1,0 +1,4 @@
+config BR2_PACKAGE_LIBRTA
+	bool "librta"
+	help
+		Run-Time Access Library, librta allows data structures in program as tables in a PostgreSQL database or as files in a virtual file system (similar to /proc)
