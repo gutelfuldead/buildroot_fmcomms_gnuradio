@@ -1,3326 +1,2018 @@
-#
-# Automatically generated file; DO NOT EDIT.
-# Buildroot 2018.02.2-gf25b142-dirty Configuration
-#
-BR2_HAVE_DOT_CONFIG=y
-BR2_HOST_GCC_AT_LEAST_4_5=y
-BR2_HOST_GCC_AT_LEAST_4_6=y
-BR2_HOST_GCC_AT_LEAST_4_7=y
-BR2_HOST_GCC_AT_LEAST_4_8=y
-
-#
-# Target options
-#
-BR2_SOFT_FLOAT=y
-BR2_ARCH_HAS_MMU_OPTIONAL=y
-# BR2_arcle is not set
-# BR2_arceb is not set
-BR2_arm=y
-# BR2_armeb is not set
-# BR2_aarch64 is not set
-# BR2_aarch64_be is not set
-# BR2_bfin is not set
-# BR2_csky is not set
-# BR2_i386 is not set
-# BR2_m68k is not set
-# BR2_microblazeel is not set
-# BR2_microblazebe is not set
-# BR2_mips is not set
-# BR2_mipsel is not set
-# BR2_mips64 is not set
-# BR2_mips64el is not set
-# BR2_nios2 is not set
-# BR2_or1k is not set
-# BR2_powerpc is not set
-# BR2_powerpc64 is not set
-# BR2_powerpc64le is not set
-# BR2_sh is not set
-# BR2_sparc is not set
-# BR2_sparc64 is not set
-# BR2_x86_64 is not set
-# BR2_xtensa is not set
-BR2_ARCH_HAS_TOOLCHAIN_BUILDROOT=y
-BR2_ARCH="arm"
-BR2_ENDIAN="LITTLE"
-BR2_GCC_TARGET_ABI="aapcs-linux"
-BR2_GCC_TARGET_CPU="cortex-a9"
-BR2_GCC_TARGET_FLOAT_ABI="soft"
-BR2_GCC_TARGET_MODE="arm"
-BR2_BINFMT_SUPPORTS_SHARED=y
-BR2_READELF_ARCH_NAME="ARM"
-BR2_BINFMT_ELF=y
-BR2_ARM_CPU_HAS_NEON=y
-BR2_ARM_CPU_MAYBE_HAS_NEON=y
-BR2_ARM_CPU_MAYBE_HAS_VFPV2=y
-BR2_ARM_CPU_MAYBE_HAS_VFPV3=y
-BR2_ARM_CPU_HAS_ARM=y
-BR2_ARM_CPU_HAS_THUMB2=y
-BR2_ARM_CPU_ARMV7A=y
-
-#
-# armv4 cores
-#
-# BR2_arm920t is not set
-# BR2_arm922t is not set
-# BR2_fa526 is not set
-# BR2_strongarm is not set
-
-#
-# armv5 cores
-#
-# BR2_arm926t is not set
-# BR2_iwmmxt is not set
-# BR2_xscale is not set
-
-#
-# armv6 cores
-#
-# BR2_arm1136j_s is not set
-# BR2_arm1136jf_s is not set
-# BR2_arm1176jz_s is not set
-# BR2_arm1176jzf_s is not set
-# BR2_arm11mpcore is not set
-
-#
-# armv7a cores
-#
-# BR2_cortex_a5 is not set
-# BR2_cortex_a7 is not set
-# BR2_cortex_a8 is not set
-BR2_cortex_a9=y
-# BR2_cortex_a12 is not set
-# BR2_cortex_a15 is not set
-# BR2_cortex_a15_a7 is not set
-# BR2_cortex_a17 is not set
-# BR2_cortex_a17_a7 is not set
-# BR2_pj4 is not set
-
-#
-# armv7m cores
-#
-# BR2_cortex_m3 is not set
-# BR2_cortex_m4 is not set
-
-#
-# armv8 cores
-#
-# BR2_cortex_a32 is not set
-# BR2_cortex_a35 is not set
-# BR2_cortex_a53 is not set
-# BR2_cortex_a57 is not set
-# BR2_cortex_a57_a53 is not set
-# BR2_cortex_a72 is not set
-# BR2_cortex_a72_a53 is not set
-# BR2_cortex_a73 is not set
-# BR2_cortex_a73_a35 is not set
-# BR2_cortex_a73_a53 is not set
-# BR2_exynos_m1 is not set
-# BR2_falkor is not set
-# BR2_qdf24xx is not set
-# BR2_xgene1 is not set
-BR2_ARM_ENABLE_NEON=y
-# BR2_ARM_ENABLE_VFP is not set
-BR2_ARM_EABI=y
-BR2_ARM_SOFT_FLOAT=y
-# BR2_ARM_FPU_NEON is not set
-BR2_ARM_INSTRUCTIONS_ARM=y
-# BR2_ARM_INSTRUCTIONS_THUMB2 is not set
-
-#
-# Build options
-#
-
-#
-# Commands
-#
-BR2_WGET="wget --passive-ftp -nd -t 3"
-BR2_SVN="svn"
-BR2_BZR="bzr"
-BR2_GIT="git"
-BR2_CVS="cvs"
-BR2_LOCALFILES="cp"
-BR2_SCP="scp"
-BR2_SSH="ssh"
-BR2_HG="hg"
-BR2_ZCAT="gzip -d -c"
-BR2_BZCAT="bzcat"
-BR2_XZCAT="xzcat"
-BR2_LZCAT="lzip -d -c"
-BR2_TAR_OPTIONS=""
-BR2_DEFCONFIG="/home/afx/zedboard/buildroot-2016.08.1/configs/zynq_zed_defconfig"
-BR2_DL_DIR="$(TOPDIR)/dl"
-BR2_HOST_DIR="$(BASE_DIR)/host"
-
-#
-# Mirrors and Download locations
-#
-BR2_PRIMARY_SITE=""
-BR2_BACKUP_SITE="http://sources.buildroot.net"
-BR2_KERNEL_MIRROR="https://cdn.kernel.org/pub"
-BR2_GNU_MIRROR="http://ftpmirror.gnu.org"
-BR2_LUAROCKS_MIRROR="http://rocks.moonscript.org"
-BR2_CPAN_MIRROR="http://cpan.metacpan.org"
-BR2_JLEVEL=0
-# BR2_CCACHE is not set
-# BR2_ENABLE_DEBUG is not set
-BR2_STRIP_strip=y
-BR2_STRIP_EXCLUDE_FILES=""
-BR2_STRIP_EXCLUDE_DIRS=""
-# BR2_OPTIMIZE_0 is not set
-# BR2_OPTIMIZE_1 is not set
-# BR2_OPTIMIZE_2 is not set
-# BR2_OPTIMIZE_3 is not set
-# BR2_OPTIMIZE_G is not set
-BR2_OPTIMIZE_S=y
-# BR2_GOOGLE_BREAKPAD_ENABLE is not set
-# BR2_STATIC_LIBS is not set
-# BR2_SHARED_LIBS is not set
-BR2_SHARED_STATIC_LIBS=y
-BR2_PACKAGE_OVERRIDE_FILE="$(CONFIG_DIR)/local.mk"
-BR2_GLOBAL_PATCH_DIR=""
-
-#
-# Advanced
-#
-BR2_COMPILER_PARANOID_UNSAFE_PATH=y
-# BR2_REPRODUCIBLE is not set
-
-#
-# Security Hardening Options
-#
-
-#
-# Stack Smashing Protection needs a toolchain w/ SSP
-#
-
-#
-# RELocation Read Only (RELRO) needs shared libraries
-#
-
-#
-# Fortify Source needs a glibc toolchain and optimization
-#
-
-#
-# Toolchain
-#
-BR2_TOOLCHAIN=y
-BR2_TOOLCHAIN_USES_UCLIBC=y
-BR2_TOOLCHAIN_BUILDROOT=y
-# BR2_TOOLCHAIN_EXTERNAL is not set
-
-#
-# Toolchain Buildroot Options
-#
-BR2_TOOLCHAIN_BUILDROOT_VENDOR="buildroot"
-BR2_TOOLCHAIN_BUILDROOT_UCLIBC=y
-# BR2_TOOLCHAIN_BUILDROOT_GLIBC is not set
-# BR2_TOOLCHAIN_BUILDROOT_MUSL is not set
-BR2_TOOLCHAIN_BUILDROOT_LIBC="uclibc"
-
-#
-# Kernel Header Options
-#
-BR2_KERNEL_HEADERS_AS_KERNEL=y
-# BR2_KERNEL_HEADERS_3_2 is not set
-# BR2_KERNEL_HEADERS_4_1 is not set
-# BR2_KERNEL_HEADERS_4_4 is not set
-# BR2_KERNEL_HEADERS_4_9 is not set
-# BR2_KERNEL_HEADERS_4_10 is not set
-# BR2_KERNEL_HEADERS_4_11 is not set
-# BR2_KERNEL_HEADERS_4_12 is not set
-# BR2_KERNEL_HEADERS_4_13 is not set
-# BR2_KERNEL_HEADERS_4_14 is not set
-# BR2_KERNEL_HEADERS_4_15 is not set
-# BR2_KERNEL_HEADERS_VERSION is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_15 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_14 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_13 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_12 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_11 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_10 is not set
-BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_9=y
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_8 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_7 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_6 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_5 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_4 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_3 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_2 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_1 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_4_0 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_19 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_18 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_17 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_16 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_15 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_14 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_13 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_12 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_11 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_10 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_9 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_8 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_7 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_6 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_5 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_4 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_3 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_2 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_1 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_3_0 is not set
-# BR2_PACKAGE_HOST_LINUX_HEADERS_CUSTOM_REALLY_OLD is not set
-BR2_PACKAGE_LINUX_HEADERS=y
-
-#
-# uClibc Options
-#
-BR2_PACKAGE_UCLIBC=y
-BR2_UCLIBC_CONFIG="package/uclibc/uClibc-ng.config"
-BR2_UCLIBC_CONFIG_FRAGMENT_FILES=""
-BR2_TOOLCHAIN_BUILDROOT_WCHAR=y
-# BR2_TOOLCHAIN_BUILDROOT_LOCALE is not set
-BR2_PTHREADS_NATIVE=y
-# BR2_PTHREADS is not set
-# BR2_PTHREADS_NONE is not set
-# BR2_PTHREAD_DEBUG is not set
-# BR2_TOOLCHAIN_BUILDROOT_USE_SSP is not set
-BR2_UCLIBC_INSTALL_UTILS=y
-BR2_UCLIBC_TARGET_ARCH="arm"
-
-#
-# Binutils Options
-#
-# BR2_BINUTILS_VERSION_2_28_X is not set
-BR2_BINUTILS_VERSION_2_29_X=y
-# BR2_BINUTILS_VERSION_2_30_X is not set
-BR2_BINUTILS_VERSION="2.29.1"
-BR2_BINUTILS_EXTRA_CONFIG_OPTIONS=""
-
-#
-# GCC Options
-#
-BR2_GCC_VERSION_4_9_X=y
-# BR2_GCC_VERSION_5_X is not set
-# BR2_GCC_VERSION_6_X is not set
-# BR2_GCC_VERSION_7_X is not set
-BR2_GCC_ARCH_HAS_CONFIGURABLE_DEFAULTS=y
-BR2_GCC_SUPPORTS_FINEGRAINEDMTUNE=y
-BR2_GCC_VERSION="4.9.4"
-BR2_EXTRA_GCC_CONFIG_OPTIONS=""
-BR2_TOOLCHAIN_BUILDROOT_CXX=y
-# BR2_TOOLCHAIN_BUILDROOT_FORTRAN is not set
-# BR2_GCC_ENABLE_LTO is not set
-# BR2_GCC_ENABLE_OPENMP is not set
-
-#
-# graphite support needs gcc >= 5.x
-#
-BR2_PACKAGE_HOST_GDB_ARCH_SUPPORTS=y
-
-#
-# Host GDB Options
-#
-# BR2_PACKAGE_HOST_GDB is not set
-
-#
-# Toolchain Generic Options
-#
-BR2_USE_WCHAR=y
-BR2_INSTALL_LIBSTDCPP=y
-BR2_TOOLCHAIN_HAS_THREADS=y
-BR2_TOOLCHAIN_HAS_THREADS_NPTL=y
-BR2_TOOLCHAIN_HAS_SHADOW_PASSWORDS=y
-BR2_TOOLCHAIN_SUPPORTS_PIE=y
-BR2_USE_MMU=y
-BR2_TARGET_OPTIMIZATION=""
-BR2_TARGET_LDFLAGS=""
-# BR2_ECLIPSE_REGISTER is not set
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_0=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_1=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_2=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_3=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_4=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_5=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_6=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_7=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_8=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_9=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_10=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_11=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_12=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_13=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_14=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_15=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_16=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_17=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_18=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_19=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_0=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_1=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_2=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_3=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_4=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_5=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_6=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_7=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_8=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST_4_9=y
-BR2_TOOLCHAIN_HEADERS_AT_LEAST="4.9"
-BR2_TOOLCHAIN_GCC_AT_LEAST_4_3=y
-BR2_TOOLCHAIN_GCC_AT_LEAST_4_4=y
-BR2_TOOLCHAIN_GCC_AT_LEAST_4_5=y
-BR2_TOOLCHAIN_GCC_AT_LEAST_4_6=y
-BR2_TOOLCHAIN_GCC_AT_LEAST_4_7=y
-BR2_TOOLCHAIN_GCC_AT_LEAST_4_8=y
-BR2_TOOLCHAIN_GCC_AT_LEAST_4_9=y
-BR2_TOOLCHAIN_GCC_AT_LEAST="4.9"
-BR2_TOOLCHAIN_HAS_MNAN_OPTION=y
-BR2_TOOLCHAIN_HAS_SYNC_1=y
-BR2_TOOLCHAIN_HAS_SYNC_2=y
-BR2_TOOLCHAIN_HAS_SYNC_4=y
-BR2_TOOLCHAIN_ARM_HAS_SYNC_8=y
-BR2_TOOLCHAIN_HAS_SYNC_8=y
-BR2_TOOLCHAIN_HAS_LIBATOMIC=y
-BR2_TOOLCHAIN_HAS_ATOMIC=y
-
-#
-# System configuration
-#
-BR2_ROOTFS_SKELETON_DEFAULT=y
-# BR2_ROOTFS_SKELETON_CUSTOM is not set
-# BR2_ROOTFS_MERGED_USR is not set
-BR2_TARGET_GENERIC_HOSTNAME="buildroot"
-BR2_TARGET_GENERIC_ISSUE="Welcome to Buildroot"
-BR2_TARGET_GENERIC_PASSWD_MD5=y
-# BR2_TARGET_GENERIC_PASSWD_SHA256 is not set
-# BR2_TARGET_GENERIC_PASSWD_SHA512 is not set
-BR2_TARGET_GENERIC_PASSWD_METHOD="md5"
-BR2_INIT_BUSYBOX=y
-# BR2_INIT_SYSV is not set
-
-#
-# systemd needs a glibc toolchain, headers >= 3.10
-#
-# BR2_INIT_NONE is not set
-# BR2_ROOTFS_DEVICE_CREATION_STATIC is not set
-BR2_ROOTFS_DEVICE_CREATION_DYNAMIC_DEVTMPFS=y
-# BR2_ROOTFS_DEVICE_CREATION_DYNAMIC_MDEV is not set
-# BR2_ROOTFS_DEVICE_CREATION_DYNAMIC_EUDEV is not set
-BR2_ROOTFS_DEVICE_TABLE="system/device_table.txt"
-# BR2_ROOTFS_DEVICE_TABLE_SUPPORTS_EXTENDED_ATTRIBUTES is not set
-BR2_TARGET_ENABLE_ROOT_LOGIN=y
-BR2_TARGET_GENERIC_ROOT_PASSWD=""
-BR2_SYSTEM_BIN_SH_BUSYBOX=y
-# BR2_SYSTEM_BIN_SH_BASH is not set
-# BR2_SYSTEM_BIN_SH_DASH is not set
-# BR2_SYSTEM_BIN_SH_MKSH is not set
-# BR2_SYSTEM_BIN_SH_ZSH is not set
-# BR2_SYSTEM_BIN_SH_NONE is not set
-BR2_TARGET_GENERIC_GETTY=y
-BR2_TARGET_GENERIC_GETTY_PORT="ttyPS0"
-BR2_TARGET_GENERIC_GETTY_BAUDRATE_KEEP=y
-# BR2_TARGET_GENERIC_GETTY_BAUDRATE_9600 is not set
-# BR2_TARGET_GENERIC_GETTY_BAUDRATE_19200 is not set
-# BR2_TARGET_GENERIC_GETTY_BAUDRATE_38400 is not set
-# BR2_TARGET_GENERIC_GETTY_BAUDRATE_57600 is not set
-# BR2_TARGET_GENERIC_GETTY_BAUDRATE_115200 is not set
-BR2_TARGET_GENERIC_GETTY_BAUDRATE="0"
-BR2_TARGET_GENERIC_GETTY_TERM="vt100"
-BR2_TARGET_GENERIC_GETTY_OPTIONS=""
-BR2_TARGET_GENERIC_REMOUNT_ROOTFS_RW=y
-BR2_SYSTEM_DHCP=""
-BR2_ENABLE_LOCALE_PURGE=y
-BR2_ENABLE_LOCALE_WHITELIST="C en_US"
-# BR2_SYSTEM_ENABLE_NLS is not set
-# BR2_TARGET_TZ_INFO is not set
-BR2_ROOTFS_USERS_TABLES="../config_files/users.desc"
-BR2_ROOTFS_OVERLAY="../rootfs_overlay"
-BR2_ROOTFS_POST_BUILD_SCRIPT=""
-BR2_ROOTFS_POST_FAKEROOT_SCRIPT=""
-BR2_ROOTFS_POST_IMAGE_SCRIPT=""
-
-#
-# Kernel
-#
-BR2_LINUX_KERNEL=y
-# BR2_LINUX_KERNEL_LATEST_VERSION is not set
-# BR2_LINUX_KERNEL_LATEST_CIP_VERSION is not set
-# BR2_LINUX_KERNEL_CUSTOM_VERSION is not set
-# BR2_LINUX_KERNEL_CUSTOM_TARBALL is not set
-BR2_LINUX_KERNEL_CUSTOM_GIT=y
-# BR2_LINUX_KERNEL_CUSTOM_HG is not set
-# BR2_LINUX_KERNEL_CUSTOM_SVN is not set
-BR2_LINUX_KERNEL_CUSTOM_REPO_URL="https://github.com/analogdevicesinc/linux.git"
-BR2_LINUX_KERNEL_CUSTOM_REPO_VERSION="2017_R1"
-BR2_LINUX_KERNEL_VERSION="2017_R1"
-BR2_LINUX_KERNEL_PATCH=""
-# BR2_LINUX_KERNEL_USE_DEFCONFIG is not set
-# BR2_LINUX_KERNEL_USE_ARCH_DEFAULT_CONFIG is not set
-BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG=y
-BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE="output/build/linux-2017_R1/arch/arm/configs/zynq_xcomm_adv7511_defconfig"
-BR2_LINUX_KERNEL_CONFIG_FRAGMENT_FILES=""
-BR2_LINUX_KERNEL_UIMAGE=y
-# BR2_LINUX_KERNEL_APPENDED_UIMAGE is not set
-# BR2_LINUX_KERNEL_ZIMAGE is not set
-# BR2_LINUX_KERNEL_APPENDED_ZIMAGE is not set
-# BR2_LINUX_KERNEL_VMLINUX is not set
-# BR2_LINUX_KERNEL_IMAGE_TARGET_CUSTOM is not set
-BR2_LINUX_KERNEL_GZIP=y
-# BR2_LINUX_KERNEL_LZ4 is not set
-# BR2_LINUX_KERNEL_LZMA is not set
-# BR2_LINUX_KERNEL_LZO is not set
-# BR2_LINUX_KERNEL_XZ is not set
-BR2_LINUX_KERNEL_UIMAGE_LOADADDR="0x8000"
-BR2_LINUX_KERNEL_DTS_SUPPORT=y
-BR2_LINUX_KERNEL_INTREE_DTS_NAME="zynq-zed"
-BR2_LINUX_KERNEL_CUSTOM_DTS_PATH=""
-# BR2_LINUX_KERNEL_INSTALL_TARGET is not set
-# BR2_LINUX_KERNEL_NEEDS_HOST_OPENSSL is not set
-# BR2_LINUX_KERNEL_NEEDS_HOST_LIBELF is not set
-
-#
-# Linux Kernel Extensions
-#
-# BR2_LINUX_KERNEL_EXT_XENOMAI is not set
-# BR2_LINUX_KERNEL_EXT_RTAI is not set
-# BR2_LINUX_KERNEL_EXT_EV3DEV_LINUX_DRIVERS is not set
-# BR2_LINUX_KERNEL_EXT_FBTFT is not set
-# BR2_LINUX_KERNEL_EXT_AUFS is not set
-
-#
-# Linux Kernel Tools
-#
-# BR2_PACKAGE_LINUX_TOOLS_CPUPOWER is not set
-# BR2_PACKAGE_LINUX_TOOLS_GPIO is not set
-# BR2_PACKAGE_LINUX_TOOLS_IIO is not set
-# BR2_PACKAGE_LINUX_TOOLS_PERF is not set
-# BR2_PACKAGE_LINUX_TOOLS_SELFTESTS is not set
-# BR2_PACKAGE_LINUX_TOOLS_TMON is not set
-
-#
-# Target packages
-#
-BR2_PACKAGE_BUSYBOX=y
-BR2_PACKAGE_BUSYBOX_CONFIG="package/busybox/busybox.config"
-BR2_PACKAGE_BUSYBOX_CONFIG_FRAGMENT_FILES=""
-BR2_PACKAGE_BUSYBOX_SHOW_OTHERS=y
-# BR2_PACKAGE_BUSYBOX_INDIVIDUAL_BINARIES is not set
-# BR2_PACKAGE_BUSYBOX_WATCHDOG is not set
-BR2_PACKAGE_SKELETON=y
-BR2_PACKAGE_HAS_SKELETON=y
-BR2_PACKAGE_PROVIDES_SKELETON="skeleton-init-sysv"
-BR2_PACKAGE_SKELETON_INIT_COMMON=y
-BR2_PACKAGE_SKELETON_INIT_SYSV=y
-
-#
-# Audio and video applications
-#
-# BR2_PACKAGE_ALSA_UTILS is not set
-# BR2_PACKAGE_ATEST is not set
-# BR2_PACKAGE_AUMIX is not set
-# BR2_PACKAGE_BELLAGIO is not set
-# BR2_PACKAGE_DVBLAST is not set
-# BR2_PACKAGE_DVDAUTHOR is not set
-# BR2_PACKAGE_DVDRW_TOOLS is not set
-# BR2_PACKAGE_ESPEAK is not set
-# BR2_PACKAGE_FAAD2 is not set
-BR2_PACKAGE_FFMPEG_ARCH_SUPPORTS=y
-# BR2_PACKAGE_FFMPEG is not set
-# BR2_PACKAGE_FLAC is not set
-# BR2_PACKAGE_FLITE is not set
-# BR2_PACKAGE_GMRENDER_RESURRECT is not set
-# BR2_PACKAGE_GSTREAMER is not set
-# BR2_PACKAGE_GSTREAMER1 is not set
-# BR2_PACKAGE_JACK2 is not set
-BR2_PACKAGE_KODI_ARCH_SUPPORTS=y
-
-#
-# kodi needs python w/ .py modules, a uClibc or glibc toolchain w/ C++, threads, wchar, dynamic library, gcc >= 4.8, host gcc >= 4.6
-#
-
-#
-# kodi needs an OpenGL EGL with either an openGL or an OpenGL ES backend
-#
-# BR2_PACKAGE_LAME is not set
-# BR2_PACKAGE_MADPLAY is not set
-# BR2_PACKAGE_MIMIC is not set
-
-#
-# miraclecast needs systemd and a glibc toolchain w/ threads and wchar
-#
-# BR2_PACKAGE_MJPEGTOOLS is not set
-# BR2_PACKAGE_MODPLUGTOOLS is not set
-# BR2_PACKAGE_MOTION is not set
-# BR2_PACKAGE_MPD is not set
-# BR2_PACKAGE_MPD_MPC is not set
-# BR2_PACKAGE_MPG123 is not set
-BR2_PACKAGE_MPLAYER_ARCH_SUPPORTS=y
-# BR2_PACKAGE_MPLAYER is not set
-# BR2_PACKAGE_MPV is not set
-# BR2_PACKAGE_MULTICAT is not set
-# BR2_PACKAGE_MUSEPACK is not set
-# BR2_PACKAGE_NCMPC is not set
-# BR2_PACKAGE_OPUS_TOOLS is not set
-BR2_PACKAGE_PULSEAUDIO_HAS_ATOMIC=y
-# BR2_PACKAGE_PULSEAUDIO is not set
-# BR2_PACKAGE_SOX is not set
-# BR2_PACKAGE_SQUEEZELITE is not set
-# BR2_PACKAGE_TOVID is not set
-# BR2_PACKAGE_TSTOOLS is not set
-# BR2_PACKAGE_TWOLAME is not set
-# BR2_PACKAGE_UDPXY is not set
-# BR2_PACKAGE_UPMPDCLI is not set
-# BR2_PACKAGE_V4L2GRAB is not set
-# BR2_PACKAGE_V4L2LOOPBACK is not set
-# BR2_PACKAGE_VLC is not set
-# BR2_PACKAGE_VORBIS_TOOLS is not set
-# BR2_PACKAGE_WAVPACK is not set
-# BR2_PACKAGE_YAVTA is not set
-# BR2_PACKAGE_YMPD is not set
-
-#
-# Compressors and decompressors
-#
-BR2_PACKAGE_BZIP2=y
-# BR2_PACKAGE_GZIP is not set
-# BR2_PACKAGE_LZ4 is not set
-# BR2_PACKAGE_LZIP is not set
-# BR2_PACKAGE_LZOP is not set
-# BR2_PACKAGE_P7ZIP is not set
-# BR2_PACKAGE_PIXZ is not set
-# BR2_PACKAGE_UNRAR is not set
-# BR2_PACKAGE_UNZIP is not set
-BR2_PACKAGE_XZ=y
-# BR2_PACKAGE_ZIP is not set
-# BR2_PACKAGE_ZSTD is not set
-
-#
-# Debugging, profiling and benchmark
-#
-# BR2_PACKAGE_BLKTRACE is not set
-# BR2_PACKAGE_BONNIE is not set
-# BR2_PACKAGE_CACHE_CALIBRATOR is not set
-# BR2_PACKAGE_DHRYSTONE is not set
-# BR2_PACKAGE_DIEHARDER is not set
-# BR2_PACKAGE_DMALLOC is not set
-# BR2_PACKAGE_DROPWATCH is not set
-# BR2_PACKAGE_DSTAT is not set
-# BR2_PACKAGE_DT is not set
-# BR2_PACKAGE_DUMA is not set
-# BR2_PACKAGE_FIO is not set
-BR2_PACKAGE_GDB_ARCH_SUPPORTS=y
-
-#
-# gdb/gdbserver needs a toolchain w/ threads, threads debug
-#
-BR2_PACKAGE_GOOGLE_BREAKPAD_ARCH_SUPPORTS=y
-# BR2_PACKAGE_GOOGLE_BREAKPAD is not set
-# BR2_PACKAGE_IOZONE is not set
-# BR2_PACKAGE_KEXEC is not set
-# BR2_PACKAGE_KTAP is not set
-# BR2_PACKAGE_LATENCYTOP is not set
-# BR2_PACKAGE_LMBENCH is not set
-# BR2_PACKAGE_LSOF is not set
-BR2_PACKAGE_LTP_TESTSUITE_ARCH_SUPPORTS=y
-# BR2_PACKAGE_LTP_TESTSUITE is not set
-# BR2_PACKAGE_LTRACE is not set
-# BR2_PACKAGE_LTTNG_BABELTRACE is not set
-# BR2_PACKAGE_LTTNG_MODULES is not set
-# BR2_PACKAGE_LTTNG_TOOLS is not set
-# BR2_PACKAGE_MEMSTAT is not set
-# BR2_PACKAGE_NETPERF is not set
-
-#
-# netsniff-ng needs a glibc or musl toolchain w/ threads, headers >= 3.0
-#
-
-#
-# nmon needs a glibc toolchain
-#
-BR2_PACKAGE_OPROFILE_ARCH_SUPPORTS=y
-# BR2_PACKAGE_OPROFILE is not set
-# BR2_PACKAGE_PAX_UTILS is not set
-# BR2_PACKAGE_PV is not set
-# BR2_PACKAGE_RAMSMP is not set
-# BR2_PACKAGE_RAMSPEED is not set
-# BR2_PACKAGE_RT_TESTS is not set
-# BR2_PACKAGE_SPIDEV_TEST is not set
-# BR2_PACKAGE_STRACE is not set
-# BR2_PACKAGE_STRESS is not set
-
-#
-# stress-ng needs a glibc toolchain w/ dynamic library, headers >= 3.3
-#
-# BR2_PACKAGE_SYSDIG is not set
-# BR2_PACKAGE_TCF_AGENT is not set
-BR2_PACKAGE_TCF_AGENT_ARCH="arm"
-BR2_PACKAGE_TCF_AGENT_ARCH_SUPPORTS=y
-# BR2_PACKAGE_TINYMEMBENCH is not set
-# BR2_PACKAGE_TRACE_CMD is not set
-BR2_PACKAGE_TRINITY_ARCH_SUPPORTS=y
-# BR2_PACKAGE_TRINITY is not set
-# BR2_PACKAGE_UCLIBC_NG_TEST is not set
-BR2_PACKAGE_VALGRIND_ARCH_SUPPORTS=y
-# BR2_PACKAGE_VALGRIND is not set
-# BR2_PACKAGE_WHETSTONE is not set
-
-#
-# Development tools
-#
-BR2_PACKAGE_BINUTILS=y
-# BR2_PACKAGE_BINUTILS_TARGET is not set
-# BR2_PACKAGE_BSDIFF is not set
-# BR2_PACKAGE_CHECK is not set
-BR2_PACKAGE_CMAKE_ARCH_SUPPORTS=y
-BR2_PACKAGE_CMAKE=y
-BR2_PACKAGE_CMAKE_CTEST=y
-BR2_PACKAGE_CPPUNIT=y
-# BR2_PACKAGE_CVS is not set
-BR2_PACKAGE_CXXTEST=y
-BR2_PACKAGE_DIFFUTILS=y
-# BR2_PACKAGE_DOS2UNIX is not set
-# BR2_PACKAGE_FINDUTILS is not set
-BR2_PACKAGE_FLEX=y
-# BR2_PACKAGE_GAWK is not set
-# BR2_PACKAGE_GETTEXT is not set
-# BR2_PACKAGE_GIT is not set
-# BR2_PACKAGE_GIT_CRYPT is not set
-# BR2_PACKAGE_GPERF is not set
-BR2_PACKAGE_GREP=y
-# BR2_PACKAGE_JO is not set
-# BR2_PACKAGE_JQ is not set
-# BR2_PACKAGE_LIBTOOL is not set
-BR2_PACKAGE_MAKE=y
-BR2_PACKAGE_PATCH=y
-# BR2_PACKAGE_PKGCONF is not set
-BR2_PACKAGE_SED=y
-# BR2_PACKAGE_SUBVERSION is not set
-BR2_PACKAGE_TREE=y
-
-#
-# Filesystem and flash utilities
-#
-# BR2_PACKAGE_AUFS_UTIL is not set
-
-#
-# autofs needs a toolchain w/ NPTL, RPC, dynamic library
-#
-# BR2_PACKAGE_BTRFS_PROGS is not set
-# BR2_PACKAGE_CIFS_UTILS is not set
-# BR2_PACKAGE_CPIO is not set
-# BR2_PACKAGE_CRAMFS is not set
-# BR2_PACKAGE_CURLFTPFS is not set
-# BR2_PACKAGE_DOSFSTOOLS is not set
-# BR2_PACKAGE_E2FSPROGS is not set
-# BR2_PACKAGE_E2TOOLS is not set
-# BR2_PACKAGE_ECRYPTFS_UTILS is not set
-# BR2_PACKAGE_EXFAT is not set
-# BR2_PACKAGE_EXFAT_UTILS is not set
-# BR2_PACKAGE_F2FS_TOOLS is not set
-# BR2_PACKAGE_FLASHBENCH is not set
-# BR2_PACKAGE_FSCRYPTCTL is not set
-# BR2_PACKAGE_FWUP is not set
-# BR2_PACKAGE_GENEXT2FS is not set
-# BR2_PACKAGE_GENPART is not set
-# BR2_PACKAGE_GENROMFS is not set
-# BR2_PACKAGE_MMC_UTILS is not set
-# BR2_PACKAGE_MTD is not set
-# BR2_PACKAGE_MTOOLS is not set
-# BR2_PACKAGE_NFS_UTILS is not set
-# BR2_PACKAGE_NILFS_UTILS is not set
-# BR2_PACKAGE_NTFS_3G is not set
-# BR2_PACKAGE_SP_OOPS_EXTRACT is not set
-# BR2_PACKAGE_SQUASHFS is not set
-# BR2_PACKAGE_SSHFS is not set
-# BR2_PACKAGE_SUNXI_TOOLS is not set
-# BR2_PACKAGE_UNIONFS is not set
-# BR2_PACKAGE_XFSPROGS is not set
-
-#
-# Fonts, cursors, icons, sounds and themes
-#
-
-#
-# Cursors
-#
-# BR2_PACKAGE_COMIX_CURSORS is not set
-# BR2_PACKAGE_OBSIDIAN_CURSORS is not set
-
-#
-# Fonts
-#
-# BR2_PACKAGE_BITSTREAM_VERA is not set
-# BR2_PACKAGE_CANTARELL is not set
-# BR2_PACKAGE_DEJAVU is not set
-# BR2_PACKAGE_FONT_AWESOME is not set
-# BR2_PACKAGE_GHOSTSCRIPT_FONTS is not set
-# BR2_PACKAGE_INCONSOLATA is not set
-# BR2_PACKAGE_LIBERATION is not set
-
-#
-# Icons
-#
-# BR2_PACKAGE_GOOGLE_MATERIAL_DESIGN_ICONS is not set
-# BR2_PACKAGE_HICOLOR_ICON_THEME is not set
-
-#
-# Sounds
-#
-# BR2_PACKAGE_SOUND_THEME_BOREALIS is not set
-# BR2_PACKAGE_SOUND_THEME_FREEDESKTOP is not set
-
-#
-# Themes
-#
-
-#
-# Games
-#
-# BR2_PACKAGE_CHOCOLATE_DOOM is not set
-# BR2_PACKAGE_GNUCHESS is not set
-# BR2_PACKAGE_LBREAKOUT2 is not set
-# BR2_PACKAGE_LTRIS is not set
-
-#
-# minetest needs X11 and an OpenGL provider
-#
-# BR2_PACKAGE_OPENTYRIAN is not set
-# BR2_PACKAGE_PRBOOM is not set
-# BR2_PACKAGE_SL is not set
-# BR2_PACKAGE_SOLARUS is not set
-# BR2_PACKAGE_STELLA is not set
-
-#
-# Graphic libraries and applications (graphic/text)
-#
-
-#
-# Graphic applications
-#
-# BR2_PACKAGE_FSWEBCAM is not set
-# BR2_PACKAGE_GHOSTSCRIPT is not set
-
-#
-# glmark2 needs an OpenGL or an openGL ES and EGL backend provided by mesa3d
-#
-# BR2_PACKAGE_GNUPLOT is not set
-# BR2_PACKAGE_JHEAD is not set
-# BR2_PACKAGE_LIBVA_UTILS is not set
-# BR2_PACKAGE_PNGQUANT is not set
-# BR2_PACKAGE_RRDTOOL is not set
-# BR2_PACKAGE_TESSERACT_OCR is not set
-
-#
-# Graphic libraries
-#
-# BR2_PACKAGE_CEGUI06 is not set
-# BR2_PACKAGE_DIRECTFB is not set
-# BR2_PACKAGE_EFL is not set
-# BR2_PACKAGE_FBDUMP is not set
-# BR2_PACKAGE_FBGRAB is not set
-# BR2_PACKAGE_FBSET is not set
-# BR2_PACKAGE_FB_TEST_APP is not set
-
-#
-# fbterm needs a toolchain w/ C++, wchar, locale
-#
-# BR2_PACKAGE_FBV is not set
-# BR2_PACKAGE_FREERDP is not set
-# BR2_PACKAGE_IMAGEMAGICK is not set
-# BR2_PACKAGE_LINUX_FUSION is not set
-# BR2_PACKAGE_MESA3D is not set
-# BR2_PACKAGE_OCRAD is not set
-# BR2_PACKAGE_PSPLASH is not set
-# BR2_PACKAGE_SDL is not set
-# BR2_PACKAGE_SDL2 is not set
-
-#
-# Other GUIs
-#
-# BR2_PACKAGE_QT is not set
-BR2_PACKAGE_QT5_JSCORE_AVAILABLE=y
-# BR2_PACKAGE_QT5 is not set
-
-#
-# tekui needs a Lua interpreter and a toolchain w/ threads, dynamic library
-#
-
-#
-# weston needs udev and a toolchain w/ locale, threads, dynamic library, headers >= 3.0
-#
-# BR2_PACKAGE_XORG7 is not set
-
-#
-# midori needs libgtk3 and a glibc toolchain w/ C++, gcc >= 5, host gcc >= 4.8
-#
-# BR2_PACKAGE_XKEYBOARD_CONFIG is not set
-
-#
-# Hardware handling
-#
-
-#
-# Firmware
-#
-# BR2_PACKAGE_AM33X_CM3 is not set
-# BR2_PACKAGE_ARMBIAN_FIRMWARE is not set
-# BR2_PACKAGE_B43_FIRMWARE is not set
-# BR2_PACKAGE_LINUX_FIRMWARE is not set
-# BR2_PACKAGE_RPI_BT_FIRMWARE is not set
-# BR2_PACKAGE_RPI_FIRMWARE is not set
-# BR2_PACKAGE_RPI_WIFI_FIRMWARE is not set
-# BR2_PACKAGE_SUNXI_BOARDS is not set
-# BR2_PACKAGE_TS4900_FPGA is not set
-# BR2_PACKAGE_UX500_FIRMWARE is not set
-# BR2_PACKAGE_WILC1000_FIRMWARE is not set
-# BR2_PACKAGE_WILINK_BT_FIRMWARE is not set
-# BR2_PACKAGE_ZD1211_FIRMWARE is not set
-# BR2_PACKAGE_A10DISP is not set
-# BR2_PACKAGE_ACPICA is not set
-# BR2_PACKAGE_ACPITOOL is not set
-# BR2_PACKAGE_AER_INJECT is not set
-# BR2_PACKAGE_AM335X_PRU_PACKAGE is not set
-# BR2_PACKAGE_AVRDUDE is not set
-
-#
-# bcache-tools needs udev /dev management
-#
-# BR2_PACKAGE_BRLTTY is not set
-# BR2_PACKAGE_CBOOTIMAGE is not set
-# BR2_PACKAGE_CC_TOOL is not set
-# BR2_PACKAGE_CDRKIT is not set
-# BR2_PACKAGE_CRYPTSETUP is not set
-# BR2_PACKAGE_CWIID is not set
-# BR2_PACKAGE_DAHDI_LINUX is not set
-# BR2_PACKAGE_DAHDI_TOOLS is not set
-# BR2_PACKAGE_DBUS is not set
-# BR2_PACKAGE_DEVMEM2 is not set
-# BR2_PACKAGE_DFU_UTIL is not set
-# BR2_PACKAGE_DMRAID is not set
-
-#
-# dt-utils needs udev /dev management
-#
-# BR2_PACKAGE_DTV_SCAN_TABLES is not set
-# BR2_PACKAGE_DUMP1090 is not set
-# BR2_PACKAGE_DVB_APPS is not set
-# BR2_PACKAGE_DVBSNOOP is not set
-# BR2_PACKAGE_EDID_DECODE is not set
-
-#
-# eudev needs eudev /dev management
-#
-# BR2_PACKAGE_EVEMU is not set
-# BR2_PACKAGE_EVTEST is not set
-# BR2_PACKAGE_FAN_CTRL is not set
-# BR2_PACKAGE_FCONFIG is not set
-# BR2_PACKAGE_FIS is not set
-# BR2_PACKAGE_FMTOOLS is not set
-# BR2_PACKAGE_FREESCALE_IMX is not set
-# BR2_PACKAGE_FXLOAD is not set
-# BR2_PACKAGE_GADGETFS_TEST is not set
-# BR2_PACKAGE_GPM is not set
-# BR2_PACKAGE_GPSD is not set
-# BR2_PACKAGE_GPTFDISK is not set
-# BR2_PACKAGE_GVFS is not set
-# BR2_PACKAGE_HDPARM is not set
-# BR2_PACKAGE_HWDATA is not set
-# BR2_PACKAGE_HWLOC is not set
-# BR2_PACKAGE_I2C_TOOLS is not set
-# BR2_PACKAGE_INPUT_EVENT_DAEMON is not set
-# BR2_PACKAGE_IOSTAT is not set
-# BR2_PACKAGE_IPMITOOL is not set
-# BR2_PACKAGE_IQVLINUX is not set
-# BR2_PACKAGE_IRDA_UTILS is not set
-# BR2_PACKAGE_KBD is not set
-# BR2_PACKAGE_LCDPROC is not set
-# BR2_PACKAGE_LIBUIO is not set
-
-#
-# libump needs a glibc toolchain
-#
-# BR2_PACKAGE_LINUXCONSOLETOOLS is not set
-# BR2_PACKAGE_LINUX_BACKPORTS is not set
-# BR2_PACKAGE_LIRC_TOOLS is not set
-# BR2_PACKAGE_LM_SENSORS is not set
-# BR2_PACKAGE_LSHW is not set
-# BR2_PACKAGE_LSSCSI is not set
-# BR2_PACKAGE_LSUIO is not set
-# BR2_PACKAGE_LUKSMETA is not set
-# BR2_PACKAGE_LVM2 is not set
-
-#
-# mali-t76x needs a glibc toolchain with armhf enabled
-#
-# BR2_PACKAGE_MDADM is not set
-# BR2_PACKAGE_MEMTESTER is not set
-# BR2_PACKAGE_MEMTOOL is not set
-# BR2_PACKAGE_MINICOM is not set
-# BR2_PACKAGE_NANOCOM is not set
-# BR2_PACKAGE_NEARD is not set
-
-#
-# nvidia-tegra23 needs Xorg <= 1.14 and a glibc toolchain w/ EABIhf
-#
-# BR2_PACKAGE_NVME is not set
-# BR2_PACKAGE_ODROID_SCRIPTS is not set
-# BR2_PACKAGE_OFONO is not set
-# BR2_PACKAGE_OPEN2300 is not set
-# BR2_PACKAGE_OPENIPMI is not set
-# BR2_PACKAGE_OPENOCD is not set
-
-#
-# owl-linux is only supported on ARM9 architecture
-#
-# BR2_PACKAGE_PARTED is not set
-# BR2_PACKAGE_PCIUTILS is not set
-# BR2_PACKAGE_PDBG is not set
-# BR2_PACKAGE_PICOCOM is not set
-# BR2_PACKAGE_PIFMRDS is not set
-# BR2_PACKAGE_POWERTOP is not set
-# BR2_PACKAGE_PPS_TOOLS is not set
-# BR2_PACKAGE_PRU_SOFTWARE_SUPPORT is not set
-# BR2_PACKAGE_READ_EDID is not set
-# BR2_PACKAGE_RNG_TOOLS is not set
-# BR2_PACKAGE_RPI_USERLAND is not set
-# BR2_PACKAGE_RS485CONF is not set
-# BR2_PACKAGE_RTL8188EU is not set
-# BR2_PACKAGE_RTL8723BS is not set
-# BR2_PACKAGE_RTL8723BU is not set
-# BR2_PACKAGE_RTL8821AU is not set
-# BR2_PACKAGE_RTL8189FS is not set
-# BR2_PACKAGE_SANE_BACKENDS is not set
-# BR2_PACKAGE_SDPARM is not set
-# BR2_PACKAGE_SETSERIAL is not set
-# BR2_PACKAGE_SG3_UTILS is not set
-# BR2_PACKAGE_SIGROK_CLI is not set
-# BR2_PACKAGE_SISPMCTL is not set
-# BR2_PACKAGE_SMARTMONTOOLS is not set
-# BR2_PACKAGE_SMSTOOLS3 is not set
-BR2_PACKAGE_SPI_TOOLS=y
-# BR2_PACKAGE_SREDIRD is not set
-# BR2_PACKAGE_STATSERIAL is not set
-# BR2_PACKAGE_STM32FLASH is not set
-
-#
-# sunxi-cedarx needs a glibc toolchain
-#
-
-#
-# sunxi-mali needs an EABIhf glibc toolchain
-#
-# BR2_PACKAGE_SYSSTAT is not set
-# BR2_PACKAGE_TARGETCLI_FB is not set
-
-#
-# ti-gfx needs a glibc toolchain and a Linux kernel to be built
-#
-# BR2_PACKAGE_TI_SGX_KM is not set
-
-#
-# ti-sgx-um needs the ti-sgx-km driver
-#
-
-#
-# ti-sgx-um needs a glibc toolchain w/ threads
-#
-# BR2_PACKAGE_TI_UIM is not set
-# BR2_PACKAGE_TI_UTILS is not set
-# BR2_PACKAGE_TRIGGERHAPPY is not set
-# BR2_PACKAGE_UBOOT_TOOLS is not set
-# BR2_PACKAGE_UBUS is not set
-# BR2_PACKAGE_UCCP420WLAN is not set
-
-#
-# udisks needs udev /dev management
-#
-# BR2_PACKAGE_UHUBCTL is not set
-
-#
-# upower needs udev /dev management
-#
-# BR2_PACKAGE_USB_MODESWITCH is not set
-# BR2_PACKAGE_USB_MODESWITCH_DATA is not set
-
-#
-# usbmount requires udev to be enabled
-#
-
-#
-# usbutils needs udev /dev management and toolchain w/ threads
-#
-# BR2_PACKAGE_W_SCAN is not set
-
-#
-# wf111 needs a glibc toolchain
-#
-# BR2_PACKAGE_WIPE is not set
-# BR2_PACKAGE_XORRISO is not set
-# BR2_PACKAGE_XR819_XRADIO is not set
-
-#
-# Interpreter languages and scripting
-#
-# BR2_PACKAGE_4TH is not set
-# BR2_PACKAGE_ENSCRIPT is not set
-BR2_PACKAGE_HOST_ERLANG_ARCH_SUPPORTS=y
-BR2_PACKAGE_ERLANG_ARCH_SUPPORTS=y
-# BR2_PACKAGE_ERLANG is not set
-# BR2_PACKAGE_EXECLINE is not set
-# BR2_PACKAGE_FICL is not set
-BR2_PACKAGE_GAUCHE_ARCH_SUPPORTS=y
-# BR2_PACKAGE_GAUCHE is not set
-# BR2_PACKAGE_GUILE is not set
-# BR2_PACKAGE_HASERL is not set
-# BR2_PACKAGE_JAMVM is not set
-# BR2_PACKAGE_JIMTCL is not set
-# BR2_PACKAGE_LUA is not set
-BR2_PACKAGE_LUAJIT_ARCH_SUPPORTS=y
-# BR2_PACKAGE_LUAJIT is not set
-# BR2_PACKAGE_MICROPYTHON is not set
-# BR2_PACKAGE_MOARVM is not set
-BR2_PACKAGE_HOST_MONO_ARCH_SUPPORTS=y
-BR2_PACKAGE_MONO_ARCH_SUPPORTS=y
-# BR2_PACKAGE_MONO is not set
-# BR2_PACKAGE_PERL is not set
-# BR2_PACKAGE_PHP is not set
-BR2_PACKAGE_PYTHON=y
-# BR2_PACKAGE_PYTHON_PY_ONLY is not set
-BR2_PACKAGE_PYTHON_PYC_ONLY=y
-# BR2_PACKAGE_PYTHON_PY_PYC is not set
-
-#
-# core python modules
-#
-
-#
-# The following modules are unusual or require extra libraries
-#
-# BR2_PACKAGE_PYTHON_BZIP2 is not set
-# BR2_PACKAGE_PYTHON_BSDDB is not set
-# BR2_PACKAGE_PYTHON_CODECSCJK is not set
-# BR2_PACKAGE_PYTHON_CURSES is not set
-# BR2_PACKAGE_PYTHON_OSSAUDIODEV is not set
-# BR2_PACKAGE_PYTHON_READLINE is not set
-# BR2_PACKAGE_PYTHON_SSL is not set
-BR2_PACKAGE_PYTHON_UNICODEDATA=y
-BR2_PACKAGE_PYTHON_UCS2=y
-# BR2_PACKAGE_PYTHON_UCS4 is not set
-# BR2_PACKAGE_PYTHON_SQLITE is not set
-# BR2_PACKAGE_PYTHON_PYEXPAT is not set
-# BR2_PACKAGE_PYTHON_ZLIB is not set
-# BR2_PACKAGE_PYTHON_HASHLIB is not set
-
-#
-# External python modules
-#
-# BR2_PACKAGE_PYTHON_ALSAAUDIO is not set
-# BR2_PACKAGE_PYTHON_ARGH is not set
-# BR2_PACKAGE_PYTHON_ARROW is not set
-# BR2_PACKAGE_PYTHON_ASN1CRYPTO is not set
-# BR2_PACKAGE_PYTHON_ATTRS is not set
-# BR2_PACKAGE_PYTHON_AUTOBAHN is not set
-# BR2_PACKAGE_PYTHON_AUTOMAT is not set
-# BR2_PACKAGE_PYTHON_BABEL is not set
-# BR2_PACKAGE_PYTHON_BACKPORTS_ABC is not set
-# BR2_PACKAGE_PYTHON_BACKPORTS_SHUTIL_GET_TERMINAL_SIZE is not set
-# BR2_PACKAGE_PYTHON_BCRYPT is not set
-# BR2_PACKAGE_PYTHON_BEAUTIFULSOUP4 is not set
-# BR2_PACKAGE_PYTHON_BITSTRING is not set
-# BR2_PACKAGE_PYTHON_BOTTLE is not set
-# BR2_PACKAGE_PYTHON_CAN is not set
-# BR2_PACKAGE_PYTHON_CBOR is not set
-# BR2_PACKAGE_PYTHON_CERTIFI is not set
-# BR2_PACKAGE_PYTHON_CFFI is not set
-# BR2_PACKAGE_PYTHON_CHARACTERISTIC is not set
-# BR2_PACKAGE_PYTHON_CHARDET is not set
-BR2_PACKAGE_PYTHON_CHEETAH=y
-# BR2_PACKAGE_PYTHON_CHEROOT is not set
-# BR2_PACKAGE_PYTHON_CHERRYPY is not set
-# BR2_PACKAGE_PYTHON_CLICK is not set
-# BR2_PACKAGE_PYTHON_COHERENCE is not set
-# BR2_PACKAGE_PYTHON_CONFIGOBJ is not set
-# BR2_PACKAGE_PYTHON_CONFIGSHELL_FB is not set
-# BR2_PACKAGE_PYTHON_CONSTANTLY is not set
-# BR2_PACKAGE_PYTHON_COUCHDB is not set
-# BR2_PACKAGE_PYTHON_CRC16 is not set
-# BR2_PACKAGE_PYTHON_CRCMOD is not set
-# BR2_PACKAGE_PYTHON_CROSSBAR is not set
-# BR2_PACKAGE_PYTHON_CRYPTOGRAPHY is not set
-# BR2_PACKAGE_PYTHON_CSSSELECT is not set
-# BR2_PACKAGE_PYTHON_CSSUTILS is not set
-# BR2_PACKAGE_PYTHON_DAEMON is not set
-# BR2_PACKAGE_PYTHON_DATAPROPERTY is not set
-# BR2_PACKAGE_PYTHON_DATEUTIL is not set
-# BR2_PACKAGE_PYTHON_DECORATOR is not set
-# BR2_PACKAGE_PYTHON_DIALOG is not set
-# BR2_PACKAGE_PYTHON_DICTTOXML is not set
-# BR2_PACKAGE_PYTHON_DJANGO is not set
-# BR2_PACKAGE_PYTHON_DOCOPT is not set
-# BR2_PACKAGE_PYTHON_DOCUTILS is not set
-# BR2_PACKAGE_PYTHON_DOMINATE is not set
-# BR2_PACKAGE_PYTHON_DPKT is not set
-# BR2_PACKAGE_PYTHON_ECDSA is not set
-# BR2_PACKAGE_PYTHON_ENGINEIO is not set
-# BR2_PACKAGE_PYTHON_ENUM is not set
-# BR2_PACKAGE_PYTHON_ENUM34 is not set
-# BR2_PACKAGE_PYTHON_FLASK is not set
-# BR2_PACKAGE_PYTHON_FLASK_CORS is not set
-# BR2_PACKAGE_PYTHON_FLASK_BABEL is not set
-# BR2_PACKAGE_PYTHON_FLASK_JSONRPC is not set
-# BR2_PACKAGE_PYTHON_FLASK_LOGIN is not set
-# BR2_PACKAGE_PYTHON_FLUP is not set
-# BR2_PACKAGE_PYTHON_FUNCTOOLS32 is not set
-# BR2_PACKAGE_PYTHON_FUTURES is not set
-# BR2_PACKAGE_PYTHON_GOBJECT is not set
-# BR2_PACKAGE_PYTHON_GUNICORN is not set
-# BR2_PACKAGE_PYTHON_H2 is not set
-# BR2_PACKAGE_PYTHON_HPACK is not set
-# BR2_PACKAGE_PYTHON_HTML5LIB is not set
-# BR2_PACKAGE_PYTHON_HTTPLIB2 is not set
-# BR2_PACKAGE_PYTHON_HUMANIZE is not set
-# BR2_PACKAGE_PYTHON_HYPERFRAME is not set
-# BR2_PACKAGE_PYTHON_HYPERLINK is not set
-# BR2_PACKAGE_PYTHON_IBMIOTF is not set
-# BR2_PACKAGE_PYTHON_ID3 is not set
-# BR2_PACKAGE_PYTHON_IDNA is not set
-# BR2_PACKAGE_PYTHON_INCREMENTAL is not set
-# BR2_PACKAGE_PYTHON_INIPARSE is not set
-# BR2_PACKAGE_PYTHON_IOWAIT is not set
-# BR2_PACKAGE_PYTHON_IPADDR is not set
-# BR2_PACKAGE_PYTHON_IPADDRESS is not set
-# BR2_PACKAGE_PYTHON_IPY is not set
-# BR2_PACKAGE_PYTHON_IPYTHON is not set
-# BR2_PACKAGE_PYTHON_IPYTHON_GENUTILS is not set
-# BR2_PACKAGE_PYTHON_ISO8601 is not set
-# BR2_PACKAGE_PYTHON_ITSDANGEROUS is not set
-# BR2_PACKAGE_PYTHON_JARACO_CLASSES is not set
-# BR2_PACKAGE_PYTHON_JINJA2 is not set
-# BR2_PACKAGE_PYTHON_JSONSCHEMA is not set
-# BR2_PACKAGE_PYTHON_JSON_SCHEMA_VALIDATOR is not set
-# BR2_PACKAGE_PYTHON_KEYRING is not set
-# BR2_PACKAGE_PYTHON_LIBCONFIG is not set
-# BR2_PACKAGE_PYTHON_LMDB is not set
-# BR2_PACKAGE_PYTHON_LOGBOOK is not set
-# BR2_PACKAGE_PYTHON_LXML is not set
-# BR2_PACKAGE_PYTHON_M2R is not set
-# BR2_PACKAGE_PYTHON_MAD is not set
-# BR2_PACKAGE_PYTHON_MAKO is not set
-# BR2_PACKAGE_PYTHON_MARKDOWN is not set
-# BR2_PACKAGE_PYTHON_MARKDOWN2 is not set
-# BR2_PACKAGE_PYTHON_MARKUPSAFE is not set
-# BR2_PACKAGE_PYTHON_MBSTRDECODER is not set
-# BR2_PACKAGE_PYTHON_MELD3 is not set
-# BR2_PACKAGE_PYTHON_MISTUNE is not set
-# BR2_PACKAGE_PYTHON_MORE_ITERTOOLS is not set
-# BR2_PACKAGE_PYTHON_MSGPACK is not set
-# BR2_PACKAGE_PYTHON_MUTAGEN is not set
-# BR2_PACKAGE_PYTHON_MWCLIENT is not set
-# BR2_PACKAGE_PYTHON_MWSCRAPE is not set
-# BR2_PACKAGE_PYTHON_NETADDR is not set
-# BR2_PACKAGE_PYTHON_NETIFACES is not set
-# BR2_PACKAGE_PYTHON_NFC is not set
-BR2_PACKAGE_PYTHON_NUMPY_ARCH_SUPPORTS=y
-BR2_PACKAGE_PYTHON_NUMPY=y
-# BR2_PACKAGE_PYTHON_OAUTHLIB is not set
-# BR2_PACKAGE_PYTHON_PAHO_MQTT is not set
-
-#
-# python-pam needs a uClibc or glibc toolchain w/ wchar, locale, dynamic library
-#
-# BR2_PACKAGE_PYTHON_PARAMIKO is not set
-# BR2_PACKAGE_PYTHON_PATHLIB2 is not set
-# BR2_PACKAGE_PYTHON_PATHPY is not set
-# BR2_PACKAGE_PYTHON_PATHTOOLS is not set
-# BR2_PACKAGE_PYTHON_PATHVALIDATE is not set
-# BR2_PACKAGE_PYTHON_PEXPECT is not set
-# BR2_PACKAGE_PYTHON_PICKLESHARE is not set
-# BR2_PACKAGE_PYTHON_PILLOW is not set
-# BR2_PACKAGE_PYTHON_PORTEND is not set
-# BR2_PACKAGE_PYTHON_POSIX_IPC is not set
-# BR2_PACKAGE_PYTHON_PRIORITY is not set
-# BR2_PACKAGE_PYTHON_PROMPT_TOOLKIT is not set
-# BR2_PACKAGE_PYTHON_PROTOBUF is not set
-# BR2_PACKAGE_PYTHON_PSUTIL is not set
-# BR2_PACKAGE_PYTHON_PTYPROCESS is not set
-# BR2_PACKAGE_PYTHON_PUDB is not set
-# BR2_PACKAGE_PYTHON_PYASN is not set
-# BR2_PACKAGE_PYTHON_PYASN_MODULES is not set
-# BR2_PACKAGE_PYTHON_PYCLI is not set
-# BR2_PACKAGE_PYTHON_PYCPARSER is not set
-# BR2_PACKAGE_PYTHON_PYCRYPTO is not set
-# BR2_PACKAGE_PYTHON_PYDAL is not set
-# BR2_PACKAGE_PYTHON_PYELFTOOLS is not set
-# BR2_PACKAGE_PYTHON_PYFTPDLIB is not set
-# BR2_PACKAGE_PYTHON_PYGAME is not set
-# BR2_PACKAGE_PYTHON_PYGMENTS is not set
-# BR2_PACKAGE_PYTHON_PYICU is not set
-# BR2_PACKAGE_PYTHON_PYINOTIFY is not set
-# BR2_PACKAGE_PYTHON_PYLIBFTDI is not set
-# BR2_PACKAGE_PYTHON_PYLRU is not set
-# BR2_PACKAGE_PYTHON_PYMYSQL is not set
-# BR2_PACKAGE_PYTHON_PYNACL is not set
-# BR2_PACKAGE_PYTHON_PYOPENSSL is not set
-# BR2_PACKAGE_PYTHON_PYPARSING is not set
-# BR2_PACKAGE_PYTHON_PYPARTED is not set
-# BR2_PACKAGE_PYTHON_PYPCAP is not set
-# BR2_PACKAGE_PYTHON_PYQRCODE is not set
-
-#
-# python-pyqt needs Qt4
-#
-
-#
-# python-pyqt5 needs Qt5
-#
-# BR2_PACKAGE_PYTHON_PYRATEMP is not set
-# BR2_PACKAGE_PYTHON_PYRO is not set
-# BR2_PACKAGE_PYTHON_PYROUTE2 is not set
-# BR2_PACKAGE_PYTHON_PYSENDFILE is not set
-# BR2_PACKAGE_PYTHON_PYSMB is not set
-# BR2_PACKAGE_PYTHON_PYSNMP is not set
-# BR2_PACKAGE_PYTHON_PYSNMP_APPS is not set
-# BR2_PACKAGE_PYTHON_PYSNMP_MIBS is not set
-# BR2_PACKAGE_PYTHON_PYSOCKS is not set
-# BR2_PACKAGE_PYTHON_PYTABLEREADER is not set
-# BR2_PACKAGE_PYTHON_PYTABLEWRITER is not set
-# BR2_PACKAGE_PYTHON_PYTRIE is not set
-# BR2_PACKAGE_PYTHON_PYTZ is not set
-
-#
-# python-pyudev needs udev /dev management
-#
-# BR2_PACKAGE_PYTHON_PYUSB is not set
-# BR2_PACKAGE_PYTHON_PYXB is not set
-# BR2_PACKAGE_PYTHON_PYYAML is not set
-BR2_PACKAGE_PYTHON_PYZMQ=y
-# BR2_PACKAGE_PYTHON_RAVEN is not set
-# BR2_PACKAGE_PYTHON_REMI is not set
-# BR2_PACKAGE_PYTHON_REQUESTS is not set
-# BR2_PACKAGE_PYTHON_REQUESTS_OAUTHLIB is not set
-# BR2_PACKAGE_PYTHON_REQUESTS_TOOLBELT is not set
-# BR2_PACKAGE_PYTHON_RPI_GPIO is not set
-# BR2_PACKAGE_PYTHON_RTSLIB_FB is not set
-# BR2_PACKAGE_PYTHON_SCANDIR is not set
-# BR2_PACKAGE_PYTHON_SCHEDULE is not set
-# BR2_PACKAGE_PYTHON_SDNOTIFY is not set
-# BR2_PACKAGE_PYTHON_SECRETSTORAGE is not set
-# BR2_PACKAGE_PYTHON_SEE is not set
-BR2_PACKAGE_PYTHON_SERIAL=y
-# BR2_PACKAGE_PYTHON_SERVICE_IDENTITY is not set
-# BR2_PACKAGE_PYTHON_SETPROCTITLE is not set
-# BR2_PACKAGE_PYTHON_SETUPTOOLS is not set
-# BR2_PACKAGE_PYTHON_SH is not set
-# BR2_PACKAGE_PYTHON_SHUTILWHICH is not set
-# BR2_PACKAGE_PYTHON_SIMPLEGENERIC is not set
-# BR2_PACKAGE_PYTHON_SIMPLEJSON is not set
-# BR2_PACKAGE_PYTHON_SIMPLESQLITE is not set
-# BR2_PACKAGE_PYTHON_SINGLEDISPATCH is not set
-
-#
-# python-sip needs qt or qt5
-#
-# BR2_PACKAGE_PYTHON_SIX is not set
-# BR2_PACKAGE_PYTHON_SMBUS_CFFI is not set
-# BR2_PACKAGE_PYTHON_SOCKETIO is not set
-# BR2_PACKAGE_PYTHON_SORTEDCONTAINERS is not set
-# BR2_PACKAGE_PYTHON_SPIDEV is not set
-
-#
-# python-systemd needs systemd
-#
-# BR2_PACKAGE_PYTHON_TABLEDATA is not set
-# BR2_PACKAGE_PYTHON_TEMPORA is not set
-# BR2_PACKAGE_PYTHON_TYPEPY is not set
-# BR2_PACKAGE_PYTHON_THRIFT is not set
-# BR2_PACKAGE_PYTHON_TOMAKO is not set
-# BR2_PACKAGE_PYTHON_TOML is not set
-# BR2_PACKAGE_PYTHON_TORNADO is not set
-# BR2_PACKAGE_PYTHON_TRAITLETS is not set
-# BR2_PACKAGE_PYTHON_TREQ is not set
-# BR2_PACKAGE_PYTHON_TWISTED is not set
-# BR2_PACKAGE_PYTHON_TXAIO is not set
-# BR2_PACKAGE_PYTHON_TXTORCON is not set
-# BR2_PACKAGE_PYTHON_U_MSGPACK is not set
-# BR2_PACKAGE_PYTHON_UBJSON is not set
-# BR2_PACKAGE_PYTHON_UJSON is not set
-# BR2_PACKAGE_PYTHON_URLLIB3 is not set
-# BR2_PACKAGE_PYTHON_URWID is not set
-# BR2_PACKAGE_PYTHON_VERSIONTOOLS is not set
-# BR2_PACKAGE_PYTHON_WATCHDOG is not set
-# BR2_PACKAGE_PYTHON_WCWIDTH is not set
-# BR2_PACKAGE_PYTHON_WEB2PY is not set
-# BR2_PACKAGE_PYTHON_WEBPY is not set
-# BR2_PACKAGE_PYTHON_WERKZEUG is not set
-# BR2_PACKAGE_PYTHON_WHOOSH is not set
-# BR2_PACKAGE_PYTHON_WS4PY is not set
-# BR2_PACKAGE_PYTHON_WSACCEL is not set
-# BR2_PACKAGE_PYTHON_XLIB is not set
-# BR2_PACKAGE_PYTHON_XLRD is not set
-# BR2_PACKAGE_PYTHON_XLSXWRITER is not set
-# BR2_PACKAGE_PYTHON_XLUTILS is not set
-# BR2_PACKAGE_PYTHON_XLWT is not set
-# BR2_PACKAGE_PYTHON_XMLTODICT is not set
-# BR2_PACKAGE_PYTHON_ZOPE_INTERFACE is not set
-BR2_PACKAGE_RUBY=y
-BR2_PACKAGE_TCL=y
-BR2_PACKAGE_TCL_DEL_ENCODINGS=y
-BR2_PACKAGE_TCL_SHLIB_ONLY=y
-
-#
-# Tcl libraries/modules
-#
-# BR2_PACKAGE_EXPECT is not set
-# BR2_PACKAGE_TCLLIB is not set
-
-#
-# Libraries
-#
-
-#
-# Audio/Sound
-#
-# BR2_PACKAGE_ALSA_LIB is not set
-# BR2_PACKAGE_AUBIO is not set
-# BR2_PACKAGE_AUDIOFILE is not set
-# BR2_PACKAGE_BCG729 is not set
-# BR2_PACKAGE_CELT051 is not set
-BR2_PACKAGE_FDK_AAC_ARCH_SUPPORTS=y
-# BR2_PACKAGE_FDK_AAC is not set
-# BR2_PACKAGE_LIBAO is not set
-# BR2_PACKAGE_LIBASPLIB is not set
-# BR2_PACKAGE_LIBBROADVOICE is not set
-# BR2_PACKAGE_LIBCDAUDIO is not set
-# BR2_PACKAGE_LIBCDDB is not set
-# BR2_PACKAGE_LIBCDIO is not set
-# BR2_PACKAGE_LIBCODEC2 is not set
-# BR2_PACKAGE_LIBCUE is not set
-# BR2_PACKAGE_LIBCUEFILE is not set
-# BR2_PACKAGE_LIBEBUR128 is not set
-# BR2_PACKAGE_LIBG7221 is not set
-# BR2_PACKAGE_LIBGSM is not set
-# BR2_PACKAGE_LIBID3TAG is not set
-# BR2_PACKAGE_LIBILBC is not set
-# BR2_PACKAGE_LIBLO is not set
-# BR2_PACKAGE_LIBMAD is not set
-# BR2_PACKAGE_LIBMODPLUG is not set
-# BR2_PACKAGE_LIBMPD is not set
-# BR2_PACKAGE_LIBMPDCLIENT is not set
-# BR2_PACKAGE_LIBREPLAYGAIN is not set
-# BR2_PACKAGE_LIBSAMPLERATE is not set
-# BR2_PACKAGE_LIBSIDPLAY2 is not set
-# BR2_PACKAGE_LIBSILK is not set
-# BR2_PACKAGE_LIBSNDFILE is not set
-# BR2_PACKAGE_LIBSOUNDTOUCH is not set
-# BR2_PACKAGE_LIBSOXR is not set
-# BR2_PACKAGE_LIBVORBIS is not set
-# BR2_PACKAGE_MP4V2 is not set
-BR2_PACKAGE_OPENAL_ARCH_SUPPORTS=y
-# BR2_PACKAGE_OPENAL is not set
-# BR2_PACKAGE_OPENCORE_AMR is not set
-# BR2_PACKAGE_OPUS is not set
-# BR2_PACKAGE_OPUSFILE is not set
-# BR2_PACKAGE_PORTAUDIO is not set
-# BR2_PACKAGE_SBC is not set
-# BR2_PACKAGE_SPEEX is not set
-# BR2_PACKAGE_TAGLIB is not set
-# BR2_PACKAGE_TINYALSA is not set
-# BR2_PACKAGE_TREMOR is not set
-# BR2_PACKAGE_VO_AACENC is not set
-BR2_PACKAGE_WEBRTC_AUDIO_PROCESSING_ARCH_SUPPORTS=y
-# BR2_PACKAGE_WEBRTC_AUDIO_PROCESSING is not set
-
-#
-# Compression and decompression
-#
-BR2_PACKAGE_LIBARCHIVE=y
-# BR2_PACKAGE_LIBARCHIVE_BSDTAR is not set
-# BR2_PACKAGE_LIBARCHIVE_BSDCPIO is not set
-# BR2_PACKAGE_LIBARCHIVE_BSDCAT is not set
-# BR2_PACKAGE_LIBSQUISH is not set
-BR2_PACKAGE_LIBZIP=y
-# BR2_PACKAGE_LZO is not set
-# BR2_PACKAGE_MINIZIP is not set
-# BR2_PACKAGE_SNAPPY is not set
-# BR2_PACKAGE_SZIP is not set
-BR2_PACKAGE_ZLIB_NG_ARCH_SUPPORTS=y
-BR2_PACKAGE_ZLIB=y
-BR2_PACKAGE_LIBZLIB=y
-# BR2_PACKAGE_ZLIB_NG is not set
-BR2_PACKAGE_HAS_ZLIB=y
-BR2_PACKAGE_PROVIDES_ZLIB="libzlib"
-BR2_PACKAGE_PROVIDES_HOST_ZLIB="host-libzlib"
-
-#
-# Crypto
-#
-# BR2_PACKAGE_BEECRYPT is not set
-BR2_PACKAGE_BOTAN_ARCH_SUPPORTS=y
-# BR2_PACKAGE_BOTAN is not set
-# BR2_PACKAGE_CA_CERTIFICATES is not set
-# BR2_PACKAGE_CRYPTODEV is not set
-# BR2_PACKAGE_GCR is not set
-# BR2_PACKAGE_GNUTLS is not set
-# BR2_PACKAGE_LIBASSUAN is not set
-# BR2_PACKAGE_LIBGCRYPT is not set
-BR2_PACKAGE_LIBGPG_ERROR_ARCH_SUPPORTS=y
-# BR2_PACKAGE_LIBGPG_ERROR is not set
-BR2_PACKAGE_LIBGPG_ERROR_SYSCFG="arm-unknown-linux-gnueabi"
-# BR2_PACKAGE_LIBGPGME is not set
-# BR2_PACKAGE_LIBKCAPI is not set
-# BR2_PACKAGE_LIBKSBA is not set
-# BR2_PACKAGE_LIBMCRYPT is not set
-# BR2_PACKAGE_LIBMHASH is not set
-# BR2_PACKAGE_LIBNSS is not set
-# BR2_PACKAGE_LIBSCRYPT is not set
-# BR2_PACKAGE_LIBSECRET is not set
-# BR2_PACKAGE_LIBSHA1 is not set
-# BR2_PACKAGE_LIBSODIUM is not set
-# BR2_PACKAGE_LIBSSH is not set
-# BR2_PACKAGE_LIBSSH2 is not set
-# BR2_PACKAGE_LIBTOMCRYPT is not set
-# BR2_PACKAGE_LIBUECC is not set
-# BR2_PACKAGE_MBEDTLS is not set
-# BR2_PACKAGE_NETTLE is not set
-BR2_PACKAGE_OPENSSL=y
-BR2_PACKAGE_LIBOPENSSL=y
-# BR2_PACKAGE_LIBOPENSSL_BIN is not set
-# BR2_PACKAGE_LIBOPENSSL_ENGINES is not set
-# BR2_PACKAGE_LIBRESSL is not set
-BR2_PACKAGE_HAS_OPENSSL=y
-BR2_PACKAGE_PROVIDES_OPENSSL="libopenssl"
-BR2_PACKAGE_PROVIDES_HOST_OPENSSL="host-libopenssl"
-BR2_PACKAGE_RHASH=y
-# BR2_PACKAGE_RHASH_BIN is not set
-# BR2_PACKAGE_TINYDTLS is not set
-# BR2_PACKAGE_TROUSERS is not set
-# BR2_PACKAGE_USTREAM_SSL is not set
-# BR2_PACKAGE_WOLFSSL is not set
-
-#
-# Database
-#
-# BR2_PACKAGE_BERKELEYDB is not set
-# BR2_PACKAGE_GDBM is not set
-# BR2_PACKAGE_HIREDIS is not set
-# BR2_PACKAGE_KOMPEXSQLITE is not set
-# BR2_PACKAGE_LEVELDB is not set
-BR2_PACKAGE_MONGODB_ARCH_SUPPORTS=y
-
-#
-# mongodb needs a glibc toolchain w/ wchar, threads, C++, gcc >= 4.8
-#
-# BR2_PACKAGE_MYSQL is not set
-# BR2_PACKAGE_POSTGRESQL is not set
-# BR2_PACKAGE_REDIS is not set
-# BR2_PACKAGE_SQLCIPHER is not set
-# BR2_PACKAGE_SQLITE is not set
-# BR2_PACKAGE_UNIXODBC is not set
-
-#
-# Filesystem
-#
-# BR2_PACKAGE_GAMIN is not set
-# BR2_PACKAGE_LIBCONFIG is not set
-# BR2_PACKAGE_LIBCONFUSE is not set
-# BR2_PACKAGE_LIBFUSE is not set
-# BR2_PACKAGE_LIBLOCKFILE is not set
-# BR2_PACKAGE_LIBNFS is not set
-# BR2_PACKAGE_LIBSYSFS is not set
-# BR2_PACKAGE_LOCKDEV is not set
-# BR2_PACKAGE_PHYSFS is not set
-
-#
-# Graphics
-#
-# BR2_PACKAGE_ASSIMP is not set
-# BR2_PACKAGE_ATK is not set
-# BR2_PACKAGE_ATKMM is not set
-# BR2_PACKAGE_BULLET is not set
-# BR2_PACKAGE_CAIRO is not set
-# BR2_PACKAGE_CAIROMM is not set
-# BR2_PACKAGE_EXIV2 is not set
-# BR2_PACKAGE_FONTCONFIG is not set
-# BR2_PACKAGE_FREETYPE is not set
-# BR2_PACKAGE_GD is not set
-# BR2_PACKAGE_GDK_PIXBUF is not set
-# BR2_PACKAGE_GIFLIB is not set
-
-#
-# granite needs libgtk3 and a toolchain w/ wchar, threads
-#
-# BR2_PACKAGE_GRAPHITE2 is not set
-
-#
-# gtkmm3 needs libgtk3 and a toolchain w/ C++, wchar, threads, gcc >= 4.9
-#
-# BR2_PACKAGE_HARFBUZZ is not set
-# BR2_PACKAGE_IJS is not set
-# BR2_PACKAGE_IMLIB2 is not set
-
-#
-# irrlicht needs X11 and an OpenGL provider
-#
-# BR2_PACKAGE_JASPER is not set
-# BR2_PACKAGE_JPEG is not set
-BR2_PACKAGE_JPEG_SIMD_SUPPORT=y
-# BR2_PACKAGE_KMSXX is not set
-# BR2_PACKAGE_LCMS2 is not set
-# BR2_PACKAGE_LENSFUN is not set
-# BR2_PACKAGE_LEPTONICA is not set
-# BR2_PACKAGE_LIBART is not set
-# BR2_PACKAGE_LIBDMTX is not set
-# BR2_PACKAGE_LIBDRM is not set
-
-#
-# libepoxy needs an OpenGL and/or OpenGL EGL backend
-#
-# BR2_PACKAGE_LIBEXIF is not set
-
-#
-# libfm needs X.org and a toolchain w/ wchar, threads, C++
-#
-# BR2_PACKAGE_LIBFM_EXTRA is not set
-
-#
-# libfreeglut depends on X.org and needs an OpenGL backend
-#
-# BR2_PACKAGE_LIBFREEIMAGE is not set
-# BR2_PACKAGE_LIBGEOTIFF is not set
-
-#
-# libglew depends on X.org and needs an OpenGL backend
-#
-
-#
-# libglfw depends on X.org and needs an OpenGL backend
-#
-
-#
-# libglu needs an OpenGL backend
-#
-# BR2_PACKAGE_LIBGTA is not set
-
-#
-# libgtk3 needs an OpenGL or an OpenGL-EGL/wayland backend
-#
-# BR2_PACKAGE_LIBMEDIAART is not set
-# BR2_PACKAGE_LIBMNG is not set
-# BR2_PACKAGE_LIBPNG is not set
-# BR2_PACKAGE_LIBQRENCODE is not set
-# BR2_PACKAGE_LIBRAW is not set
-# BR2_PACKAGE_LIBRSVG is not set
-
-#
-# libsoil needs an OpenGL backend and a toolchain w/ dynamic library
-#
-# BR2_PACKAGE_LIBSVG is not set
-# BR2_PACKAGE_LIBSVG_CAIRO is not set
-# BR2_PACKAGE_LIBSVGTINY is not set
-# BR2_PACKAGE_LIBVA is not set
-# BR2_PACKAGE_LIBVIPS is not set
-# BR2_PACKAGE_MENU_CACHE is not set
-# BR2_PACKAGE_OPENCV is not set
-# BR2_PACKAGE_OPENCV3 is not set
-# BR2_PACKAGE_OPENJPEG is not set
-# BR2_PACKAGE_PANGO is not set
-# BR2_PACKAGE_PANGOMM is not set
-# BR2_PACKAGE_PIXMAN is not set
-# BR2_PACKAGE_POPPLER is not set
-# BR2_PACKAGE_TIFF is not set
-# BR2_PACKAGE_WAYLAND is not set
-BR2_PACKAGE_WEBKITGTK_ARCH_SUPPORTS=y
-
-#
-# webkitgtk needs libgtk3 and a glibc toolchain w/ C++, gcc >= 5, host gcc >= 4.8
-#
-# BR2_PACKAGE_WEBP is not set
-# BR2_PACKAGE_ZBAR is not set
-# BR2_PACKAGE_ZXING_CPP is not set
-
-#
-# Hardware handling
-#
-# BR2_PACKAGE_ACSCCID is not set
-# BR2_PACKAGE_BCM2835 is not set
-# BR2_PACKAGE_C_PERIPHERY is not set
-# BR2_PACKAGE_CCID is not set
-# BR2_PACKAGE_DTC is not set
-# BR2_PACKAGE_GNU_EFI is not set
-
-#
-# hidapi needs udev /dev management and a toolchain w/ NPTL threads
-#
-# BR2_PACKAGE_LCDAPI is not set
-# BR2_PACKAGE_LET_ME_CREATE is not set
-BR2_PACKAGE_LIBAIO_ARCH_SUPPORTS=y
-# BR2_PACKAGE_LIBAIO is not set
-
-#
-# libatasmart requires udev to be enabled
-#
-# BR2_PACKAGE_LIBCEC is not set
-# BR2_PACKAGE_LIBFREEFARE is not set
-# BR2_PACKAGE_LIBFTDI is not set
-# BR2_PACKAGE_LIBFTDI1 is not set
-# BR2_PACKAGE_LIBGPHOTO2 is not set
-# BR2_PACKAGE_LIBGPIOD is not set
-
-#
-# libgudev needs udev /dev handling and a toolchain w/ wchar, threads
-#
-# BR2_PACKAGE_LIBHID is not set
-BR2_PACKAGE_LIBIIO=y
-BR2_PACKAGE_LIBIIO_LOCAL_BACKEND=y
-BR2_PACKAGE_LIBIIO_XML_BACKEND=y
-BR2_PACKAGE_LIBIIO_NETWORK_BACKEND=y
-BR2_PACKAGE_LIBIIO_USB_BACKEND=y
-BR2_PACKAGE_LIBIIO_SERIAL_BACKEND=y
-BR2_PACKAGE_LIBIIO_IIOD=y
-# BR2_PACKAGE_LIBIIO_IIOD_USBD is not set
-BR2_PACKAGE_LIBIIO_TESTS=y
-BR2_PACKAGE_LIBIIO_BINDINGS_PYTHON=y
-BR2_PACKAGE_LIBAD9361_IIO=y
-
-#
-# libinput needs udev /dev management and a toolchain w/ locale
-#
-# BR2_PACKAGE_LIBIQRF is not set
-# BR2_PACKAGE_LIBLLCP is not set
-# BR2_PACKAGE_LIBMBIM is not set
-# BR2_PACKAGE_LIBNFC is not set
-# BR2_PACKAGE_LIBPCIACCESS is not set
-# BR2_PACKAGE_LIBPHIDGET is not set
-# BR2_PACKAGE_LIBPRI is not set
-# BR2_PACKAGE_LIBQMI is not set
-# BR2_PACKAGE_LIBRAW1394 is not set
-BR2_PACKAGE_LIBRTA=y
-# BR2_PACKAGE_LIBRTLSDR is not set
-# BR2_PACKAGE_LIBSERIAL is not set
-BR2_PACKAGE_LIBSERIALPORT=y
-# BR2_PACKAGE_LIBSIGROK is not set
-
-#
-# libsigrokdecode is not compatible with python
-#
-# BR2_PACKAGE_LIBSOC is not set
-# BR2_PACKAGE_LIBSS7 is not set
-BR2_PACKAGE_LIBUSB=y
-# BR2_PACKAGE_LIBUSB_COMPAT is not set
-# BR2_PACKAGE_LIBUSBGX is not set
-# BR2_PACKAGE_LIBV4L is not set
-# BR2_PACKAGE_LIBXKBCOMMON is not set
-# BR2_PACKAGE_MRAA is not set
-# BR2_PACKAGE_MTDEV is not set
-
-#
-# ne10 needs a toolchain w/ neon
-#
-# BR2_PACKAGE_NEARDAL is not set
-# BR2_PACKAGE_OWFS is not set
-# BR2_PACKAGE_PCSC_LITE is not set
-# BR2_PACKAGE_TSLIB is not set
-# BR2_PACKAGE_URG is not set
-# BR2_PACKAGE_WIRINGPI is not set
-
-#
-# Javascript
-#
-# BR2_PACKAGE_ANGULARJS is not set
-# BR2_PACKAGE_BOOTSTRAP is not set
-# BR2_PACKAGE_EXPLORERCANVAS is not set
-# BR2_PACKAGE_FLOT is not set
-# BR2_PACKAGE_JQUERY is not set
-# BR2_PACKAGE_JSMIN is not set
-# BR2_PACKAGE_JSON_JAVASCRIPT is not set
-
-#
-# JSON/XML
-#
-# BR2_PACKAGE_BENEJSON is not set
-# BR2_PACKAGE_CJSON is not set
-BR2_PACKAGE_EXPAT=y
-# BR2_PACKAGE_EZXML is not set
-# BR2_PACKAGE_JANSSON is not set
-# BR2_PACKAGE_JOSE is not set
-# BR2_PACKAGE_JSMN is not set
-# BR2_PACKAGE_JSON_C is not set
-# BR2_PACKAGE_JSON_FOR_MODERN_CPP is not set
-# BR2_PACKAGE_JSON_GLIB is not set
-BR2_PACKAGE_JSONCPP=y
-# BR2_PACKAGE_LIBBSON is not set
-# BR2_PACKAGE_LIBFASTJSON is not set
-# BR2_PACKAGE_LIBJSON is not set
-# BR2_PACKAGE_LIBROXML is not set
-# BR2_PACKAGE_LIBUCL is not set
-BR2_PACKAGE_LIBXML2=y
-# BR2_PACKAGE_LIBXMLPP is not set
-# BR2_PACKAGE_LIBXMLRPC is not set
-# BR2_PACKAGE_LIBXSLT is not set
-# BR2_PACKAGE_LIBYAML is not set
-# BR2_PACKAGE_MXML is not set
-# BR2_PACKAGE_PUGIXML is not set
-# BR2_PACKAGE_RAPIDJSON is not set
-# BR2_PACKAGE_RAPIDXML is not set
-# BR2_PACKAGE_RAPTOR is not set
-# BR2_PACKAGE_TINYXML is not set
-# BR2_PACKAGE_TINYXML2 is not set
-# BR2_PACKAGE_VALIJSON is not set
-# BR2_PACKAGE_XERCES is not set
-# BR2_PACKAGE_YAJL is not set
-# BR2_PACKAGE_YAML_CPP is not set
-
-#
-# Logging
-#
-# BR2_PACKAGE_EVENTLOG is not set
-# BR2_PACKAGE_GLOG is not set
-# BR2_PACKAGE_LIBLOG4C_LOCALTIME is not set
-# BR2_PACKAGE_LIBLOGGING is not set
-# BR2_PACKAGE_LOG4CPLUS is not set
-# BR2_PACKAGE_LOG4CPP is not set
-# BR2_PACKAGE_LOG4CXX is not set
-# BR2_PACKAGE_OPENTRACING_CPP is not set
-# BR2_PACKAGE_ZLOG is not set
-
-#
-# Multimedia
-#
-# BR2_PACKAGE_BITSTREAM is not set
-# BR2_PACKAGE_KVAZAAR is not set
-# BR2_PACKAGE_LIBAACS is not set
-# BR2_PACKAGE_LIBAMCODEC is not set
-# BR2_PACKAGE_LIBASS is not set
-# BR2_PACKAGE_LIBBDPLUS is not set
-# BR2_PACKAGE_LIBBLURAY is not set
-# BR2_PACKAGE_LIBDCADEC is not set
-# BR2_PACKAGE_LIBDVBCSA is not set
-# BR2_PACKAGE_LIBDVBPSI is not set
-# BR2_PACKAGE_LIBDVBSI is not set
-# BR2_PACKAGE_LIBDVDCSS is not set
-# BR2_PACKAGE_LIBDVDNAV is not set
-# BR2_PACKAGE_LIBDVDREAD is not set
-# BR2_PACKAGE_LIBEBML is not set
-# BR2_PACKAGE_LIBHDHOMERUN is not set
-
-#
-# libimxvpuapi needs an i.MX platform with VPU support
-#
-# BR2_PACKAGE_LIBMATROSKA is not set
-# BR2_PACKAGE_LIBMMS is not set
-# BR2_PACKAGE_LIBMPEG2 is not set
-# BR2_PACKAGE_LIBOGG is not set
-BR2_PACKAGE_LIBOPENH264_ARCH_SUPPORTS=y
-# BR2_PACKAGE_LIBOPENH264 is not set
-# BR2_PACKAGE_LIBPLAYER is not set
-# BR2_PACKAGE_LIBTHEORA is not set
-# BR2_PACKAGE_LIBVPX is not set
-# BR2_PACKAGE_LIBYUV is not set
-# BR2_PACKAGE_LIVE555 is not set
-# BR2_PACKAGE_MEDIASTREAMER is not set
-# BR2_PACKAGE_X264 is not set
-# BR2_PACKAGE_X265 is not set
-
-#
-# Networking
-#
-# BR2_PACKAGE_AGENTPP is not set
-# BR2_PACKAGE_ALLJOYN is not set
-# BR2_PACKAGE_ALLJOYN_BASE is not set
-# BR2_PACKAGE_ALLJOYN_TCL is not set
-# BR2_PACKAGE_ALLJOYN_TCL_BASE is not set
-# BR2_PACKAGE_AZMQ is not set
-# BR2_PACKAGE_AZURE_IOT_SDK_C is not set
-# BR2_PACKAGE_BATMAN_ADV is not set
-# BR2_PACKAGE_C_ARES is not set
-BR2_PACKAGE_CANFESTIVAL_ARCH_SUPPORTS=y
-# BR2_PACKAGE_CANFESTIVAL is not set
-# BR2_PACKAGE_CGIC is not set
-BR2_PACKAGE_CPPZMQ=y
-# BR2_PACKAGE_CURLPP is not set
-# BR2_PACKAGE_CZMQ is not set
-# BR2_PACKAGE_DAQ is not set
-# BR2_PACKAGE_FILEMQ is not set
-# BR2_PACKAGE_FLICKCURL is not set
-# BR2_PACKAGE_FREERADIUS_CLIENT is not set
-# BR2_PACKAGE_GEOIP is not set
-# BR2_PACKAGE_GLIB_NETWORKING is not set
-# BR2_PACKAGE_GSSDP is not set
-# BR2_PACKAGE_GUPNP is not set
-# BR2_PACKAGE_GUPNP_AV is not set
-# BR2_PACKAGE_GUPNP_DLNA is not set
-BR2_PACKAGE_IBRCOMMON=y
-BR2_PACKAGE_IBRDTN=y
-# BR2_PACKAGE_LIBCGI is not set
-# BR2_PACKAGE_LIBCGICC is not set
-# BR2_PACKAGE_LIBCOAP is not set
-# BR2_PACKAGE_LIBCPPRESTSDK is not set
-BR2_PACKAGE_LIBCURL=y
-# BR2_PACKAGE_CURL is not set
-# BR2_PACKAGE_LIBCURL_VERBOSE is not set
-# BR2_PACKAGE_LIBDNET is not set
-# BR2_PACKAGE_LIBEXOSIP2 is not set
-# BR2_PACKAGE_LIBFCGI is not set
-# BR2_PACKAGE_LIBGSASL is not set
-# BR2_PACKAGE_LIBHTTPPARSER is not set
-# BR2_PACKAGE_LIBIDN is not set
-# BR2_PACKAGE_LIBISCSI is not set
-# BR2_PACKAGE_LIBLDNS is not set
-# BR2_PACKAGE_LIBMAXMINDDB is not set
-# BR2_PACKAGE_LIBMBUS is not set
-# BR2_PACKAGE_LIBMEMCACHED is not set
-# BR2_PACKAGE_LIBMICROHTTPD is not set
-# BR2_PACKAGE_LIBMINIUPNPC is not set
-# BR2_PACKAGE_LIBMNL is not set
-# BR2_PACKAGE_LIBMODBUS is not set
-# BR2_PACKAGE_LIBNATPMP is not set
-# BR2_PACKAGE_LIBNDP is not set
-# BR2_PACKAGE_LIBNET is not set
-# BR2_PACKAGE_LIBNETFILTER_ACCT is not set
-# BR2_PACKAGE_LIBNETFILTER_CONNTRACK is not set
-# BR2_PACKAGE_LIBNETFILTER_CTHELPER is not set
-# BR2_PACKAGE_LIBNETFILTER_CTTIMEOUT is not set
-# BR2_PACKAGE_LIBNETFILTER_LOG is not set
-# BR2_PACKAGE_LIBNETFILTER_QUEUE is not set
-# BR2_PACKAGE_LIBNFNETLINK is not set
-# BR2_PACKAGE_LIBNFTNL is not set
-# BR2_PACKAGE_LIBNICE is not set
-# BR2_PACKAGE_LIBNL is not set
-# BR2_PACKAGE_LIBOAUTH is not set
-# BR2_PACKAGE_LIBOPING is not set
-# BR2_PACKAGE_LIBOSIP2 is not set
-# BR2_PACKAGE_LIBPCAP is not set
-# BR2_PACKAGE_LIBPJSIP is not set
-# BR2_PACKAGE_LIBRSYNC is not set
-# BR2_PACKAGE_LIBSHAIRPLAY is not set
-# BR2_PACKAGE_LIBSHOUT is not set
-# BR2_PACKAGE_LIBSOCKETCAN is not set
-# BR2_PACKAGE_LIBSOUP is not set
-# BR2_PACKAGE_LIBSRTP is not set
-# BR2_PACKAGE_LIBSTROPHE is not set
-# BR2_PACKAGE_LIBTIRPC is not set
-# BR2_PACKAGE_LIBTORRENT is not set
-# BR2_PACKAGE_LIBUPNP is not set
-# BR2_PACKAGE_LIBUPNP18 is not set
-# BR2_PACKAGE_LIBUPNPP is not set
-# BR2_PACKAGE_LIBURIPARSER is not set
-# BR2_PACKAGE_LIBVNCSERVER is not set
-# BR2_PACKAGE_LIBWEBSOCK is not set
-# BR2_PACKAGE_LIBWEBSOCKETS is not set
-# BR2_PACKAGE_LKSCTP_TOOLS is not set
-# BR2_PACKAGE_MONGOOSE is not set
-# BR2_PACKAGE_NANOMSG is not set
-# BR2_PACKAGE_NEON is not set
-BR2_PACKAGE_NORM=y
-
-#
-# nss-pam-ldapd needs a glibc toolchain
-#
-# BR2_PACKAGE_OMNIORB is not set
-# BR2_PACKAGE_OPENLDAP is not set
-# BR2_PACKAGE_OPENMPI is not set
-BR2_PACKAGE_OPENPGM=y
-
-#
-# openzwave needs udev and a toolchain w/ C++, threads, wchar
-#
-# BR2_PACKAGE_ORTP is not set
-# BR2_PACKAGE_PAHO_MQTT_C is not set
-# BR2_PACKAGE_QDECODER is not set
-# BR2_PACKAGE_QPID_PROTON is not set
-# BR2_PACKAGE_RABBITMQ_C is not set
-# BR2_PACKAGE_RTMPDUMP is not set
-# BR2_PACKAGE_SLIRP is not set
-# BR2_PACKAGE_SNMPPP is not set
-# BR2_PACKAGE_SOFIA_SIP is not set
-# BR2_PACKAGE_THRIFT is not set
-# BR2_PACKAGE_USBREDIR is not set
-BR2_PACKAGE_ZEROMQ=y
-# BR2_PACKAGE_ZEROMQ_NORM is not set
-# BR2_PACKAGE_ZEROMQ_PGM is not set
-# BR2_PACKAGE_ZMQPP is not set
-# BR2_PACKAGE_ZYRE is not set
-
-#
-# Other
-#
-# BR2_PACKAGE_APR is not set
-# BR2_PACKAGE_APR_UTIL is not set
-# BR2_PACKAGE_ARGP_STANDALONE is not set
-# BR2_PACKAGE_ARMADILLO is not set
-# BR2_PACKAGE_ATF is not set
-# BR2_PACKAGE_BCTOOLBOX is not set
-# BR2_PACKAGE_BDWGC is not set
-BR2_PACKAGE_BOOST=y
-BR2_PACKAGE_BOOST_LAYOUT_SYSTEM=y
-# BR2_PACKAGE_BOOST_LAYOUT_TAGGED is not set
-# BR2_PACKAGE_BOOST_LAYOUT_VERSIONED is not set
-BR2_PACKAGE_BOOST_LAYOUT="system"
-# BR2_PACKAGE_BOOST_ATOMIC is not set
-# BR2_PACKAGE_BOOST_CHRONO is not set
-# BR2_PACKAGE_BOOST_CONTAINER is not set
-# BR2_PACKAGE_BOOST_CONTEXT is not set
-BR2_PACKAGE_BOOST_DATE_TIME=y
-# BR2_PACKAGE_BOOST_EXCEPTION is not set
-# BR2_PACKAGE_BOOST_FIBER is not set
-BR2_PACKAGE_BOOST_FILESYSTEM=y
-# BR2_PACKAGE_BOOST_GRAPH is not set
-# BR2_PACKAGE_BOOST_GRAPH_PARALLEL is not set
-# BR2_PACKAGE_BOOST_IOSTREAMS is not set
-# BR2_PACKAGE_BOOST_LOCALE is not set
-# BR2_PACKAGE_BOOST_LOG is not set
-BR2_PACKAGE_BOOST_MATH=y
-BR2_PACKAGE_BOOST_MPI=y
-BR2_PACKAGE_BOOST_PROGRAM_OPTIONS=y
-BR2_PACKAGE_BOOST_PYTHON=y
-BR2_PACKAGE_BOOST_RANDOM=y
-BR2_PACKAGE_BOOST_REGEX=y
-BR2_PACKAGE_BOOST_SERIALIZATION=y
-BR2_PACKAGE_BOOST_SIGNALS=y
-# BR2_PACKAGE_BOOST_STACKTRACE is not set
-BR2_PACKAGE_BOOST_SYSTEM=y
-# BR2_PACKAGE_BOOST_TEST is not set
-BR2_PACKAGE_BOOST_THREAD=y
-# BR2_PACKAGE_BOOST_TIMER is not set
-# BR2_PACKAGE_BOOST_TYPE_ERASURE is not set
-# BR2_PACKAGE_BOOST_WAVE is not set
-# BR2_PACKAGE_CLAPACK is not set
-BR2_PACKAGE_CLASSPATH_ARCH_SUPPORTS=y
-# BR2_PACKAGE_CLASSPATH is not set
-# BR2_PACKAGE_CPPCMS is not set
-# BR2_PACKAGE_CRACKLIB is not set
-# BR2_PACKAGE_DAWGDIC is not set
-# BR2_PACKAGE_DING_LIBS is not set
-# BR2_PACKAGE_EIGEN is not set
-# BR2_PACKAGE_ELFUTILS is not set
-BR2_PACKAGE_FFTW=y
-BR2_PACKAGE_FFTW_PRECISION_SINGLE=y
-# BR2_PACKAGE_FFTW_PRECISION_DOUBLE is not set
-# BR2_PACKAGE_FFTW_FAST is not set
-# BR2_PACKAGE_FLANN is not set
-# BR2_PACKAGE_FLATBUFFERS is not set
-# BR2_PACKAGE_GCONF is not set
-# BR2_PACKAGE_GFLAGS is not set
-# BR2_PACKAGE_GLIBMM is not set
-# BR2_PACKAGE_GLM is not set
-# BR2_PACKAGE_GMP is not set
-BR2_PACKAGE_GSL=y
-# BR2_PACKAGE_GTEST is not set
-BR2_PACKAGE_JEMALLOC_ARCH_SUPPORTS=y
-# BR2_PACKAGE_JEMALLOC is not set
-
-#
-# lapack/blas needs a toolchain w/ fortran
-#
-# BR2_PACKAGE_LIBARGTABLE2 is not set
-BR2_PACKAGE_LIBATOMIC_OPS_ARCH_SUPPORTS=y
-# BR2_PACKAGE_LIBATOMIC_OPS is not set
-# BR2_PACKAGE_LIBB64 is not set
-BR2_PACKAGE_LIBBSD_ARCH_SUPPORTS=y
-
-#
-# libbsd needs a glibc toolchain w/ threads
-#
-# BR2_PACKAGE_LIBCAP is not set
-# BR2_PACKAGE_LIBCAP_NG is not set
-
-#
-# libcgroup needs a glibc toolchain w/ C++
-#
-# BR2_PACKAGE_LIBCOFI is not set
-# BR2_PACKAGE_LIBCROCO is not set
-# BR2_PACKAGE_LIBCROSSGUID is not set
-# BR2_PACKAGE_LIBCSV is not set
-# BR2_PACKAGE_LIBDAEMON is not set
-# BR2_PACKAGE_LIBEE is not set
-# BR2_PACKAGE_LIBEV is not set
-# BR2_PACKAGE_LIBEVDEV is not set
-# BR2_PACKAGE_LIBEVENT is not set
-BR2_PACKAGE_LIBFFI=y
-# BR2_PACKAGE_LIBGEE is not set
-# BR2_PACKAGE_LIBGLIB2 is not set
-# BR2_PACKAGE_LIBGLOB is not set
-# BR2_PACKAGE_LIBICAL is not set
-# BR2_PACKAGE_LIBITE is not set
-# BR2_PACKAGE_LIBLINEAR is not set
-# BR2_PACKAGE_LIBLOKI is not set
-# BR2_PACKAGE_LIBNPTH is not set
-BR2_PACKAGE_LIBNSPR_ARCH_SUPPORT=y
-# BR2_PACKAGE_LIBNSPR is not set
-# BR2_PACKAGE_LIBPFM4 is not set
-# BR2_PACKAGE_LIBPLIST is not set
-# BR2_PACKAGE_LIBPTHREAD_STUBS is not set
-# BR2_PACKAGE_LIBPTHSEM is not set
-# BR2_PACKAGE_LIBPWQUALITY is not set
-BR2_PACKAGE_LIBSECCOMP_ARCH_SUPPORTS=y
-# BR2_PACKAGE_LIBSECCOMP is not set
-# BR2_PACKAGE_LIBSIGC is not set
-BR2_PACKAGE_LIBSIGSEGV_ARCH_SUPPORTS=y
-# BR2_PACKAGE_LIBSIGSEGV is not set
-# BR2_PACKAGE_LIBSPATIALINDEX is not set
-# BR2_PACKAGE_LIBTASN1 is not set
-# BR2_PACKAGE_LIBTOMMATH is not set
-# BR2_PACKAGE_LIBTPL is not set
-# BR2_PACKAGE_LIBUBOX is not set
-# BR2_PACKAGE_LIBUCI is not set
-BR2_PACKAGE_LIBUNWIND_ARCH_SUPPORTS=y
-# BR2_PACKAGE_LIBUNWIND is not set
-BR2_PACKAGE_LIBURCU_ARCH_SUPPORTS=y
-# BR2_PACKAGE_LIBURCU is not set
-BR2_PACKAGE_LIBUV=y
-# BR2_PACKAGE_LIGHTNING is not set
-
-#
-# linux-pam needs a uClibc or glibc toolchain w/ wchar, locale, dynamic library
-#
-
-#
-# liquid-dsp requires a glibc or musl toolchain w/ dynamic library
-#
-# BR2_PACKAGE_LTTNG_LIBUST is not set
-# BR2_PACKAGE_MPC is not set
-# BR2_PACKAGE_MPDECIMAL is not set
-# BR2_PACKAGE_MPFR is not set
-# BR2_PACKAGE_MPIR is not set
-# BR2_PACKAGE_MSGPACK is not set
-# BR2_PACKAGE_MTDEV2TUIO is not set
-# BR2_PACKAGE_ORC is not set
-# BR2_PACKAGE_P11_KIT is not set
-# BR2_PACKAGE_POCO is not set
-BR2_PACKAGE_PROTOBUF_ARCH_SUPPORTS=y
-# BR2_PACKAGE_PROTOBUF is not set
-# BR2_PACKAGE_PROTOBUF_C is not set
-# BR2_PACKAGE_QHULL is not set
-# BR2_PACKAGE_QLIBC is not set
-# BR2_PACKAGE_RIEMANN_C_CLIENT is not set
-# BR2_PACKAGE_SHAPELIB is not set
-# BR2_PACKAGE_SKALIBS is not set
-# BR2_PACKAGE_SPHINXBASE is not set
-# BR2_PACKAGE_TINYCBOR is not set
-
-#
-# Security
-#
-
-#
-# libselinux needs a glibc toolchain w/ threads, dynamic library
-#
-
-#
-# libsemanage needs a glibc toolchain w/ threads, dynamic library
-#
-# BR2_PACKAGE_LIBSEPOL is not set
-# BR2_PACKAGE_SAFECLIB is not set
-
-#
-# Text and terminal handling
-#
-# BR2_PACKAGE_AUGEAS is not set
-# BR2_PACKAGE_ENCHANT is not set
-# BR2_PACKAGE_FMT is not set
-# BR2_PACKAGE_ICU is not set
-# BR2_PACKAGE_LIBCLI is not set
-# BR2_PACKAGE_LIBEDIT is not set
-# BR2_PACKAGE_LIBENCA is not set
-# BR2_PACKAGE_LIBESTR is not set
-# BR2_PACKAGE_LIBFRIBIDI is not set
-# BR2_PACKAGE_LIBICONV is not set
-# BR2_PACKAGE_LIBUNISTRING is not set
-# BR2_PACKAGE_LINENOISE is not set
-BR2_PACKAGE_NCURSES=y
-# BR2_PACKAGE_NCURSES_WCHAR is not set
-# BR2_PACKAGE_NCURSES_TARGET_PROGS is not set
-# BR2_PACKAGE_NEWT is not set
-# BR2_PACKAGE_PCRE is not set
-# BR2_PACKAGE_PCRE2 is not set
-# BR2_PACKAGE_POPT is not set
-BR2_PACKAGE_READLINE=y
-# BR2_PACKAGE_SLANG is not set
-# BR2_PACKAGE_TCLAP is not set
-# BR2_PACKAGE_USTR is not set
-
-#
-# Mail
-#
-# BR2_PACKAGE_DOVECOT is not set
-# BR2_PACKAGE_EXIM is not set
-# BR2_PACKAGE_FETCHMAIL is not set
-# BR2_PACKAGE_HEIRLOOM_MAILX is not set
-# BR2_PACKAGE_LIBESMTP is not set
-# BR2_PACKAGE_MSMTP is not set
-# BR2_PACKAGE_MUTT is not set
-
-#
-# Miscellaneous
-#
-# BR2_PACKAGE_AESPIPE is not set
-# BR2_PACKAGE_BC is not set
-# BR2_PACKAGE_CLAMAV is not set
-# BR2_PACKAGE_COLLECTD is not set
-
-#
-# domoticz needs lua >= 5.2 and a toolchain w/ C++, NPTL, wchar, dynamic library
-#
-# BR2_PACKAGE_EMPTY is not set
-BR2_PACKAGE_GNURADIO=y
-# BR2_PACKAGE_GNURADIO_AUDIO is not set
-BR2_PACKAGE_GNURADIO_BLOCKS=y
-BR2_PACKAGE_GNURADIO_CTRLPORT=y
-BR2_PACKAGE_GNURADIO_FEC=y
-BR2_PACKAGE_GNURADIO_PYTHON=y
-BR2_PACKAGE_GNURADIO_UTILS=y
-BR2_PACKAGE_GNURADIO_ANALOG=y
-BR2_PACKAGE_GNURADIO_CHANNELS=y
-BR2_PACKAGE_GNURADIO_DIGITAL=y
-BR2_PACKAGE_GNURADIO_FFT=y
-BR2_PACKAGE_GNURADIO_FILTER=y
-BR2_PACKAGE_GNURADIO_PAGER=y
-BR2_PACKAGE_GNURADIO_TRELLIS=y
-BR2_PACKAGE_GNURADIO_ZEROMQ=y
-BR2_PACKAGE_GRC=y
-# BR2_PACKAGE_GOOGLEFONTDIRECTORY is not set
-
-#
-# gqrx needs qt5, gnuradio, fftw's single precision
-#
-# BR2_PACKAGE_GR_OSMOSDR is not set
-BR2_PACKAGE_GR_IIO=y
-# BR2_PACKAGE_GSETTINGS_DESKTOP_SCHEMAS is not set
-# BR2_PACKAGE_HAVEGED is not set
-# BR2_PACKAGE_LINUX_SYSCALL_SUPPORT is not set
-# BR2_PACKAGE_MCRYPT is not set
-# BR2_PACKAGE_MOBILE_BROADBAND_PROVIDER_INFO is not set
-# BR2_PACKAGE_PROJ is not set
-BR2_PACKAGE_QEMU_ARCH_SUPPORTS_TARGET=y
-# BR2_PACKAGE_QEMU is not set
-# BR2_PACKAGE_QPDF is not set
-# BR2_PACKAGE_SHARED_MIME_INFO is not set
-# BR2_PACKAGE_TASKD is not set
-# BR2_PACKAGE_XUTIL_UTIL_MACROS is not set
-
-#
-# Networking applications
-#
-# BR2_PACKAGE_AIRCRACK_NG is not set
-# BR2_PACKAGE_AOETOOLS is not set
-# BR2_PACKAGE_APACHE is not set
-# BR2_PACKAGE_ARGUS is not set
-# BR2_PACKAGE_ARP_SCAN is not set
-# BR2_PACKAGE_ARPTABLES is not set
-
-#
-# asterisk needs a glibc toolchain w/ C++
-#
-# BR2_PACKAGE_ATFTP is not set
-# BR2_PACKAGE_AUTOSSH is not set
-# BR2_PACKAGE_AVAHI is not set
-# BR2_PACKAGE_AXEL is not set
-# BR2_PACKAGE_BABELD is not set
-# BR2_PACKAGE_BANDWIDTHD is not set
-# BR2_PACKAGE_BATCTL is not set
-# BR2_PACKAGE_BCUSDK is not set
-# BR2_PACKAGE_BIND is not set
-# BR2_PACKAGE_BLUEZ_UTILS is not set
-# BR2_PACKAGE_BLUEZ5_UTILS is not set
-# BR2_PACKAGE_BMON is not set
-# BR2_PACKAGE_BOA is not set
-# BR2_PACKAGE_BOINC is not set
-# BR2_PACKAGE_BRIDGE_UTILS is not set
-# BR2_PACKAGE_BWM_NG is not set
-# BR2_PACKAGE_C_ICAP is not set
-# BR2_PACKAGE_CAN_UTILS is not set
-# BR2_PACKAGE_CANNELLONI is not set
-# BR2_PACKAGE_CHRONY is not set
-# BR2_PACKAGE_CIVETWEB is not set
-# BR2_PACKAGE_CONNMAN is not set
-
-#
-# connman-gtk needs libgtk3 and a glibc or uClibc toolchain w/ wchar, threads, resolver, dynamic library
-#
-# BR2_PACKAGE_CONNTRACK_TOOLS is not set
-# BR2_PACKAGE_CRDA is not set
-# BR2_PACKAGE_CTORRENT is not set
-# BR2_PACKAGE_CUPS is not set
-# BR2_PACKAGE_DANTE is not set
-# BR2_PACKAGE_DARKHTTPD is not set
-# BR2_PACKAGE_DHCP is not set
-# BR2_PACKAGE_DHCPCD is not set
-# BR2_PACKAGE_DHCPDUMP is not set
-# BR2_PACKAGE_DNSMASQ is not set
-# BR2_PACKAGE_DRBD_UTILS is not set
-# BR2_PACKAGE_DROPBEAR is not set
-# BR2_PACKAGE_EBTABLES is not set
-
-#
-# ebtables needs a glibc or uClibc toolchain
-#
-
-#
-# ejabberd needs erlang, toolchain w/ C++
-#
-# BR2_PACKAGE_ETHTOOL is not set
-# BR2_PACKAGE_FAIFA is not set
-# BR2_PACKAGE_FASTD is not set
-# BR2_PACKAGE_FCGIWRAP is not set
-# BR2_PACKAGE_FLANNEL is not set
-# BR2_PACKAGE_FPING is not set
-# BR2_PACKAGE_FREESWITCH is not set
-# BR2_PACKAGE_GESFTPSERVER is not set
-# BR2_PACKAGE_GLORYTUN is not set
-
-#
-# gupnp-tools needs libgtk3
-#
-# BR2_PACKAGE_HANS is not set
-# BR2_PACKAGE_HIAWATHA is not set
-# BR2_PACKAGE_HOSTAPD is not set
-# BR2_PACKAGE_HTTPING is not set
-# BR2_PACKAGE_IBRDTN_TOOLS is not set
-# BR2_PACKAGE_IBRDTND is not set
-# BR2_PACKAGE_IFENSLAVE is not set
-# BR2_PACKAGE_IFPLUGD is not set
-# BR2_PACKAGE_IFTOP is not set
-# BR2_PACKAGE_IFUPDOWN is not set
-BR2_PACKAGE_IFUPDOWN_SCRIPTS=y
-# BR2_PACKAGE_IGD2_FOR_LINUX is not set
-# BR2_PACKAGE_IGH_ETHERCAT is not set
-# BR2_PACKAGE_IGMPPROXY is not set
-# BR2_PACKAGE_INADYN is not set
-# BR2_PACKAGE_IODINE is not set
-# BR2_PACKAGE_IPERF is not set
-# BR2_PACKAGE_IPERF3 is not set
-# BR2_PACKAGE_IPROUTE2 is not set
-# BR2_PACKAGE_IPSEC_TOOLS is not set
-# BR2_PACKAGE_IPSET is not set
-# BR2_PACKAGE_IPTABLES is not set
-# BR2_PACKAGE_IPTRAF_NG is not set
-# BR2_PACKAGE_IPUTILS is not set
-# BR2_PACKAGE_IRSSI is not set
-# BR2_PACKAGE_IW is not set
-# BR2_PACKAGE_JANUS_GATEWAY is not set
-# BR2_PACKAGE_KEEPALIVED is not set
-# BR2_PACKAGE_KISMET is not set
-# BR2_PACKAGE_KNOCK is not set
-# BR2_PACKAGE_LEAFNODE2 is not set
-# BR2_PACKAGE_LFT is not set
-# BR2_PACKAGE_LFTP is not set
-# BR2_PACKAGE_LIGHTTPD is not set
-# BR2_PACKAGE_LINKNX is not set
-# BR2_PACKAGE_LINKS is not set
-# BR2_PACKAGE_LINPHONE is not set
-# BR2_PACKAGE_LINUX_ZIGBEE is not set
-# BR2_PACKAGE_LINUXPTP is not set
-# BR2_PACKAGE_LLDPD is not set
-# BR2_PACKAGE_LRZSZ is not set
-# BR2_PACKAGE_LYNX is not set
-# BR2_PACKAGE_MACCHANGER is not set
-# BR2_PACKAGE_MEMCACHED is not set
-# BR2_PACKAGE_MII_DIAG is not set
-# BR2_PACKAGE_MINIDLNA is not set
-# BR2_PACKAGE_MINISSDPD is not set
-# BR2_PACKAGE_MJPG_STREAMER is not set
-
-#
-# modemmanager needs udev /dev management and a toolchain w/ wchar, threads
-#
-BR2_PACKAGE_MONGREL2_LIBC_SUPPORTS=y
-# BR2_PACKAGE_MONGREL2 is not set
-# BR2_PACKAGE_MONKEY is not set
-# BR2_PACKAGE_MOSH is not set
-# BR2_PACKAGE_MOSQUITTO is not set
-# BR2_PACKAGE_MROUTED is not set
-# BR2_PACKAGE_MTR is not set
-# BR2_PACKAGE_NBD is not set
-# BR2_PACKAGE_NCFTP is not set
-# BR2_PACKAGE_NDISC6 is not set
-# BR2_PACKAGE_NETATALK is not set
-# BR2_PACKAGE_NETCAT is not set
-
-#
-# netcat-openbsd needs a glibc toolchain w/ threads, headers >= 3.12
-#
-# BR2_PACKAGE_NETPLUG is not set
-# BR2_PACKAGE_NETSNMP is not set
-# BR2_PACKAGE_NETSTAT_NAT is not set
-# BR2_PACKAGE_NET_TOOLS is not set
-
-#
-# NetworkManager needs udev /dev management and a glibc toolchain w/ headers >= 3.7, dynamic library
-#
-# BR2_PACKAGE_NFACCT is not set
-# BR2_PACKAGE_NFTABLES is not set
-# BR2_PACKAGE_NGINX is not set
-# BR2_PACKAGE_NGIRCD is not set
-# BR2_PACKAGE_NGREP is not set
-# BR2_PACKAGE_NLOAD is not set
-# BR2_PACKAGE_NMAP is not set
-# BR2_PACKAGE_NOIP is not set
-# BR2_PACKAGE_NTP is not set
-# BR2_PACKAGE_NUTTCP is not set
-# BR2_PACKAGE_ODHCP6C is not set
-# BR2_PACKAGE_ODHCPLOC is not set
-# BR2_PACKAGE_OLSR is not set
-# BR2_PACKAGE_OPEN_LLDP is not set
-# BR2_PACKAGE_OPEN_PLC_UTILS is not set
-# BR2_PACKAGE_OPENNTPD is not set
-# BR2_PACKAGE_OPENOBEX is not set
-BR2_PACKAGE_OPENSSH=y
-# BR2_PACKAGE_OPENSWAN is not set
-# BR2_PACKAGE_OPENVPN is not set
-# BR2_PACKAGE_P910ND is not set
-# BR2_PACKAGE_PHIDGETWEBSERVICE is not set
-# BR2_PACKAGE_PHYTOOL is not set
-# BR2_PACKAGE_PIMD is not set
-# BR2_PACKAGE_POUND is not set
-# BR2_PACKAGE_PPPD is not set
-# BR2_PACKAGE_PPTP_LINUX is not set
-# BR2_PACKAGE_PRIVOXY is not set
-# BR2_PACKAGE_PROFTPD is not set
-
-#
-# prosody needs the lua interpreter
-#
-# BR2_PACKAGE_PROXYCHAINS_NG is not set
-# BR2_PACKAGE_PTPD is not set
-# BR2_PACKAGE_PTPD2 is not set
-# BR2_PACKAGE_PURE_FTPD is not set
-# BR2_PACKAGE_PUTTY is not set
-# BR2_PACKAGE_QUAGGA is not set
-
-#
-# rabbitmq-server needs erlang
-#
-# BR2_PACKAGE_RADVD is not set
-# BR2_PACKAGE_RP_PPPOE is not set
-# BR2_PACKAGE_RPCBIND is not set
-# BR2_PACKAGE_RSH_REDONE is not set
-# BR2_PACKAGE_RSYNC is not set
-# BR2_PACKAGE_RTORRENT is not set
-# BR2_PACKAGE_RTPTOOLS is not set
-# BR2_PACKAGE_RYGEL is not set
-# BR2_PACKAGE_S6_DNS is not set
-# BR2_PACKAGE_S6_NETWORKING is not set
-# BR2_PACKAGE_SAMBA4 is not set
-# BR2_PACKAGE_SCONESERVER is not set
-# BR2_PACKAGE_SER2NET is not set
-# BR2_PACKAGE_SHAIRPORT_SYNC is not set
-# BR2_PACKAGE_SHELLINABOX is not set
-# BR2_PACKAGE_SMCROUTE is not set
-# BR2_PACKAGE_SNGREP is not set
-# BR2_PACKAGE_SOCAT is not set
-# BR2_PACKAGE_SOCKETCAND is not set
-# BR2_PACKAGE_SOFTETHER is not set
-# BR2_PACKAGE_SPAWN_FCGI is not set
-# BR2_PACKAGE_SPICE_PROTOCOL is not set
-# BR2_PACKAGE_SQUID is not set
-# BR2_PACKAGE_SSHPASS is not set
-# BR2_PACKAGE_SSLH is not set
-# BR2_PACKAGE_STRONGSWAN is not set
-# BR2_PACKAGE_STUNNEL is not set
-# BR2_PACKAGE_TCPDUMP is not set
-# BR2_PACKAGE_TCPING is not set
-# BR2_PACKAGE_TCPREPLAY is not set
-# BR2_PACKAGE_TFTPD is not set
-# BR2_PACKAGE_THTTPD is not set
-# BR2_PACKAGE_TINC is not set
-# BR2_PACKAGE_TINYHTTPD is not set
-# BR2_PACKAGE_TN5250 is not set
-# BR2_PACKAGE_TOR is not set
-# BR2_PACKAGE_TRACEROUTE is not set
-# BR2_PACKAGE_TRANSMISSION is not set
-# BR2_PACKAGE_TUNCTL is not set
-# BR2_PACKAGE_TVHEADEND is not set
-# BR2_PACKAGE_UDPCAST is not set
-# BR2_PACKAGE_UHTTPD is not set
-# BR2_PACKAGE_ULOGD is not set
-# BR2_PACKAGE_USHARE is not set
-# BR2_PACKAGE_USSP_PUSH is not set
-# BR2_PACKAGE_VDE2 is not set
-# BR2_PACKAGE_VDR is not set
-# BR2_PACKAGE_VNSTAT is not set
-# BR2_PACKAGE_VPNC is not set
-# BR2_PACKAGE_VSFTPD is not set
-# BR2_PACKAGE_VTUN is not set
-# BR2_PACKAGE_WAVEMON is not set
-# BR2_PACKAGE_WGET is not set
-# BR2_PACKAGE_WHOIS is not set
-# BR2_PACKAGE_WIREGUARD is not set
-# BR2_PACKAGE_WIRELESS_REGDB is not set
-# BR2_PACKAGE_WIRELESS_TOOLS is not set
-# BR2_PACKAGE_WIRESHARK is not set
-# BR2_PACKAGE_WPA_SUPPLICANT is not set
-# BR2_PACKAGE_WPAN_TOOLS is not set
-# BR2_PACKAGE_XINETD is not set
-# BR2_PACKAGE_XL2TP is not set
-# BR2_PACKAGE_XTABLES_ADDONS is not set
-# BR2_PACKAGE_ZNC is not set
-
-#
-# Package managers
-#
-
-#
-# -------------------------------------------------------
-#
-
-#
-# Please note:                                           
-#
-
-#
-# - Buildroot does *not* generate binary packages,       
-#
-
-#
-# - Buildroot does *not* install any package database.   
-#
-
-#
-# *                                                      
-#
-
-#
-# It is up to you to provide those by yourself if you    
-#
-
-#
-# want to use any of those package managers.             
-#
-
-#
-# *                                                      
-#
-
-#
-# See the manual:                                        
-#
-
-#
-# http://buildroot.org/manual.html#faq-no-binary-packages
-#
-
-#
-# -------------------------------------------------------
-#
-# BR2_PACKAGE_OPKG is not set
-# BR2_PACKAGE_RPM is not set
-
-#
-# Real-Time
-#
-BR2_PACKAGE_XENOMAI_ARCH_SUPPORTS=y
-# BR2_PACKAGE_XENOMAI is not set
-
-#
-# Security
-#
-
-#
-# checkpolicy needs a glibc toolchain w/ threads, dynamic library
-#
-
-#
-# paxtest needs a glibc toolchain
-#
-
-#
-# policycoreutils needs a glibc toolchain w/ threads, dynamic library
-#
-
-#
-# refpolicy needs a glibc toolchain w/ threads, dynamic library
-#
-
-#
-# restorecond needs a toolchain w/ wchar, threads, dynamic library
-#
-# BR2_PACKAGE_SELINUX_PYTHON is not set
-# BR2_PACKAGE_SEMODULE_UTILS is not set
-
-#
-# setools needs a glibc toolchain w/ threads, C++, wchar, dynamic library
-#
-
-#
-# Shell and utilities
-#
-
-#
-# Shells
-#
-BR2_PACKAGE_BASH=y
-# BR2_PACKAGE_DASH is not set
-# BR2_PACKAGE_MKSH is not set
-# BR2_PACKAGE_ZSH is not set
-
-#
-# Utilities
-#
-# BR2_PACKAGE_AT is not set
-# BR2_PACKAGE_CCRYPT is not set
-# BR2_PACKAGE_CRUDINI is not set
-# BR2_PACKAGE_DIALOG is not set
-# BR2_PACKAGE_DTACH is not set
-# BR2_PACKAGE_EASY_RSA is not set
-BR2_PACKAGE_FILE=y
-# BR2_PACKAGE_GNUPG is not set
-# BR2_PACKAGE_GNUPG2 is not set
-# BR2_PACKAGE_INOTIFY_TOOLS is not set
-# BR2_PACKAGE_LOCKFILE_PROGS is not set
-# BR2_PACKAGE_LOGROTATE is not set
-# BR2_PACKAGE_LOGSURFER is not set
-# BR2_PACKAGE_PDMENU is not set
-# BR2_PACKAGE_PINENTRY is not set
-# BR2_PACKAGE_RANGER is not set
-# BR2_PACKAGE_SCREEN is not set
-BR2_PACKAGE_SUDO=y
-# BR2_PACKAGE_TIME is not set
-
-#
-# tmux needs a toolchain w/ wchar, locale
-#
-BR2_PACKAGE_WHICH=y
-# BR2_PACKAGE_XMLSTARLET is not set
-# BR2_PACKAGE_XXHASH is not set
-
-#
-# System tools
-#
-# BR2_PACKAGE_ACL is not set
-# BR2_PACKAGE_ANDROID_TOOLS is not set
-# BR2_PACKAGE_ATOP is not set
-# BR2_PACKAGE_ATTR is not set
-BR2_PACKAGE_AUDIT_ARCH_SUPPORTS=y
-# BR2_PACKAGE_AUDIT is not set
-# BR2_PACKAGE_BOOTUTILS is not set
-# BR2_PACKAGE_CGROUPFS_MOUNT is not set
-# BR2_PACKAGE_CIRCUS is not set
-# BR2_PACKAGE_COREUTILS is not set
-# BR2_PACKAGE_CPULOAD is not set
-# BR2_PACKAGE_DAEMON is not set
-# BR2_PACKAGE_DC3DD is not set
-# BR2_PACKAGE_DCRON is not set
-# BR2_PACKAGE_DDRESCUE is not set
-# BR2_PACKAGE_DEBIANUTILS is not set
-# BR2_PACKAGE_DOCKER_CONTAINERD is not set
-# BR2_PACKAGE_DOCKER_ENGINE is not set
-# BR2_PACKAGE_DOCKER_PROXY is not set
-# BR2_PACKAGE_EFIBOOTMGR is not set
-BR2_PACKAGE_EFIVAR_ARCH_SUPPORTS=y
-# BR2_PACKAGE_EFIVAR is not set
-# BR2_PACKAGE_EMLOG is not set
-# BR2_PACKAGE_FTOP is not set
-# BR2_PACKAGE_GETENT is not set
-BR2_PACKAGE_HTOP=y
-BR2_PACKAGE_INITSCRIPTS=y
-# BR2_PACKAGE_IOTOP is not set
-# BR2_PACKAGE_IPRUTILS is not set
-# BR2_PACKAGE_IRQBALANCE is not set
-# BR2_PACKAGE_KEYUTILS is not set
-# BR2_PACKAGE_KMOD is not set
-
-#
-# kvmtool needs a glibc or musl toolchain w/ dynamic library
-#
-# BR2_PACKAGE_LIBOSTREE is not set
-# BR2_PACKAGE_LXC is not set
-# BR2_PACKAGE_MONIT is not set
-# BR2_PACKAGE_NCDU is not set
-# BR2_PACKAGE_NUT is not set
-# BR2_PACKAGE_POLKIT is not set
-# BR2_PACKAGE_PROCPS_NG is not set
-# BR2_PACKAGE_PROCRANK_LINUX is not set
-# BR2_PACKAGE_PSMISC is not set
-# BR2_PACKAGE_PWGEN is not set
-# BR2_PACKAGE_QUOTA is not set
-# BR2_PACKAGE_RAUC is not set
-# BR2_PACKAGE_RSYSLOG is not set
-# BR2_PACKAGE_RUNC is not set
-# BR2_PACKAGE_S6 is not set
-# BR2_PACKAGE_S6_LINUX_INIT is not set
-# BR2_PACKAGE_S6_LINUX_UTILS is not set
-# BR2_PACKAGE_S6_PORTABLE_UTILS is not set
-# BR2_PACKAGE_S6_RC is not set
-# BR2_PACKAGE_SCRUB is not set
-# BR2_PACKAGE_SCRYPT is not set
-# BR2_PACKAGE_SMACK is not set
-# BR2_PACKAGE_START_STOP_DAEMON is not set
-# BR2_PACKAGE_SUPERVISOR is not set
-# BR2_PACKAGE_SWUPDATE is not set
-# BR2_PACKAGE_SYSKLOGD is not set
-# BR2_PACKAGE_SYSLOG_NG is not set
-BR2_PACKAGE_SYSTEMD_ARCH_SUPPORTS=y
-# BR2_PACKAGE_TAR is not set
-# BR2_PACKAGE_TPM_TOOLS is not set
-
-#
-# unscd needs a glibc toolchain
-#
-BR2_PACKAGE_UTIL_LINUX=y
-# BR2_PACKAGE_UTIL_LINUX_LIBBLKID is not set
-# BR2_PACKAGE_UTIL_LINUX_LIBFDISK is not set
-# BR2_PACKAGE_UTIL_LINUX_LIBMOUNT is not set
-# BR2_PACKAGE_UTIL_LINUX_LIBSMARTCOLS is not set
-BR2_PACKAGE_UTIL_LINUX_LIBUUID=y
-# BR2_PACKAGE_UTIL_LINUX_BINARIES is not set
-# BR2_PACKAGE_UTIL_LINUX_AGETTY is not set
-# BR2_PACKAGE_UTIL_LINUX_BFS is not set
-# BR2_PACKAGE_UTIL_LINUX_CAL is not set
-
-#
-# chfn/chsh needs a uClibc or glibc toolchain w/ wchar, locale, dynamic library
-#
-# BR2_PACKAGE_UTIL_LINUX_CHMEM is not set
-# BR2_PACKAGE_UTIL_LINUX_CRAMFS is not set
-# BR2_PACKAGE_UTIL_LINUX_EJECT is not set
-# BR2_PACKAGE_UTIL_LINUX_FALLOCATE is not set
-# BR2_PACKAGE_UTIL_LINUX_FDFORMAT is not set
-# BR2_PACKAGE_UTIL_LINUX_FSCK is not set
-# BR2_PACKAGE_UTIL_LINUX_HWCLOCK is not set
-# BR2_PACKAGE_UTIL_LINUX_IPCRM is not set
-# BR2_PACKAGE_UTIL_LINUX_IPCS is not set
-# BR2_PACKAGE_UTIL_LINUX_KILL is not set
-# BR2_PACKAGE_UTIL_LINUX_LAST is not set
-# BR2_PACKAGE_UTIL_LINUX_LINE is not set
-# BR2_PACKAGE_UTIL_LINUX_LOGGER is not set
-
-#
-# login needs a uClibc or glibc toolchain w/ wchar, locale, dynamic library
-#
-# BR2_PACKAGE_UTIL_LINUX_LOSETUP is not set
-# BR2_PACKAGE_UTIL_LINUX_LSLOGINS is not set
-# BR2_PACKAGE_UTIL_LINUX_LSMEM is not set
-# BR2_PACKAGE_UTIL_LINUX_MESG is not set
-# BR2_PACKAGE_UTIL_LINUX_MINIX is not set
-# BR2_PACKAGE_UTIL_LINUX_MORE is not set
-# BR2_PACKAGE_UTIL_LINUX_MOUNT is not set
-# BR2_PACKAGE_UTIL_LINUX_MOUNTPOINT is not set
-# BR2_PACKAGE_UTIL_LINUX_NEWGRP is not set
-# BR2_PACKAGE_UTIL_LINUX_NOLOGIN is not set
-# BR2_PACKAGE_UTIL_LINUX_NSENTER is not set
-# BR2_PACKAGE_UTIL_LINUX_PG is not set
-# BR2_PACKAGE_UTIL_LINUX_PARTX is not set
-# BR2_PACKAGE_UTIL_LINUX_PIVOT_ROOT is not set
-# BR2_PACKAGE_UTIL_LINUX_RAW is not set
-# BR2_PACKAGE_UTIL_LINUX_RENAME is not set
-# BR2_PACKAGE_UTIL_LINUX_RFKILL is not set
-
-#
-# runuser needs a uClibc or glibc toolchain w/ wchar, locale, dynamic library
-#
-# BR2_PACKAGE_UTIL_LINUX_SCHEDUTILS is not set
-# BR2_PACKAGE_UTIL_LINUX_SETPRIV is not set
-# BR2_PACKAGE_UTIL_LINUX_SETTERM is not set
-
-#
-# su needs a uClibc or glibc toolchain w/ wchar, locale, dynamic library
-#
-# BR2_PACKAGE_UTIL_LINUX_SULOGIN is not set
-# BR2_PACKAGE_UTIL_LINUX_SWITCH_ROOT is not set
-# BR2_PACKAGE_UTIL_LINUX_TUNELP is not set
-# BR2_PACKAGE_UTIL_LINUX_UL is not set
-# BR2_PACKAGE_UTIL_LINUX_UNSHARE is not set
-# BR2_PACKAGE_UTIL_LINUX_UTMPDUMP is not set
-# BR2_PACKAGE_UTIL_LINUX_UUIDD is not set
-# BR2_PACKAGE_UTIL_LINUX_VIPW is not set
-# BR2_PACKAGE_UTIL_LINUX_WALL is not set
-# BR2_PACKAGE_UTIL_LINUX_WDCTL is not set
-# BR2_PACKAGE_UTIL_LINUX_WRITE is not set
-# BR2_PACKAGE_UTIL_LINUX_ZRAMCTL is not set
-# BR2_PACKAGE_XEN is not set
-BR2_PACKAGE_XVISOR_ARCH_SUPPORTS=y
-# BR2_PACKAGE_XVISOR is not set
-
-#
-# Text editors and viewers
-#
-# BR2_PACKAGE_ED is not set
-# BR2_PACKAGE_JOE is not set
-BR2_PACKAGE_LESS=y
-# BR2_PACKAGE_MC is not set
-BR2_PACKAGE_NANO=y
-BR2_PACKAGE_NANO_TINY=y
-# BR2_PACKAGE_UEMACS is not set
-BR2_PACKAGE_VIM=y
-BR2_PACKAGE_VIM_RUNTIME=y
-
-#
-# Filesystem images
-#
-# BR2_TARGET_ROOTFS_AXFS is not set
-# BR2_TARGET_ROOTFS_CLOOP is not set
-BR2_TARGET_ROOTFS_CPIO=y
-# BR2_TARGET_ROOTFS_CPIO_NONE is not set
-BR2_TARGET_ROOTFS_CPIO_GZIP=y
-# BR2_TARGET_ROOTFS_CPIO_BZIP2 is not set
-# BR2_TARGET_ROOTFS_CPIO_LZ4 is not set
-# BR2_TARGET_ROOTFS_CPIO_LZMA is not set
-# BR2_TARGET_ROOTFS_CPIO_LZO is not set
-# BR2_TARGET_ROOTFS_CPIO_XZ is not set
-BR2_TARGET_ROOTFS_CPIO_UIMAGE=y
-# BR2_TARGET_ROOTFS_CRAMFS is not set
-# BR2_TARGET_ROOTFS_EXT2 is not set
-# BR2_TARGET_ROOTFS_INITRAMFS is not set
-# BR2_TARGET_ROOTFS_JFFS2 is not set
-# BR2_TARGET_ROOTFS_ROMFS is not set
-# BR2_TARGET_ROOTFS_SQUASHFS is not set
-BR2_TARGET_ROOTFS_TAR=y
-BR2_TARGET_ROOTFS_TAR_NONE=y
-# BR2_TARGET_ROOTFS_TAR_GZIP is not set
-# BR2_TARGET_ROOTFS_TAR_BZIP2 is not set
-# BR2_TARGET_ROOTFS_TAR_LZ4 is not set
-# BR2_TARGET_ROOTFS_TAR_LZMA is not set
-# BR2_TARGET_ROOTFS_TAR_LZO is not set
-# BR2_TARGET_ROOTFS_TAR_XZ is not set
-BR2_TARGET_ROOTFS_TAR_OPTIONS=""
-# BR2_TARGET_ROOTFS_UBI is not set
-# BR2_TARGET_ROOTFS_UBIFS is not set
-# BR2_TARGET_ROOTFS_YAFFS2 is not set
-
-#
-# Bootloaders
-#
-# BR2_TARGET_AFBOOT_STM32 is not set
-# BR2_TARGET_BAREBOX is not set
-# BR2_TARGET_MXS_BOOTLETS is not set
-# BR2_TARGET_S500_BOOTLOADER is not set
-# BR2_TARGET_TS4800_MBRBOOT is not set
-BR2_TARGET_UBOOT=y
-# BR2_TARGET_UBOOT_BUILD_SYSTEM_LEGACY is not set
-BR2_TARGET_UBOOT_BUILD_SYSTEM_KCONFIG=y
-# BR2_TARGET_UBOOT_LATEST_VERSION is not set
-# BR2_TARGET_UBOOT_CUSTOM_VERSION is not set
-# BR2_TARGET_UBOOT_CUSTOM_TARBALL is not set
-BR2_TARGET_UBOOT_CUSTOM_GIT=y
-# BR2_TARGET_UBOOT_CUSTOM_HG is not set
-# BR2_TARGET_UBOOT_CUSTOM_SVN is not set
-BR2_TARGET_UBOOT_CUSTOM_REPO_URL="https://github.com/Xilinx/u-boot-xlnx.git"
-BR2_TARGET_UBOOT_CUSTOM_REPO_VERSION="xilinx-v2016.2"
-BR2_TARGET_UBOOT_VERSION="xilinx-v2016.2"
-BR2_TARGET_UBOOT_PATCH=""
-BR2_TARGET_UBOOT_USE_DEFCONFIG=y
-# BR2_TARGET_UBOOT_USE_CUSTOM_CONFIG is not set
-BR2_TARGET_UBOOT_BOARD_DEFCONFIG="zynq_zed"
-BR2_TARGET_UBOOT_CONFIG_FRAGMENT_FILES=""
-BR2_TARGET_UBOOT_NEEDS_DTC=y
-# BR2_TARGET_UBOOT_NEEDS_PYLIBFDT is not set
-# BR2_TARGET_UBOOT_NEEDS_OPENSSL is not set
-
-#
-# U-Boot binary format
-#
-# BR2_TARGET_UBOOT_FORMAT_AIS is not set
-# BR2_TARGET_UBOOT_FORMAT_BIN is not set
-# BR2_TARGET_UBOOT_FORMAT_DTB_BIN is not set
-# BR2_TARGET_UBOOT_FORMAT_DTB_IMG is not set
-BR2_TARGET_UBOOT_FORMAT_IMG=y
-# BR2_TARGET_UBOOT_FORMAT_IMX is not set
-# BR2_TARGET_UBOOT_FORMAT_NAND_BIN is not set
-# BR2_TARGET_UBOOT_FORMAT_KWB is not set
-# BR2_TARGET_UBOOT_FORMAT_ELF is not set
-# BR2_TARGET_UBOOT_FORMAT_SB is not set
-# BR2_TARGET_UBOOT_FORMAT_SD is not set
-# BR2_TARGET_UBOOT_FORMAT_NAND is not set
-# BR2_TARGET_UBOOT_FORMAT_CUSTOM is not set
-BR2_TARGET_UBOOT_SPL=y
-BR2_TARGET_UBOOT_SPL_NAME="spl/boot.bin"
-# BR2_TARGET_UBOOT_ALTERA_SOCFPGA_IMAGE_CRC is not set
-# BR2_TARGET_UBOOT_ENVIMAGE is not set
-# BR2_TARGET_UBOOT_BOOT_SCRIPT is not set
-BR2_TARGET_UBOOT_CUSTOM_DTS_PATH=""
-# BR2_TARGET_XLOADER is not set
-
-#
-# Host utilities
-#
-# BR2_PACKAGE_HOST_AESPIPE is not set
-# BR2_PACKAGE_HOST_ANDROID_TOOLS is not set
-# BR2_PACKAGE_HOST_CBOOTIMAGE is not set
-# BR2_PACKAGE_HOST_CHECKPOLICY is not set
-# BR2_PACKAGE_HOST_CMAKE is not set
-# BR2_PACKAGE_HOST_CRAMFS is not set
-# BR2_PACKAGE_HOST_CRYPTSETUP is not set
-# BR2_PACKAGE_HOST_DFU_UTIL is not set
-# BR2_PACKAGE_HOST_DOS2UNIX is not set
-# BR2_PACKAGE_HOST_DOSFSTOOLS is not set
-BR2_PACKAGE_HOST_DTC=y
-# BR2_PACKAGE_HOST_E2FSPROGS is not set
-# BR2_PACKAGE_HOST_E2TOOLS is not set
-# BR2_PACKAGE_HOST_FAKETIME is not set
-# BR2_PACKAGE_HOST_FWUP is not set
-# BR2_PACKAGE_HOST_GENEXT2FS is not set
-# BR2_PACKAGE_HOST_GENIMAGE is not set
-# BR2_PACKAGE_HOST_GENPART is not set
-# BR2_PACKAGE_HOST_GNUPG is not set
-BR2_PACKAGE_HOST_GO_ARCH_SUPPORTS=y
-BR2_PACKAGE_HOST_GO_CGO_LINKING_SUPPORTS=y
-BR2_PACKAGE_HOST_GO_BOOTSTRAP_ARCH_SUPPORTS=y
-BR2_PACKAGE_HOST_GOOGLE_BREAKPAD_ARCH_SUPPORTS=y
-# BR2_PACKAGE_HOST_GPTFDISK is not set
-# BR2_PACKAGE_HOST_IMX_USB_LOADER is not set
-# BR2_PACKAGE_HOST_JQ is not set
-# BR2_PACKAGE_HOST_JSMIN is not set
-# BR2_PACKAGE_HOST_LPC3250LOADER is not set
-# BR2_PACKAGE_HOST_LTTNG_BABELTRACE is not set
-# BR2_PACKAGE_HOST_MFGTOOLS is not set
-# BR2_PACKAGE_HOST_MKPASSWD is not set
-# BR2_PACKAGE_HOST_MTD is not set
-# BR2_PACKAGE_HOST_MTOOLS is not set
-# BR2_PACKAGE_HOST_MXSLDR is not set
-# BR2_PACKAGE_HOST_OMAP_U_BOOT_UTILS is not set
-# BR2_PACKAGE_HOST_OPENOCD is not set
-# BR2_PACKAGE_HOST_OPKG_UTILS is not set
-# BR2_PACKAGE_HOST_PARTED is not set
-BR2_PACKAGE_HOST_PATCHELF=y
-# BR2_PACKAGE_HOST_PKGCONF is not set
-# BR2_PACKAGE_HOST_PRU_SOFTWARE_SUPPORT is not set
-# BR2_PACKAGE_HOST_PWGEN is not set
-# BR2_PACKAGE_HOST_PYTHON_LXML is not set
-# BR2_PACKAGE_HOST_PYTHON_SIX is not set
-# BR2_PACKAGE_HOST_QEMU is not set
-# BR2_PACKAGE_HOST_RASPBERRYPI_USBBOOT is not set
-# BR2_PACKAGE_HOST_RAUC is not set
-BR2_PACKAGE_HOST_RUSTC_ARCH="armv7"
-BR2_PACKAGE_HOST_RUSTC_ABI="eabi"
-# BR2_PACKAGE_HOST_SAM_BA is not set
-# BR2_PACKAGE_HOST_SQUASHFS is not set
-# BR2_PACKAGE_HOST_SUNXI_TOOLS is not set
-# BR2_PACKAGE_HOST_TEGRARCM is not set
-BR2_PACKAGE_HOST_TI_CGT_PRU_ARCH_SUPPORTS=y
-# BR2_PACKAGE_HOST_TI_CGT_PRU is not set
-BR2_PACKAGE_HOST_UBOOT_TOOLS=y
-# BR2_PACKAGE_HOST_UBOOT_TOOLS_FIT_SUPPORT is not set
-# BR2_PACKAGE_HOST_UTIL_LINUX is not set
-# BR2_PACKAGE_HOST_VBOOT_UTILS is not set
-# BR2_PACKAGE_HOST_XORRISO is not set
-# BR2_PACKAGE_HOST_ZIP is not set
-
-#
-# Legacy config options
-#
-
-#
-# Legacy options removed in 2018.02
-#
-# BR2_KERNEL_HEADERS_3_4 is not set
-# BR2_KERNEL_HEADERS_3_10 is not set
-# BR2_KERNEL_HEADERS_3_12 is not set
-# BR2_BINUTILS_VERSION_2_27_X is not set
-# BR2_PACKAGE_EEPROG is not set
-# BR2_PACKAGE_GNUPG2_GPGV2 is not set
-# BR2_PACKAGE_IMX_GPU_VIV_APITRACE is not set
-# BR2_PACKAGE_IMX_GPU_VIV_G2D is not set
-
-#
-# Legacy options removed in 2017.11
-#
-# BR2_PACKAGE_RFKILL is not set
-# BR2_PACKAGE_UTIL_LINUX_RESET is not set
-# BR2_PACKAGE_POLICYCOREUTILS_AUDIT2ALLOW is not set
-# BR2_PACKAGE_POLICYCOREUTILS_RESTORECOND is not set
-# BR2_PACKAGE_SEPOLGEN is not set
-# BR2_PACKAGE_OPENOBEX_BLUEZ is not set
-# BR2_PACKAGE_OPENOBEX_LIBUSB is not set
-# BR2_PACKAGE_OPENOBEX_APPS is not set
-# BR2_PACKAGE_OPENOBEX_SYSLOG is not set
-# BR2_PACKAGE_OPENOBEX_DUMP is not set
-# BR2_PACKAGE_AICCU is not set
-# BR2_PACKAGE_UTIL_LINUX_LOGIN_UTILS is not set
-
-#
-# Legacy options removed in 2017.08
-#
-# BR2_TARGET_GRUB is not set
-# BR2_PACKAGE_SIMICSFS is not set
-# BR2_BINUTILS_VERSION_2_26_X is not set
-BR2_XTENSA_OVERLAY_DIR=""
-BR2_XTENSA_CUSTOM_NAME=""
-# BR2_PACKAGE_HOST_MKE2IMG is not set
-BR2_TARGET_ROOTFS_EXT2_BLOCKS=0
-BR2_TARGET_ROOTFS_EXT2_EXTRA_INODES=0
-# BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_CDXAPARSE is not set
-# BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_DATAURISRC is not set
-# BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_DCCP is not set
-# BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_HDVPARSE is not set
-# BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_MVE is not set
-# BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_NUVDEMUX is not set
-# BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_PATCHDETECT is not set
-# BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_SDI is not set
-# BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_TTA is not set
-# BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_VIDEOMEASURE is not set
-# BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_APEXSINK is not set
-# BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_SDL is not set
-# BR2_PACKAGE_GST1_PLUGINS_UGLY_PLUGIN_MAD is not set
-# BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_WEBRTC is not set
-# BR2_STRIP_none is not set
-# BR2_PACKAGE_BEECRYPT_CPP is not set
-# BR2_PACKAGE_SPICE_CLIENT is not set
-# BR2_PACKAGE_SPICE_GUI is not set
-# BR2_PACKAGE_SPICE_TUNNEL is not set
-# BR2_PACKAGE_INPUT_TOOLS is not set
-# BR2_PACKAGE_INPUT_TOOLS_INPUTATTACH is not set
-# BR2_PACKAGE_INPUT_TOOLS_JSCAL is not set
-# BR2_PACKAGE_INPUT_TOOLS_JSTEST is not set
-# BR2_TOOLCHAIN_EXTERNAL_CODESOURCERY_SH is not set
-# BR2_TOOLCHAIN_EXTERNAL_CODESOURCERY_X86 is not set
-# BR2_GCC_VERSION_4_8_X is not set
-
-#
-# Legacy options removed in 2017.05
-#
-# BR2_PACKAGE_SUNXI_MALI_R2P4 is not set
-# BR2_PACKAGE_NODEJS_MODULES_COFFEESCRIPT is not set
-# BR2_PACKAGE_NODEJS_MODULES_EXPRESS is not set
-# BR2_PACKAGE_BLUEZ5_UTILS_GATTTOOL is not set
-# BR2_PACKAGE_OPENOCD_FT2XXX is not set
-# BR2_PACKAGE_KODI_RTMPDUMP is not set
-# BR2_PACKAGE_KODI_VISUALISATION_FOUNTAIN is not set
-# BR2_PACKAGE_PORTMAP is not set
-# BR2_BINUTILS_VERSION_2_25_X is not set
-# BR2_TOOLCHAIN_BUILDROOT_INET_RPC is not set
-BR2_TARGET_ROOTFS_EXT2_EXTRA_BLOCKS=0
-# BR2_PACKAGE_SYSTEMD_KDBUS is not set
-# BR2_PACKAGE_POLARSSL is not set
-# BR2_NBD_CLIENT is not set
-# BR2_NBD_SERVER is not set
-# BR2_PACKAGE_GMOCK is not set
-# BR2_KERNEL_HEADERS_4_8 is not set
-# BR2_KERNEL_HEADERS_3_18 is not set
-# BR2_GLIBC_VERSION_2_22 is not set
-
-#
-# Legacy options removed in 2017.02
-#
-# BR2_PACKAGE_PERL_DB_FILE is not set
-# BR2_KERNEL_HEADERS_4_7 is not set
-# BR2_KERNEL_HEADERS_4_6 is not set
-# BR2_KERNEL_HEADERS_4_5 is not set
-# BR2_KERNEL_HEADERS_3_14 is not set
-# BR2_TOOLCHAIN_EXTERNAL_MUSL_CROSS is not set
-# BR2_UCLIBC_INSTALL_TEST_SUITE is not set
-# BR2_TOOLCHAIN_EXTERNAL_BLACKFIN_UCLINUX is not set
-# BR2_PACKAGE_MAKEDEVS is not set
-# BR2_TOOLCHAIN_EXTERNAL_ARAGO_ARMV7A is not set
-# BR2_TOOLCHAIN_EXTERNAL_ARAGO_ARMV5TE is not set
-# BR2_PACKAGE_SNOWBALL_HDMISERVICE is not set
-# BR2_PACKAGE_SNOWBALL_INIT is not set
-# BR2_GDB_VERSION_7_9 is not set
-
-#
-# Legacy options removed in 2016.11
-#
-# BR2_PACKAGE_PHP_SAPI_CLI_CGI is not set
-# BR2_PACKAGE_PHP_SAPI_CLI_FPM is not set
-# BR2_PACKAGE_WVSTREAMS is not set
-# BR2_PACKAGE_WVDIAL is not set
-# BR2_PACKAGE_WEBKITGTK24 is not set
-# BR2_PACKAGE_TORSMO is not set
-# BR2_PACKAGE_SSTRIP is not set
-# BR2_KERNEL_HEADERS_4_3 is not set
-# BR2_KERNEL_HEADERS_4_2 is not set
-# BR2_PACKAGE_KODI_ADDON_XVDR is not set
-# BR2_PACKAGE_IPKG is not set
-# BR2_GCC_VERSION_4_7_X is not set
-# BR2_BINUTILS_VERSION_2_24_X is not set
-# BR2_PACKAGE_WESTON_RPI is not set
-# BR2_LINUX_KERNEL_TOOL_CPUPOWER is not set
-# BR2_LINUX_KERNEL_TOOL_PERF is not set
-# BR2_LINUX_KERNEL_TOOL_SELFTESTS is not set
-# BR2_GCC_VERSION_4_8_ARC is not set
-# BR2_KERNEL_HEADERS_4_0 is not set
-# BR2_KERNEL_HEADERS_3_19 is not set
-# BR2_PACKAGE_LIBEVAS_GENERIC_LOADERS is not set
-# BR2_PACKAGE_ELEMENTARY is not set
-# BR2_LINUX_KERNEL_CUSTOM_LOCAL is not set
-
-#
-# Legacy options removed in 2016.08
-#
-# BR2_PACKAGE_EFL_JP2K is not set
-# BR2_PACKAGE_SYSTEMD_COMPAT is not set
-# BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_LIVEADDER is not set
-# BR2_PACKAGE_LIBFSLVPUWRAP is not set
-# BR2_PACKAGE_LIBFSLPARSER is not set
-# BR2_PACKAGE_LIBFSLCODEC is not set
-# BR2_PACKAGE_UBOOT_TOOLS_MKIMAGE_FIT_SIGNATURE_SUPPORT is not set
-# BR2_PTHREADS_OLD is not set
-# BR2_BINUTILS_VERSION_2_23_X is not set
-# BR2_TOOLCHAIN_BUILDROOT_EGLIBC is not set
-# BR2_GDB_VERSION_7_8 is not set
-
-#
-# Legacy options removed in 2016.05
-#
-# BR2_PACKAGE_OPENVPN_CRYPTO_POLARSSL is not set
-# BR2_PACKAGE_NGINX_HTTP_SPDY_MODULE is not set
-# BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_RTP is not set
-# BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_MPG123 is not set
-# BR2_TOOLCHAIN_EXTERNAL_CODESOURCERY_POWERPC is not set
-# BR2_TOOLCHAIN_EXTERNAL_CODESOURCERY_POWERPC_E500V2 is not set
-# BR2_x86_i386 is not set
-# BR2_PACKAGE_QT5QUICK1 is not set
-BR2_TARGET_UBOOT_CUSTOM_PATCH_DIR=""
-# BR2_PACKAGE_XDRIVER_XF86_INPUT_VOID is not set
-# BR2_KERNEL_HEADERS_3_17 is not set
-# BR2_GDB_VERSION_7_7 is not set
-# BR2_PACKAGE_FOOMATIC_FILTERS is not set
-# BR2_PACKAGE_SAMBA is not set
-# BR2_PACKAGE_KODI_WAVPACK is not set
-# BR2_PACKAGE_KODI_RSXS is not set
-# BR2_PACKAGE_KODI_GOOM is not set
-# BR2_PACKAGE_SYSTEMD_ALL_EXTRAS is not set
-# BR2_GCC_VERSION_4_5_X is not set
-# BR2_PACKAGE_SQLITE_READLINE is not set
-
-#
-# Legacy options removed in 2016.02
-#
-# BR2_PACKAGE_DOVECOT_BZIP2 is not set
-# BR2_PACKAGE_DOVECOT_ZLIB is not set
-# BR2_PACKAGE_E2FSPROGS_FINDFS is not set
-# BR2_PACKAGE_OPENPOWERLINK_DEBUG_LEVEL is not set
-# BR2_PACKAGE_OPENPOWERLINK_KERNEL_MODULE is not set
-# BR2_PACKAGE_OPENPOWERLINK_LIBPCAP is not set
-# BR2_LINUX_KERNEL_SAME_AS_HEADERS is not set
-# BR2_PACKAGE_CUPS_PDFTOPS is not set
-# BR2_KERNEL_HEADERS_3_16 is not set
-# BR2_PACKAGE_PYTHON_PYXML is not set
-# BR2_ENABLE_SSP is not set
-# BR2_PACKAGE_DIRECTFB_CLE266 is not set
-# BR2_PACKAGE_DIRECTFB_UNICHROME is not set
-# BR2_PACKAGE_LIBELEMENTARY is not set
-# BR2_PACKAGE_LIBEINA is not set
-# BR2_PACKAGE_LIBEET is not set
-# BR2_PACKAGE_LIBEVAS is not set
-# BR2_PACKAGE_LIBECORE is not set
-# BR2_PACKAGE_LIBEDBUS is not set
-# BR2_PACKAGE_LIBEFREET is not set
-# BR2_PACKAGE_LIBEIO is not set
-# BR2_PACKAGE_LIBEMBRYO is not set
-# BR2_PACKAGE_LIBEDJE is not set
-# BR2_PACKAGE_LIBETHUMB is not set
-# BR2_PACKAGE_INFOZIP is not set
-# BR2_BR2_PACKAGE_NODEJS_0_10_X is not set
-# BR2_BR2_PACKAGE_NODEJS_0_12_X is not set
-# BR2_BR2_PACKAGE_NODEJS_4_X is not set
-
-#
-# Legacy options removed in 2015.11
-#
-# BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_REAL is not set
-# BR2_PACKAGE_MEDIA_CTL is not set
-# BR2_PACKAGE_SCHIFRA is not set
-# BR2_PACKAGE_ZXING is not set
-# BR2_PACKAGE_BLACKBOX is not set
-# BR2_KERNEL_HEADERS_3_0 is not set
-# BR2_KERNEL_HEADERS_3_11 is not set
-# BR2_KERNEL_HEADERS_3_13 is not set
-# BR2_KERNEL_HEADERS_3_15 is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_ANDI is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_BLTLOAD is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_CPULOAD is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_DATABUFFER is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_DIOLOAD is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_DOK is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_DRIVERTEST is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_FIRE is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_FLIP is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_FONTS is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_INPUT is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_JOYSTICK is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_KNUCKLES is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_LAYER is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_MATRIX is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_MATRIX_WATER is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_NEO is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_NETLOAD is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_PALETTE is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_PARTICLE is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_PORTER is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_STRESS is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_TEXTURE is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_VIDEO is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_VIDEO_PARTICLE is not set
-# BR2_PACKAGE_DIRECTFB_EXAMPLES_WINDOW is not set
-# BR2_PACKAGE_KOBS_NG is not set
-# BR2_PACKAGE_SAWMAN is not set
-# BR2_PACKAGE_DIVINE is not set
-
-#
-# Legacy options removed in 2015.08
-#
-# BR2_PACKAGE_KODI_PVR_ADDONS is not set
-# BR2_BINUTILS_VERSION_2_23_2 is not set
-# BR2_BINUTILS_VERSION_2_24 is not set
-# BR2_BINUTILS_VERSION_2_25 is not set
-# BR2_PACKAGE_PERF is not set
-# BR2_BINUTILS_VERSION_2_22 is not set
-# BR2_PACKAGE_GPU_VIV_BIN_MX6Q is not set
-# BR2_PACKAGE_LIBSEMANAGE_PYTHON_BINDINGS is not set
-# BR2_TARGET_UBOOT_NETWORK is not set
-
-#
-# Legacy options removed in 2015.05
-#
-# BR2_TARGET_ROOTFS_JFFS2_NANDFLASH_512_16K is not set
-# BR2_TARGET_ROOTFS_JFFS2_NANDFLASH_2K_128K is not set
-# BR2_PACKAGE_MONO_20 is not set
-# BR2_PACKAGE_MONO_40 is not set
-# BR2_PACKAGE_MONO_45 is not set
-# BR2_CIVETWEB_WITH_LUA is not set
-# BR2_PACKAGE_TIFF_TIFF2PDF is not set
-# BR2_PACKAGE_TIFF_TIFFCP is not set
-# BR2_LINUX_KERNEL_EXT_RTAI_PATCH is not set
-# BR2_TARGET_GENERIC_PASSWD_DES is not set
-# BR2_PACKAGE_GTK2_THEME_HICOLOR is not set
-# BR2_PACKAGE_VALGRIND_PTRCHECK is not set
-
-#
-# Legacy options removed in 2015.02
-#
-# BR2_PACKAGE_LIBGC is not set
-# BR2_PACKAGE_WDCTL is not set
-# BR2_PACKAGE_UTIL_LINUX_ARCH is not set
-# BR2_PACKAGE_UTIL_LINUX_DDATE is not set
-# BR2_PACKAGE_RPM_BZIP2_PAYLOADS is not set
-# BR2_PACKAGE_RPM_XZ_PAYLOADS is not set
-# BR2_PACKAGE_M4 is not set
-# BR2_PACKAGE_FLEX_BINARY is not set
-# BR2_PACKAGE_BISON is not set
-# BR2_PACKAGE_GOB2 is not set
-# BR2_PACKAGE_DISTCC is not set
-# BR2_PACKAGE_HASERL_VERSION_0_8_X is not set
-# BR2_PACKAGE_STRONGSWAN_TOOLS is not set
-# BR2_PACKAGE_XBMC_ADDON_XVDR is not set
-# BR2_PACKAGE_XBMC_PVR_ADDONS is not set
-# BR2_PACKAGE_XBMC is not set
-# BR2_PACKAGE_XBMC_ALSA_LIB is not set
-# BR2_PACKAGE_XBMC_AVAHI is not set
-# BR2_PACKAGE_XBMC_DBUS is not set
-# BR2_PACKAGE_XBMC_LIBBLURAY is not set
-# BR2_PACKAGE_XBMC_GOOM is not set
-# BR2_PACKAGE_XBMC_RSXS is not set
-# BR2_PACKAGE_XBMC_LIBCEC is not set
-# BR2_PACKAGE_XBMC_LIBMICROHTTPD is not set
-# BR2_PACKAGE_XBMC_LIBNFS is not set
-# BR2_PACKAGE_XBMC_RTMPDUMP is not set
-# BR2_PACKAGE_XBMC_LIBSHAIRPLAY is not set
-# BR2_PACKAGE_XBMC_LIBSMBCLIENT is not set
-# BR2_PACKAGE_XBMC_LIBTHEORA is not set
-# BR2_PACKAGE_XBMC_LIBUSB is not set
-# BR2_PACKAGE_XBMC_LIBVA is not set
-# BR2_PACKAGE_XBMC_WAVPACK is not set
-# BR2_PREFER_STATIC_LIB is not set
-
-#
-# Legacy options removed in 2014.11
-#
-# BR2_x86_generic is not set
-# BR2_GCC_VERSION_4_4_X is not set
-# BR2_sparc_sparchfleon is not set
-# BR2_sparc_sparchfleonv8 is not set
-# BR2_sparc_sparcsfleon is not set
-# BR2_sparc_sparcsfleonv8 is not set
-# BR2_PACKAGE_LINUX_FIRMWARE_XC5000 is not set
-# BR2_PACKAGE_LINUX_FIRMWARE_CXGB4 is not set
-# BR2_PACKAGE_LINUX_FIRMWARE_IWLWIFI_3160_7260_7 is not set
-# BR2_PACKAGE_LINUX_FIRMWARE_IWLWIFI_3160_7260_8 is not set
-
-#
-# Legacy options removed in 2014.08
-#
-# BR2_PACKAGE_LIBELF is not set
-# BR2_KERNEL_HEADERS_3_8 is not set
-# BR2_PACKAGE_GETTEXT_TOOLS is not set
-# BR2_PACKAGE_PROCPS is not set
-# BR2_BINUTILS_VERSION_2_20_1 is not set
-# BR2_BINUTILS_VERSION_2_21 is not set
-# BR2_BINUTILS_VERSION_2_23_1 is not set
-# BR2_UCLIBC_VERSION_0_9_32 is not set
-# BR2_GCC_VERSION_4_3_X is not set
-# BR2_GCC_VERSION_4_6_X is not set
-# BR2_GDB_VERSION_7_4 is not set
-# BR2_GDB_VERSION_7_5 is not set
-# BR2_BUSYBOX_VERSION_1_19_X is not set
-# BR2_BUSYBOX_VERSION_1_20_X is not set
-# BR2_BUSYBOX_VERSION_1_21_X is not set
-# BR2_PACKAGE_LIBV4L_DECODE_TM6000 is not set
-# BR2_PACKAGE_LIBV4L_IR_KEYTABLE is not set
-# BR2_PACKAGE_LIBV4L_V4L2_COMPLIANCE is not set
-# BR2_PACKAGE_LIBV4L_V4L2_CTL is not set
-# BR2_PACKAGE_LIBV4L_V4L2_DBG is not set
-
-#
-# Legacy options removed in 2014.05
-#
-# BR2_PACKAGE_EVTEST_CAPTURE is not set
-# BR2_KERNEL_HEADERS_3_6 is not set
-# BR2_KERNEL_HEADERS_3_7 is not set
-# BR2_PACKAGE_VALA is not set
-BR2_PACKAGE_TZDATA_ZONELIST=""
-# BR2_PACKAGE_LUA_INTERPRETER_EDITING_NONE is not set
-# BR2_PACKAGE_LUA_INTERPRETER_READLINE is not set
-# BR2_PACKAGE_LUA_INTERPRETER_LINENOISE is not set
-# BR2_PACKAGE_DVB_APPS_UTILS is not set
-# BR2_KERNEL_HEADERS_SNAP is not set
-# BR2_ROOTFS_DEVICE_CREATION_DYNAMIC_UDEV is not set
-# BR2_PACKAGE_UDEV is not set
-# BR2_PACKAGE_UDEV_RULES_GEN is not set
-# BR2_PACKAGE_UDEV_ALL_EXTRAS is not set
-
-#
-# Legacy options removed in 2014.02
-#
-# BR2_sh2 is not set
-# BR2_sh3 is not set
-# BR2_sh3eb is not set
-# BR2_KERNEL_HEADERS_3_1 is not set
-# BR2_KERNEL_HEADERS_3_3 is not set
-# BR2_KERNEL_HEADERS_3_5 is not set
-# BR2_GDB_VERSION_7_2 is not set
-# BR2_GDB_VERSION_7_3 is not set
-# BR2_PACKAGE_CCACHE is not set
-# BR2_HAVE_DOCUMENTATION is not set
-# BR2_PACKAGE_AUTOMAKE is not set
-# BR2_PACKAGE_AUTOCONF is not set
-# BR2_PACKAGE_XSTROKE is not set
-# BR2_PACKAGE_LZMA is not set
-# BR2_PACKAGE_TTCP is not set
-# BR2_PACKAGE_LIBNFC_LLCP is not set
-# BR2_PACKAGE_MYSQL_CLIENT is not set
-# BR2_PACKAGE_SQUASHFS3 is not set
-# BR2_TARGET_ROOTFS_SQUASHFS3 is not set
-# BR2_PACKAGE_NETKITBASE is not set
-# BR2_PACKAGE_NETKITTELNET is not set
-# BR2_PACKAGE_LUASQL is not set
-# BR2_PACKAGE_LUACJSON is not set
-
-#
-# Legacy options removed in 2013.11
-#
-# BR2_PACKAGE_LVM2_DMSETUP_ONLY is not set
-# BR2_PACKAGE_QT_JAVASCRIPTCORE is not set
-# BR2_PACKAGE_MODULE_INIT_TOOLS is not set
-BR2_TARGET_UBOOT_CUSTOM_GIT_REPO_URL=""
-BR2_TARGET_UBOOT_CUSTOM_GIT_VERSION=""
-BR2_LINUX_KERNEL_CUSTOM_GIT_REPO_URL=""
-BR2_LINUX_KERNEL_CUSTOM_GIT_VERSION=""
-
-#
-# Legacy options removed in 2013.08
-#
-# BR2_ARM_OABI is not set
-# BR2_PACKAGE_DOSFSTOOLS_DOSFSCK is not set
-# BR2_PACKAGE_DOSFSTOOLS_DOSFSLABEL is not set
-# BR2_PACKAGE_DOSFSTOOLS_MKDOSFS is not set
-# BR2_ELF2FLT is not set
-# BR2_VFP_FLOAT is not set
-# BR2_PACKAGE_GCC_TARGET is not set
-# BR2_HAVE_DEVFILES is not set
-
-#
-# Legacy options removed in 2013.05
-#
-# BR2_PACKAGE_LINUX_FIRMWARE_RTL_8192 is not set
-# BR2_PACKAGE_LINUX_FIRMWARE_RTL_8712 is not set
+menu "Target packages"
+
+	source "package/busybox/Config.in"
+	source "package/skeleton/Config.in"
+	source "package/skeleton-custom/Config.in"
+	source "package/skeleton-init-common/Config.in"
+	source "package/skeleton-init-none/Config.in"
+	source "package/skeleton-init-systemd/Config.in"
+	source "package/skeleton-init-sysv/Config.in"
+
+menu "Audio and video applications"
+	source "package/alsa-utils/Config.in"
+	source "package/atest/Config.in"
+	source "package/aumix/Config.in"
+	source "package/bellagio/Config.in"
+	source "package/dvblast/Config.in"
+	source "package/dvdauthor/Config.in"
+	source "package/dvdrw-tools/Config.in"
+	source "package/espeak/Config.in"
+	source "package/faad2/Config.in"
+	source "package/ffmpeg/Config.in"
+	source "package/flac/Config.in"
+	source "package/flite/Config.in"
+	source "package/gmrender-resurrect/Config.in"
+	source "package/gstreamer/Config.in"
+	source "package/gstreamer1/Config.in"
+	source "package/jack2/Config.in"
+	source "package/kodi/Config.in"
+	source "package/lame/Config.in"
+	source "package/madplay/Config.in"
+	source "package/mimic/Config.in"
+	source "package/miraclecast/Config.in"
+	source "package/mjpegtools/Config.in"
+	source "package/modplugtools/Config.in"
+	source "package/motion/Config.in"
+	source "package/mpd/Config.in"
+	source "package/mpd-mpc/Config.in"
+	source "package/mpg123/Config.in"
+	source "package/mplayer/Config.in"
+	source "package/mpv/Config.in"
+	source "package/multicat/Config.in"
+	source "package/musepack/Config.in"
+	source "package/ncmpc/Config.in"
+	source "package/omxplayer/Config.in"
+	source "package/on2-8170-libs/Config.in"
+	source "package/opus-tools/Config.in"
+	source "package/pulseaudio/Config.in"
+	source "package/sox/Config.in"
+	source "package/squeezelite/Config.in"
+	source "package/tidsp-binaries/Config.in"
+	source "package/tovid/Config.in"
+	source "package/tstools/Config.in"
+	source "package/twolame/Config.in"
+	source "package/udpxy/Config.in"
+	source "package/upmpdcli/Config.in"
+	source "package/v4l2grab/Config.in"
+	source "package/v4l2loopback/Config.in"
+	source "package/vlc/Config.in"
+	source "package/vorbis-tools/Config.in"
+	source "package/wavpack/Config.in"
+	source "package/yavta/Config.in"
+	source "package/ympd/Config.in"
+endmenu
+
+menu "Compressors and decompressors"
+	source "package/bzip2/Config.in"
+	source "package/gzip/Config.in"
+	source "package/lz4/Config.in"
+	source "package/lzip/Config.in"
+	source "package/lzop/Config.in"
+	source "package/p7zip/Config.in"
+	source "package/pixz/Config.in"
+	source "package/unrar/Config.in"
+	source "package/unzip/Config.in"
+	source "package/xz/Config.in"
+	source "package/zip/Config.in"
+	source "package/zstd/Config.in"
+endmenu
+
+menu "Debugging, profiling and benchmark"
+	source "package/blktrace/Config.in"
+	source "package/bonnie/Config.in"
+	source "package/cache-calibrator/Config.in"
+	source "package/dhrystone/Config.in"
+	source "package/dieharder/Config.in"
+	source "package/dmalloc/Config.in"
+	source "package/dropwatch/Config.in"
+	source "package/dstat/Config.in"
+	source "package/dt/Config.in"
+	source "package/duma/Config.in"
+	source "package/fio/Config.in"
+	source "package/fwts/Config.in"
+	source "package/gdb/Config.in"
+	source "package/google-breakpad/Config.in"
+	source "package/iozone/Config.in"
+	source "package/kexec/Config.in"
+	source "package/kexec-lite/Config.in"
+	source "package/ktap/Config.in"
+	source "package/kvm-unit-tests/Config.in"
+	source "package/kyua/Config.in"
+	source "package/latencytop/Config.in"
+	source "package/lmbench/Config.in"
+	source "package/lsof/Config.in"
+	source "package/ltp-testsuite/Config.in"
+	source "package/ltrace/Config.in"
+	source "package/lttng-babeltrace/Config.in"
+	source "package/lttng-modules/Config.in"
+	source "package/lttng-tools/Config.in"
+	source "package/mcelog/Config.in"
+	source "package/memstat/Config.in"
+	source "package/netperf/Config.in"
+	source "package/netsniff-ng/Config.in"
+	source "package/nmon/Config.in"
+	source "package/oprofile/Config.in"
+	source "package/pax-utils/Config.in"
+	source "package/pv/Config.in"
+	source "package/racehound/Config.in"
+	source "package/ramsmp/Config.in"
+	source "package/ramspeed/Config.in"
+	source "package/rt-tests/Config.in"
+	source "package/spidev_test/Config.in"
+	source "package/strace/Config.in"
+	source "package/stress/Config.in"
+	source "package/stress-ng/Config.in"
+	source "package/sysdig/Config.in"
+	source "package/sysprof/Config.in"
+	source "package/tcf-agent/Config.in"
+	source "package/tinymembench/Config.in"
+	source "package/trace-cmd/Config.in"
+	source "package/trinity/Config.in"
+	source "package/uclibc-ng-test/Config.in"
+	source "package/valgrind/Config.in"
+	source "package/whetstone/Config.in"
+endmenu
+
+menu "Development tools"
+	source "package/binutils/Config.in"
+	source "package/bsdiff/Config.in"
+	source "package/bustle/Config.in"
+	source "package/check/Config.in"
+	source "package/cmake/Config.in"
+	source "package/cppunit/Config.in"
+	source "package/cvs/Config.in"
+	source "package/cxxtest/Config.in"
+	source "package/diffutils/Config.in"
+	source "package/dos2unix/Config.in"
+	source "package/findutils/Config.in"
+	source "package/flex/Config.in"
+	source "package/gawk/Config.in"
+	source "package/gettext/Config.in"
+	source "package/git/Config.in"
+	source "package/git-crypt/Config.in"
+	source "package/gperf/Config.in"
+	source "package/grep/Config.in"
+	source "package/jo/Config.in"
+	source "package/jq/Config.in"
+	source "package/libtool/Config.in"
+	source "package/make/Config.in"
+	source "package/patch/Config.in"
+	source "package/pkgconf/Config.in"
+	source "package/sed/Config.in"
+	source "package/subversion/Config.in"
+	source "package/tree/Config.in"
+	source "package/yasm/Config.in"
+endmenu
+
+menu "Filesystem and flash utilities"
+	source "package/aufs/Config.in"
+	source "package/aufs-util/Config.in"
+	source "package/autofs/Config.in"
+	source "package/btrfs-progs/Config.in"
+	source "package/cifs-utils/Config.in"
+	source "package/cpio/Config.in"
+	source "package/cramfs/Config.in"
+	source "package/curlftpfs/Config.in"
+	source "package/dosfstools/Config.in"
+	source "package/e2fsprogs/Config.in"
+	source "package/e2tools/Config.in"
+	source "package/ecryptfs-utils/Config.in"
+	source "package/exfat/Config.in"
+	source "package/exfat-utils/Config.in"
+	source "package/f2fs-tools/Config.in"
+	source "package/flashbench/Config.in"
+	source "package/fscryptctl/Config.in"
+	source "package/fwup/Config.in"
+	source "package/genext2fs/Config.in"
+	source "package/genpart/Config.in"
+	source "package/genromfs/Config.in"
+	source "package/mmc-utils/Config.in"
+	source "package/mtd/Config.in"
+	source "package/mtools/Config.in"
+	source "package/nfs-utils/Config.in"
+	source "package/nilfs-utils/Config.in"
+	source "package/ntfs-3g/Config.in"
+	source "package/sp-oops-extract/Config.in"
+	source "package/squashfs/Config.in"
+	source "package/sshfs/Config.in"
+	source "package/sunxi-tools/Config.in"
+	source "package/unionfs/Config.in"
+	source "package/xfsprogs/Config.in"
+endmenu
+
+menu "Fonts, cursors, icons, sounds and themes"
+
+comment "Cursors"
+	source "package/comix-cursors/Config.in"
+	source "package/obsidian-cursors/Config.in"
+
+comment "Fonts"
+	source "package/bitstream-vera/Config.in"
+	source "package/cantarell/Config.in"
+	source "package/dejavu/Config.in"
+	source "package/font-awesome/Config.in"
+	source "package/ghostscript-fonts/Config.in"
+	source "package/inconsolata/Config.in"
+	source "package/liberation/Config.in"
+
+comment "Icons"
+	source "package/adwaita-icon-theme/Config.in"
+	source "package/google-material-design-icons/Config.in"
+	source "package/hicolor-icon-theme/Config.in"
+
+comment "Sounds"
+	source "package/sound-theme-borealis/Config.in"
+	source "package/sound-theme-freedesktop/Config.in"
+
+comment "Themes"
+	source "package/gtk2-engines/Config.in"
+
+endmenu
+
+menu "Games"
+	source "package/chocolate-doom/Config.in"
+	source "package/doom-wad/Config.in"
+	source "package/gnuchess/Config.in"
+	source "package/lbreakout2/Config.in"
+	source "package/ltris/Config.in"
+	source "package/lugaru/Config.in"
+	source "package/minetest/Config.in"
+	source "package/minetest-game/Config.in"
+	source "package/opentyrian/Config.in"
+	source "package/opentyrian-data/Config.in"
+	source "package/prboom/Config.in"
+	source "package/rubix/Config.in"
+	source "package/sl/Config.in"
+	source "package/solarus/Config.in"
+	source "package/stella/Config.in"
+	source "package/supertux/Config.in"
+	source "package/supertuxkart/Config.in"
+endmenu
+
+menu "Graphic libraries and applications (graphic/text)"
+
+comment "Graphic applications"
+	source "package/expedite/Config.in"
+	source "package/fswebcam/Config.in"
+	source "package/ghostscript/Config.in"
+	source "package/glmark2/Config.in"
+	source "package/gnuplot/Config.in"
+	source "package/jhead/Config.in"
+	source "package/kmscube/Config.in"
+	source "package/libva-utils/Config.in"
+	source "package/mesa3d-demos/Config.in"
+	source "package/pngquant/Config.in"
+	source "package/qt5cinex/Config.in"
+	source "package/rrdtool/Config.in"
+	source "package/tesseract-ocr/Config.in"
+
+comment "Graphic libraries"
+	source "package/cegui06/Config.in"
+	source "package/directfb/Config.in"
+	source "package/directfb-examples/Config.in"
+	source "package/efl/Config.in"
+	source "package/fbdump/Config.in"
+	source "package/fbgrab/Config.in"
+	source "package/fbset/Config.in"
+	source "package/fb-test-app/Config.in"
+	source "package/fbterm/Config.in"
+	source "package/fbv/Config.in"
+	source "package/freerdp/Config.in"
+	source "package/imagemagick/Config.in"
+	source "package/linux-fusion/Config.in"
+	source "package/lite/Config.in"
+	source "package/mesa3d/Config.in"
+	source "package/mesa3d-headers/Config.in"
+	source "package/ocrad/Config.in"
+	source "package/psplash/Config.in"
+	source "package/sdl/Config.in"
+	source "package/sdl_gfx/Config.in"
+	source "package/sdl_image/Config.in"
+	source "package/sdl_mixer/Config.in"
+	source "package/sdl_net/Config.in"
+	source "package/sdl_sound/Config.in"
+	source "package/sdl_ttf/Config.in"
+	source "package/sdl2/Config.in"
+	source "package/sdl2_gfx/Config.in"
+	source "package/sdl2_image/Config.in"
+	source "package/sdl2_mixer/Config.in"
+	source "package/sdl2_net/Config.in"
+	source "package/sdl2_ttf/Config.in"
+
+comment "Other GUIs"
+	source "package/qt/Config.in"
+	source "package/qt5/Config.in"
+if BR2_PACKAGE_QT || BR2_PACKAGE_QT5
+comment "QT libraries and helper libraries"
+	source "package/grantlee/Config.in"
+	source "package/qextserialport/Config.in"
+	source "package/qjson/Config.in"
+	source "package/qtuio/Config.in"
+	source "package/quazip/Config.in"
+	source "package/qwt/Config.in"
+endif
+	source "package/tekui/Config.in"
+	source "package/weston/Config.in"
+	source "package/x11r7/Config.in"
+
+comment "X applications"
+	depends on BR2_PACKAGE_XORG7
+
+	source "package/alsamixergui/Config.in"
+	source "package/apitrace/Config.in"
+	source "package/dillo/Config.in"
+	source "package/docker/Config.in"
+	source "package/feh/Config.in"
+	source "package/gmpc/Config.in"
+	source "package/gqview/Config.in"
+	source "package/gtkperf/Config.in"
+	source "package/leafpad/Config.in"
+	source "package/midori/Config.in"
+	source "package/nodm/Config.in"
+	source "package/pcmanfm/Config.in"
+	source "package/qt-webkit-kiosk/Config.in"
+	source "package/rdesktop/Config.in"
+	source "package/synergy/Config.in"
+	source "package/wmctrl/Config.in"
+	source "package/x11vnc/Config.in"
+	source "package/xdotool/Config.in"
+	source "package/xscreensaver/Config.in"
+	source "package/xterm/Config.in"
+	source "package/xvkbd/Config.in"
+	source "package/yad/Config.in"
+
+comment "X libraries and helper libraries"
+	depends on BR2_PACKAGE_XORG7
+
+	source "package/libsexy/Config.in"
+	source "package/x11r7/xkeyboard-config/Config.in"
+
+comment "X window managers"
+	depends on BR2_PACKAGE_XORG7
+
+	source "package/enlightenment/Config.in"
+	source "package/fluxbox/Config.in"
+	source "package/matchbox/Config.in"
+	source "package/metacity/Config.in"
+	source "package/openbox/Config.in"
+	source "package/ratpoison/Config.in"
+endmenu
+
+menu "Hardware handling"
+menu "Firmware"
+	source "package/am33x-cm3/Config.in"
+	source "package/armbian-firmware/Config.in"
+	source "package/b43-firmware/Config.in"
+	source "package/linux-firmware/Config.in"
+	source "package/rpi-bt-firmware/Config.in"
+	source "package/rpi-firmware/Config.in"
+	source "package/rpi-wifi-firmware/Config.in"
+	source "package/sunxi-boards/Config.in"
+	source "package/ts4900-fpga/Config.in"
+	source "package/ux500-firmware/Config.in"
+	source "package/wilc1000-firmware/Config.in"
+	source "package/wilink-bt-firmware/Config.in"
+	source "package/zd1211-firmware/Config.in"
+endmenu
+	source "package/a10disp/Config.in"
+	source "package/acpica/Config.in"
+	source "package/acpid/Config.in"
+	source "package/acpitool/Config.in"
+	source "package/aer-inject/Config.in"
+	source "package/am335x-pru-package/Config.in"
+	source "package/amd-catalyst/Config.in"
+	source "package/avrdude/Config.in"
+	source "package/bcache-tools/Config.in"
+	source "package/biosdevname/Config.in"
+	source "package/brltty/Config.in"
+	source "package/cbootimage/Config.in"
+	source "package/cc-tool/Config.in"
+	source "package/cdrkit/Config.in"
+	source "package/cryptsetup/Config.in"
+	source "package/cwiid/Config.in"
+	source "package/dahdi-linux/Config.in"
+	source "package/dahdi-tools/Config.in"
+	source "package/dbus/Config.in"
+	source "package/dbus-cpp/Config.in"
+	source "package/dbus-glib/Config.in"
+	source "package/dbus-python/Config.in"
+	source "package/dbus-triggerd/Config.in"
+	source "package/devmem2/Config.in"
+	source "package/dfu-util/Config.in"
+	source "package/dmidecode/Config.in"
+	source "package/dmraid/Config.in"
+	source "package/dt-utils/Config.in"
+	source "package/dtv-scan-tables/Config.in"
+	source "package/dump1090/Config.in"
+	source "package/dvb-apps/Config.in"
+	source "package/dvbsnoop/Config.in"
+	source "package/edid-decode/Config.in"
+	source "package/eudev/Config.in"
+	source "package/ev3dev-linux-drivers/Config.in"
+	source "package/evemu/Config.in"
+	source "package/evtest/Config.in"
+	source "package/fan-ctrl/Config.in"
+	source "package/fbtft/Config.in"
+	source "package/fconfig/Config.in"
+	source "package/fis/Config.in"
+	source "package/flashrom/Config.in"
+	source "package/fmtools/Config.in"
+	source "package/freescale-imx/Config.in"
+	source "package/fxload/Config.in"
+	source "package/gadgetfs-test/Config.in"
+	source "package/gpm/Config.in"
+	source "package/gpsd/Config.in"
+	source "package/gptfdisk/Config.in"
+	source "package/gvfs/Config.in"
+	source "package/hdparm/Config.in"
+	source "package/hwdata/Config.in"
+	source "package/hwloc/Config.in"
+	source "package/i2c-tools/Config.in"
+	source "package/i7z/Config.in"
+	source "package/input-event-daemon/Config.in"
+	source "package/intel-microcode/Config.in"
+	source "package/iostat/Config.in"
+	source "package/ipmitool/Config.in"
+	source "package/ipmiutil/Config.in"
+	source "package/iqvlinux/Config.in"
+	source "package/irda-utils/Config.in"
+	source "package/iucode-tool/Config.in"
+	source "package/kbd/Config.in"
+	source "package/lcdproc/Config.in"
+	source "package/libuio/Config.in"
+	source "package/libump/Config.in"
+	source "package/linuxconsoletools/Config.in"
+	source "package/linux-backports/Config.in"
+	source "package/lirc-tools/Config.in"
+	source "package/lm-sensors/Config.in"
+	source "package/lshw/Config.in"
+	source "package/lsscsi/Config.in"
+	source "package/lsuio/Config.in"
+	source "package/luksmeta/Config.in"
+	source "package/lvm2/Config.in"
+	source "package/mali-t76x/Config.in"
+	source "package/mdadm/Config.in"
+	source "package/memtest86/Config.in"
+	source "package/memtester/Config.in"
+	source "package/memtool/Config.in"
+	source "package/minicom/Config.in"
+	source "package/msr-tools/Config.in"
+	source "package/nanocom/Config.in"
+	source "package/neard/Config.in"
+	source "package/nvidia-driver/Config.in"
+	source "package/nvidia-tegra23/Config.in"
+	source "package/nvme/Config.in"
+	source "package/odroid-mali/Config.in"
+	source "package/odroid-scripts/Config.in"
+	source "package/ofono/Config.in"
+	source "package/on2-8170-modules/Config.in"
+	source "package/open2300/Config.in"
+	source "package/openipmi/Config.in"
+	source "package/openocd/Config.in"
+	source "package/openpowerlink/Config.in"
+	source "package/owl-linux/Config.in"
+	source "package/parted/Config.in"
+	source "package/pciutils/Config.in"
+	source "package/pdbg/Config.in"
+	source "package/picocom/Config.in"
+	source "package/pifmrds/Config.in"
+	source "package/powertop/Config.in"
+	source "package/pps-tools/Config.in"
+	source "package/pru-software-support/Config.in"
+	source "package/pulseview/Config.in"
+	source "package/read-edid/Config.in"
+	source "package/rng-tools/Config.in"
+	source "package/rpi-userland/Config.in"
+	source "package/rs485conf/Config.in"
+	source "package/rtl8188eu/Config.in"
+	source "package/rtl8723bs/Config.in"
+	source "package/rtl8723bu/Config.in"
+	source "package/rtl8821au/Config.in"
+	source "package/rtl8189fs/Config.in"
+	source "package/sane-backends/Config.in"
+	source "package/sdparm/Config.in"
+	source "package/setserial/Config.in"
+	source "package/sg3_utils/Config.in"
+	source "package/sigrok-cli/Config.in"
+	source "package/sispmctl/Config.in"
+	source "package/smartmontools/Config.in"
+	source "package/smstools3/Config.in"
+	source "package/spi-tools/Config.in"
+	source "package/sredird/Config.in"
+	source "package/statserial/Config.in"
+	source "package/stm32flash/Config.in"
+	source "package/sunxi-cedarx/Config.in"
+	source "package/sunxi-mali/Config.in"
+	source "package/sysstat/Config.in"
+	source "package/targetcli-fb/Config.in"
+	source "package/ti-gfx/Config.in"
+	source "package/ti-sgx-demos/Config.in"
+	source "package/ti-sgx-km/Config.in"
+	source "package/ti-sgx-um/Config.in"
+	source "package/ti-uim/Config.in"
+	source "package/ti-utils/Config.in"
+	source "package/triggerhappy/Config.in"
+	source "package/uboot-tools/Config.in"
+	source "package/ubus/Config.in"
+	source "package/uccp420wlan/Config.in"
+	source "package/udev/Config.in"
+	source "package/udisks/Config.in"
+	source "package/uhubctl/Config.in"
+	source "package/upower/Config.in"
+	source "package/usb_modeswitch/Config.in"
+	source "package/usb_modeswitch_data/Config.in"
+	source "package/usbmount/Config.in"
+	source "package/usbutils/Config.in"
+	source "package/w_scan/Config.in"
+	source "package/wf111/Config.in"
+	source "package/wipe/Config.in"
+	source "package/xorriso/Config.in"
+	source "package/xr819-xradio/Config.in"
+endmenu
+
+menu "Interpreter languages and scripting"
+	source "package/4th/Config.in"
+	source "package/enscript/Config.in"
+	source "package/erlang/Config.in"
+if BR2_PACKAGE_ERLANG
+menu "Erlang libraries/modules"
+	source "package/erlang-goldrush/Config.in"
+	source "package/erlang-jiffy/Config.in"
+	source "package/erlang-lager/Config.in"
+	source "package/erlang-p1-cache-tab/Config.in"
+	source "package/erlang-p1-iconv/Config.in"
+	source "package/erlang-p1-oauth2/Config.in"
+	source "package/erlang-p1-sip/Config.in"
+	source "package/erlang-p1-stringprep/Config.in"
+	source "package/erlang-p1-stun/Config.in"
+	source "package/erlang-p1-tls/Config.in"
+	source "package/erlang-p1-utils/Config.in"
+	source "package/erlang-p1-xml/Config.in"
+	source "package/erlang-p1-xmpp/Config.in"
+	source "package/erlang-p1-yaml/Config.in"
+	source "package/erlang-p1-zlib/Config.in"
+endmenu
+endif
+	source "package/execline/Config.in"
+	source "package/ficl/Config.in"
+	source "package/gauche/Config.in"
+	source "package/guile/Config.in"
+	source "package/haserl/Config.in"
+	source "package/jamvm/Config.in"
+	source "package/jimtcl/Config.in"
+	source "package/lua/Config.in"
+	source "package/luainterpreter/Config.in"
+	source "package/luajit/Config.in"
+if BR2_PACKAGE_HAS_LUAINTERPRETER && !BR2_STATIC_LIBS
+# lua modules are dynamically loaded, so not available on static builds
+menu "Lua libraries/modules"
+# When adding lua packages, make sure the name start with "lua". If the
+# upstream package is "luafoo", call it "luafoo" in Buildroot; if the upstream
+# package is "foo", call it "lua-foo". Many packages currently don't follow
+# this convention, but that's historical accident.
+	source "package/argparse/Config.in"
+	source "package/cgilua/Config.in"
+	source "package/copas/Config.in"
+	source "package/coxpcall/Config.in"
+	source "package/dado/Config.in"
+	source "package/easydbus/Config.in"
+	source "package/lbase64/Config.in"
+	source "package/ljlinenoise/Config.in"
+	source "package/ljsyscall/Config.in"
+	source "package/lpeg/Config.in"
+	source "package/lpty/Config.in"
+	source "package/lrandom/Config.in"
+	source "package/lsqlite3/Config.in"
+	source "package/lua-basexx/Config.in"
+	source "package/lua-bit32/Config.in"
+	source "package/lua-cjson/Config.in"
+	source "package/lua-coat/Config.in"
+	source "package/lua-coatpersistent/Config.in"
+	source "package/lua-compat53/Config.in"
+	source "package/lua-cqueues/Config.in"
+	source "package/lua-csnappy/Config.in"
+	source "package/lua-curl/Config.in"
+	source "package/lua-datafile/Config.in"
+	source "package/lua-ev/Config.in"
+	source "package/lua-fifo/Config.in"
+	source "package/lua-flu/Config.in"
+	source "package/lua-http/Config.in"
+	source "package/lua-iconv/Config.in"
+	source "package/lua-lpeg-patterns/Config.in"
+	source "package/lua-markdown/Config.in"
+	source "package/lua-messagepack/Config.in"
+	source "package/lua-msgpack-native/Config.in"
+	source "package/lua-periphery/Config.in"
+	source "package/lua-sdl2/Config.in"
+	source "package/lua-stdlib/Config.in"
+	source "package/lua-testmore/Config.in"
+	source "package/lua-utf8/Config.in"
+	source "package/luabitop/Config.in"
+	source "package/luacrypto/Config.in"
+	source "package/luadbi/Config.in"
+	source "package/luadbi-sqlite3/Config.in"
+	source "package/luaexpat/Config.in"
+	source "package/luaexpatutils/Config.in"
+	source "package/luafilesystem/Config.in"
+	source "package/luajson/Config.in"
+	source "package/lualogging/Config.in"
+	source "package/luaossl/Config.in"
+	source "package/luaposix/Config.in"
+	source "package/lua-resty-http/Config.in"
+	source "package/lua-sailor/Config.in"
+	source "package/luasec/Config.in"
+	source "package/luasocket/Config.in"
+	source "package/luasql-sqlite3/Config.in"
+	source "package/lua-valua/Config.in"
+	source "package/lunit/Config.in"
+	source "package/lutok/Config.in"
+	source "package/luv/Config.in"
+	source "package/luvi/Config.in"
+	source "package/lzlib/Config.in"
+	source "package/orbit/Config.in"
+	source "package/rings/Config.in"
+	source "package/turbolua/Config.in"
+	source "package/wsapi/Config.in"
+	source "package/wsapi-fcgi/Config.in"
+	source "package/wsapi-xavante/Config.in"
+	source "package/xavante/Config.in"
+endmenu
+endif
+	source "package/micropython/Config.in"
+	source "package/micropython-lib/Config.in"
+	source "package/moarvm/Config.in"
+	source "package/mono/Config.in"
+if BR2_PACKAGE_MONO
+menu "Mono libraries/modules"
+	source "package/mono-gtksharp3/Config.in"
+endmenu
+endif
+	source "package/nodejs/Config.in"
+	source "package/perl/Config.in"
+if BR2_PACKAGE_PERL
+menu "Perl libraries/modules"
+	source "package/perl-crypt-openssl-random/Config.in"
+	source "package/perl-crypt-openssl-rsa/Config.in"
+	source "package/perl-datetime-tiny/Config.in"
+	source "package/perl-digest-hmac/Config.in"
+	source "package/perl-digest-sha1/Config.in"
+	source "package/perl-encode-detect/Config.in"
+	source "package/perl-encode-locale/Config.in"
+	source "package/perl-file-listing/Config.in"
+	source "package/perl-file-util/Config.in"
+	source "package/perl-gd/Config.in"
+	source "package/perl-gdgraph/Config.in"
+	source "package/perl-gdtextutil/Config.in"
+	source "package/perl-html-parser/Config.in"
+	source "package/perl-html-tagset/Config.in"
+	source "package/perl-http-cookies/Config.in"
+	source "package/perl-http-daemon/Config.in"
+	source "package/perl-http-date/Config.in"
+	source "package/perl-http-message/Config.in"
+	source "package/perl-http-negotiate/Config.in"
+	source "package/perl-io-html/Config.in"
+	source "package/perl-io-socket-ssl/Config.in"
+	source "package/perl-json-tiny/Config.in"
+	source "package/perl-libwww-perl/Config.in"
+	source "package/perl-lwp-mediatypes/Config.in"
+	source "package/perl-mail-dkim/Config.in"
+	source "package/perl-mailtools/Config.in"
+	source "package/perl-mime-base64/Config.in"
+	source "package/perl-mojolicious/Config.in"
+	source "package/perl-net-dns/Config.in"
+	source "package/perl-net-http/Config.in"
+	source "package/perl-net-ssleay/Config.in"
+	source "package/perl-netaddr-ip/Config.in"
+	source "package/perl-path-tiny/Config.in"
+	source "package/perl-time-hires/Config.in"
+	source "package/perl-timedate/Config.in"
+	source "package/perl-try-tiny/Config.in"
+	source "package/perl-uri/Config.in"
+	source "package/perl-www-robotrules/Config.in"
+	source "package/perl-xml-libxml/Config.in"
+	source "package/perl-xml-namespacesupport/Config.in"
+	source "package/perl-xml-sax/Config.in"
+	source "package/perl-xml-sax-base/Config.in"
+endmenu
+endif
+	source "package/php/Config.in"
+if BR2_PACKAGE_PHP
+if !BR2_STATIC_LIBS
+menu "External php extensions"
+	source "package/php-amqp/Config.in"
+	source "package/php-geoip/Config.in"
+	source "package/php-gnupg/Config.in"
+	source "package/php-imagick/Config.in"
+	source "package/php-memcached/Config.in"
+	source "package/php-ssh2/Config.in"
+	source "package/php-yaml/Config.in"
+	source "package/php-zmq/Config.in"
+endmenu
+endif
+if BR2_STATIC_LIBS
+comment "External PHP extensions need a toolchain w/ dynamic library"
+endif
+endif
+	source "package/python/Config.in"
+	source "package/python3/Config.in"
+if BR2_PACKAGE_PYTHON || BR2_PACKAGE_PYTHON3
+menu "External python modules"
+	source "package/python-aiocoap/Config.in"
+	source "package/python-alsaaudio/Config.in"
+	source "package/python-argh/Config.in"
+	source "package/python-arrow/Config.in"
+	source "package/python-asn1crypto/Config.in"
+	source "package/python-attrs/Config.in"
+	source "package/python-autobahn/Config.in"
+	source "package/python-automat/Config.in"
+	source "package/python-babel/Config.in"
+	source "package/python-backports-abc/Config.in"
+	source "package/python-backports-shutil-get-terminal-size/Config.in"
+	source "package/python-bcrypt/Config.in"
+	source "package/python-beautifulsoup4/Config.in"
+	source "package/python-bitstring/Config.in"
+	source "package/python-bottle/Config.in"
+	source "package/python-can/Config.in"
+	source "package/python-cbor/Config.in"
+	source "package/python-certifi/Config.in"
+	source "package/python-cffi/Config.in"
+	source "package/python-characteristic/Config.in"
+	source "package/python-chardet/Config.in"
+	source "package/python-cheetah/Config.in"
+	source "package/python-cheroot/Config.in"
+	source "package/python-cherrypy/Config.in"
+	source "package/python-click/Config.in"
+	source "package/python-coherence/Config.in"
+	source "package/python-configobj/Config.in"
+	source "package/python-configshell-fb/Config.in"
+	source "package/python-constantly/Config.in"
+	source "package/python-couchdb/Config.in"
+	source "package/python-crc16/Config.in"
+	source "package/python-crcmod/Config.in"
+	source "package/python-crossbar/Config.in"
+	source "package/python-cryptography/Config.in"
+	source "package/python-cssselect/Config.in"
+	source "package/python-cssutils/Config.in"
+	source "package/python-daemon/Config.in"
+	source "package/python-dataproperty/Config.in"
+	source "package/python-dateutil/Config.in"
+	source "package/python-decorator/Config.in"
+	source "package/python-dialog/Config.in"
+	source "package/python-dialog3/Config.in"
+	source "package/python-dicttoxml/Config.in"
+	source "package/python-django/Config.in"
+	source "package/python-docopt/Config.in"
+	source "package/python-docutils/Config.in"
+	source "package/python-dominate/Config.in"
+	source "package/python-dpkt/Config.in"
+	source "package/python-ecdsa/Config.in"
+	source "package/python-engineio/Config.in"
+	source "package/python-enum/Config.in"
+	source "package/python-enum34/Config.in"
+	source "package/python-flask/Config.in"
+	source "package/python-flask-cors/Config.in"
+	source "package/python-flask-babel/Config.in"
+	source "package/python-flask-jsonrpc/Config.in"
+	source "package/python-flask-login/Config.in"
+	source "package/python-flup/Config.in"
+	source "package/python-functools32/Config.in"
+	source "package/python-futures/Config.in"
+	source "package/python-gobject/Config.in"
+	source "package/python-gunicorn/Config.in"
+	source "package/python-h2/Config.in"
+	source "package/python-hpack/Config.in"
+	source "package/python-html5lib/Config.in"
+	source "package/python-httplib2/Config.in"
+	source "package/python-humanize/Config.in"
+	source "package/python-hyperframe/Config.in"
+	source "package/python-hyperlink/Config.in"
+	source "package/python-ibmiotf/Config.in"
+	source "package/python-id3/Config.in"
+	source "package/python-idna/Config.in"
+	source "package/python-incremental/Config.in"
+	source "package/python-iniparse/Config.in"
+	source "package/python-iowait/Config.in"
+	source "package/python-ipaddr/Config.in"
+	source "package/python-ipaddress/Config.in"
+	source "package/python-ipy/Config.in"
+	source "package/python-ipython/Config.in"
+	source "package/python-ipython-genutils/Config.in"
+	source "package/python-iso8601/Config.in"
+	source "package/python-itsdangerous/Config.in"
+	source "package/python-jaraco-classes/Config.in"
+	source "package/python-jinja2/Config.in"
+	source "package/python-jsonschema/Config.in"
+	source "package/python-json-schema-validator/Config.in"
+	source "package/python-keyring/Config.in"
+	source "package/python-libconfig/Config.in"
+	source "package/python-lmdb/Config.in"
+	source "package/python-logbook/Config.in"
+	source "package/python-lxml/Config.in"
+	source "package/python-m2r/Config.in"
+	source "package/python-mad/Config.in"
+	source "package/python-mako/Config.in"
+	source "package/python-markdown/Config.in"
+	source "package/python-markdown2/Config.in"
+	source "package/python-markupsafe/Config.in"
+	source "package/python-mbstrdecoder/Config.in"
+	source "package/python-meld3/Config.in"
+	source "package/python-mistune/Config.in"
+	source "package/python-more-itertools/Config.in"
+	source "package/python-msgpack/Config.in"
+	source "package/python-mutagen/Config.in"
+	source "package/python-mwclient/Config.in"
+	source "package/python-mwscrape/Config.in"
+	source "package/python-mwscrape2slob/Config.in"
+	source "package/python-netaddr/Config.in"
+	source "package/python-netifaces/Config.in"
+	source "package/python-networkmanager/Config.in"
+	source "package/python-nfc/Config.in"
+	source "package/python-numpy/Config.in"
+	source "package/python-oauthlib/Config.in"
+	source "package/python-paho-mqtt/Config.in"
+	source "package/python-pam/Config.in"
+	source "package/python-paramiko/Config.in"
+	source "package/python-pathlib2/Config.in"
+	source "package/python-pathpy/Config.in"
+	source "package/python-pathtools/Config.in"
+	source "package/python-pathvalidate/Config.in"
+	source "package/python-pexpect/Config.in"
+	source "package/python-pickleshare/Config.in"
+	source "package/python-pillow/Config.in"
+	source "package/python-portend/Config.in"
+	source "package/python-posix-ipc/Config.in"
+	source "package/python-priority/Config.in"
+	source "package/python-prompt-toolkit/Config.in"
+	source "package/python-protobuf/Config.in"
+	source "package/python-psutil/Config.in"
+	source "package/python-ptyprocess/Config.in"
+	source "package/python-pudb/Config.in"
+	source "package/python-pyasn/Config.in"
+	source "package/python-pyasn-modules/Config.in"
+	source "package/python-pycli/Config.in"
+	source "package/python-pycparser/Config.in"
+	source "package/python-pycrypto/Config.in"
+	source "package/python-pydal/Config.in"
+	source "package/python-pyelftools/Config.in"
+	source "package/python-pyftpdlib/Config.in"
+	source "package/python-pygame/Config.in"
+	source "package/python-pygments/Config.in"
+	source "package/python-pyicu/Config.in"
+	source "package/python-pyinotify/Config.in"
+	source "package/python-pylibftdi/Config.in"
+	source "package/python-pylru/Config.in"
+	source "package/python-pymysql/Config.in"
+	source "package/python-pynacl/Config.in"
+	source "package/python-pyopenssl/Config.in"
+	source "package/python-pyparsing/Config.in"
+	source "package/python-pyparted/Config.in"
+	source "package/python-pypcap/Config.in"
+	source "package/python-pyqrcode/Config.in"
+	source "package/python-pyqt/Config.in"
+	source "package/python-pyqt5/Config.in"
+	source "package/python-pyratemp/Config.in"
+	source "package/python-pyro/Config.in"
+	source "package/python-pyroute2/Config.in"
+	source "package/python-pysendfile/Config.in"
+	source "package/python-pysmb/Config.in"
+	source "package/python-pysnmp/Config.in"
+	source "package/python-pysnmp-apps/Config.in"
+	source "package/python-pysnmp-mibs/Config.in"
+	source "package/python-pysocks/Config.in"
+	source "package/python-pytablereader/Config.in"
+	source "package/python-pytablewriter/Config.in"
+	source "package/python-pytrie/Config.in"
+	source "package/python-pytz/Config.in"
+	source "package/python-pyudev/Config.in"
+	source "package/python-pyusb/Config.in"
+	source "package/python-pyxb/Config.in"
+	source "package/python-pyyaml/Config.in"
+	source "package/python-pyzmq/Config.in"
+	source "package/python-raven/Config.in"
+	source "package/python-remi/Config.in"
+	source "package/python-requests/Config.in"
+	source "package/python-requests-oauthlib/Config.in"
+	source "package/python-requests-toolbelt/Config.in"
+	source "package/python-rpi-gpio/Config.in"
+	source "package/python-rtslib-fb/Config.in"
+	source "package/python-scandir/Config.in"
+	source "package/python-scapy3k/Config.in"
+	source "package/python-schedule/Config.in"
+	source "package/python-sdnotify/Config.in"
+	source "package/python-secretstorage/Config.in"
+	source "package/python-see/Config.in"
+	source "package/python-serial/Config.in"
+	source "package/python-service-identity/Config.in"
+	source "package/python-setproctitle/Config.in"
+	source "package/python-setuptools/Config.in"
+	source "package/python-sh/Config.in"
+	source "package/python-shutilwhich/Config.in"
+	source "package/python-simpleaudio/Config.in"
+	source "package/python-simplegeneric/Config.in"
+	source "package/python-simplejson/Config.in"
+	source "package/python-simplesqlite/Config.in"
+	source "package/python-singledispatch/Config.in"
+	source "package/python-sip/Config.in"
+	source "package/python-six/Config.in"
+	source "package/python-slob/Config.in"
+	source "package/python-smbus-cffi/Config.in"
+	source "package/python-socketio/Config.in"
+	source "package/python-sortedcontainers//Config.in"
+	source "package/python-spidev/Config.in"
+	source "package/python-systemd/Config.in"
+	source "package/python-tabledata/Config.in"
+	source "package/python-tempora/Config.in"
+	source "package/python-typepy/Config.in"
+	source "package/python-thrift/Config.in"
+	source "package/python-tomako/Config.in"
+	source "package/python-toml/Config.in"
+	source "package/python-tornado/Config.in"
+	source "package/python-traitlets/Config.in"
+	source "package/python-treq/Config.in"
+	source "package/python-twisted/Config.in"
+	source "package/python-txaio/Config.in"
+	source "package/python-txtorcon/Config.in"
+	source "package/python-u-msgpack/Config.in"
+	source "package/python-ubjson/Config.in"
+	source "package/python-ujson/Config.in"
+	source "package/python-urllib3/Config.in"
+	source "package/python-urwid/Config.in"
+	source "package/python-versiontools/Config.in"
+	source "package/python-watchdog/Config.in"
+	source "package/python-wcwidth/Config.in"
+	source "package/python-web2py/Config.in"
+	source "package/python-webpy/Config.in"
+	source "package/python-websockets/Config.in"
+	source "package/python-werkzeug/Config.in"
+	source "package/python-whoosh/Config.in"
+	source "package/python-ws4py/Config.in"
+	source "package/python-wsaccel/Config.in"
+	source "package/python-xlib/Config.in"
+	source "package/python-xlrd/Config.in"
+	source "package/python-xlsxwriter/Config.in"
+	source "package/python-xlutils/Config.in"
+	source "package/python-xlwt/Config.in"
+	source "package/python-xmltodict/Config.in"
+	source "package/python-zope-interface/Config.in"
+endmenu
+endif
+	source "package/ruby/Config.in"
+	source "package/tcl/Config.in"
+if BR2_PACKAGE_TCL
+menu "Tcl libraries/modules"
+	source "package/expect/Config.in"
+	source "package/tcllib/Config.in"
+endmenu
+endif
+endmenu
+
+menu "Libraries"
+
+menu "Audio/Sound"
+	source "package/alsa-lib/Config.in"
+	source "package/aubio/Config.in"
+	source "package/audiofile/Config.in"
+	source "package/bcg729/Config.in"
+	source "package/celt051/Config.in"
+	source "package/fdk-aac/Config.in"
+	source "package/libao/Config.in"
+	source "package/libasplib/Config.in"
+	source "package/libbroadvoice/Config.in"
+	source "package/libcdaudio/Config.in"
+	source "package/libcddb/Config.in"
+	source "package/libcdio/Config.in"
+	source "package/libcodec2/Config.in"
+	source "package/libcue/Config.in"
+	source "package/libcuefile/Config.in"
+	source "package/libebur128/Config.in"
+	source "package/libg7221/Config.in"
+	source "package/libgsm/Config.in"
+	source "package/libid3tag/Config.in"
+	source "package/libilbc/Config.in"
+	source "package/liblo/Config.in"
+	source "package/libmad/Config.in"
+	source "package/libmodplug/Config.in"
+	source "package/libmpd/Config.in"
+	source "package/libmpdclient/Config.in"
+	source "package/libreplaygain/Config.in"
+	source "package/libsamplerate/Config.in"
+	source "package/libsidplay2/Config.in"
+	source "package/libsilk/Config.in"
+	source "package/libsndfile/Config.in"
+	source "package/libsoundtouch/Config.in"
+	source "package/libsoxr/Config.in"
+	source "package/libvorbis/Config.in"
+	source "package/mp4v2/Config.in"
+	source "package/openal/Config.in"
+	source "package/opencore-amr/Config.in"
+	source "package/opus/Config.in"
+	source "package/opusfile/Config.in"
+	source "package/portaudio/Config.in"
+	source "package/sbc/Config.in"
+	source "package/speex/Config.in"
+	source "package/taglib/Config.in"
+	source "package/tinyalsa/Config.in"
+	source "package/tremor/Config.in"
+	source "package/vo-aacenc/Config.in"
+	source "package/webrtc-audio-processing/Config.in"
+endmenu
+
+menu "Compression and decompression"
+	source "package/libarchive/Config.in"
+	source "package/libsquish/Config.in"
+	source "package/libzip/Config.in"
+	source "package/lzo/Config.in"
+	source "package/minizip/Config.in"
+	source "package/snappy/Config.in"
+	source "package/szip/Config.in"
+	source "package/zlib/Config.in"
+endmenu
+
+menu "Crypto"
+	source "package/beecrypt/Config.in"
+	source "package/botan/Config.in"
+	source "package/ca-certificates/Config.in"
+	source "package/cryptodev/Config.in"
+	source "package/gcr/Config.in"
+	source "package/gnutls/Config.in"
+	source "package/libassuan/Config.in"
+	source "package/libgcrypt/Config.in"
+	source "package/libgpg-error/Config.in"
+	source "package/libgpgme/Config.in"
+	source "package/libkcapi/Config.in"
+	source "package/libksba/Config.in"
+	source "package/libmcrypt/Config.in"
+	source "package/libmhash/Config.in"
+	source "package/libnss/Config.in"
+	source "package/libscrypt/Config.in"
+	source "package/libsecret/Config.in"
+	source "package/libsha1/Config.in"
+	source "package/libsodium/Config.in"
+	source "package/libssh/Config.in"
+	source "package/libssh2/Config.in"
+	source "package/libtomcrypt/Config.in"
+	source "package/libuecc/Config.in"
+	source "package/mbedtls/Config.in"
+	source "package/nettle/Config.in"
+	source "package/openssl/Config.in"
+	source "package/rhash/Config.in"
+	source "package/tinydtls/Config.in"
+	source "package/trousers/Config.in"
+	source "package/ustream-ssl/Config.in"
+	source "package/wolfssl/Config.in"
+endmenu
+
+menu "Database"
+	source "package/berkeleydb/Config.in"
+	source "package/cppdb/Config.in"
+	source "package/gdbm/Config.in"
+	source "package/hiredis/Config.in"
+	source "package/kompexsqlite/Config.in"
+	source "package/leveldb/Config.in"
+	source "package/libpqxx/Config.in"
+	source "package/mongodb/Config.in"
+	source "package/mysql/Config.in"
+	source "package/postgresql/Config.in"
+	source "package/redis/Config.in"
+	source "package/sqlcipher/Config.in"
+	source "package/sqlite/Config.in"
+	source "package/unixodbc/Config.in"
+endmenu
+
+menu "Filesystem"
+	source "package/gamin/Config.in"
+	source "package/libconfig/Config.in"
+	source "package/libconfuse/Config.in"
+	source "package/libfuse/Config.in"
+	source "package/liblockfile/Config.in"
+	source "package/libnfs/Config.in"
+	source "package/libsysfs/Config.in"
+	source "package/lockdev/Config.in"
+	source "package/physfs/Config.in"
+endmenu
+
+menu "Graphics"
+	source "package/assimp/Config.in"
+	source "package/atk/Config.in"
+	source "package/atkmm/Config.in"
+	source "package/bullet/Config.in"
+	source "package/cairo/Config.in"
+	source "package/cairomm/Config.in"
+	source "package/exiv2/Config.in"
+	source "package/fltk/Config.in"
+	source "package/fontconfig/Config.in"
+	source "package/freetype/Config.in"
+	source "package/gd/Config.in"
+	source "package/gdk-pixbuf/Config.in"
+	source "package/giblib/Config.in"
+	source "package/giflib/Config.in"
+	source "package/granite/Config.in"
+	source "package/graphite2/Config.in"
+	source "package/gtkmm3/Config.in"
+	source "package/gtksourceview/Config.in"
+	source "package/harfbuzz/Config.in"
+	source "package/ijs/Config.in"
+	source "package/imlib2/Config.in"
+	source "package/irrlicht/Config.in"
+	source "package/jasper/Config.in"
+	source "package/jpeg/Config.in"
+	source "package/kmsxx/Config.in"
+	source "package/lcms2/Config.in"
+	source "package/lensfun/Config.in"
+	source "package/leptonica/Config.in"
+	source "package/lesstif/Config.in"
+	source "package/libart/Config.in"
+	source "package/libdmtx/Config.in"
+	source "package/libdri2/Config.in"
+	source "package/libdrm/Config.in"
+	source "package/libepoxy/Config.in"
+	source "package/libexif/Config.in"
+	source "package/libfm/Config.in"
+	source "package/libfm-extra/Config.in"
+	source "package/libfreeglut/Config.in"
+	source "package/libfreeimage/Config.in"
+	source "package/libgdiplus/Config.in"
+	source "package/libgeotiff/Config.in"
+	source "package/libglade/Config.in"
+	source "package/libglew/Config.in"
+	source "package/libglfw/Config.in"
+	source "package/libglu/Config.in"
+	source "package/libgta/Config.in"
+	source "package/libgtk2/Config.in"
+	source "package/libgtk3/Config.in"
+	source "package/libmediaart/Config.in"
+	source "package/libmng/Config.in"
+	source "package/libpng/Config.in"
+	source "package/libqrencode/Config.in"
+	source "package/libraw/Config.in"
+	source "package/librsvg/Config.in"
+	source "package/libsoil/Config.in"
+	source "package/libsvg/Config.in"
+	source "package/libsvg-cairo/Config.in"
+	source "package/libsvgtiny/Config.in"
+	source "package/libva/Config.in"
+	source "package/libva-intel-driver/Config.in"
+	source "package/libvdpau/Config.in"
+	source "package/libvips/Config.in"
+	source "package/menu-cache/Config.in"
+	source "package/opencv/Config.in"
+	source "package/opencv3/Config.in"
+	source "package/opengl/Config.in"
+	source "package/openjpeg/Config.in"
+	source "package/pango/Config.in"
+	source "package/pangomm/Config.in"
+	source "package/pixman/Config.in"
+	source "package/poppler/Config.in"
+	source "package/powervr/Config.in"
+	source "package/tiff/Config.in"
+	source "package/wayland/Config.in"
+	source "package/wayland-protocols/Config.in"
+	source "package/waylandpp/Config.in"
+	source "package/webkitgtk/Config.in"
+	source "package/webp/Config.in"
+	source "package/zbar/Config.in"
+	source "package/zxing-cpp/Config.in"
+endmenu
+
+menu "Hardware handling"
+	source "package/acsccid/Config.in"
+	source "package/bcm2835/Config.in"
+	source "package/c-periphery/Config.in"
+	source "package/ccid/Config.in"
+	source "package/dtc/Config.in"
+	source "package/gnu-efi/Config.in"
+	source "package/hidapi/Config.in"
+	source "package/lcdapi/Config.in"
+	source "package/let-me-create/Config.in"
+	source "package/libaio/Config.in"
+	source "package/libatasmart/Config.in"
+	source "package/libcec/Config.in"
+	source "package/libfreefare/Config.in"
+	source "package/libftdi/Config.in"
+	source "package/libftdi1/Config.in"
+	source "package/libgphoto2/Config.in"
+	source "package/libgpiod/Config.in"
+	source "package/libgudev/Config.in"
+	source "package/libhid/Config.in"
+	source "package/libiio/Config.in"
+	source "package/libad9361-iio/Config.in"
+	source "package/libinput/Config.in"
+	source "package/libiqrf/Config.in"
+	source "package/libllcp/Config.in"
+	source "package/libmbim/Config.in"
+	source "package/libnfc/Config.in"
+	source "package/libpciaccess/Config.in"
+	source "package/libphidget/Config.in"
+	source "package/libpri/Config.in"
+	source "package/libqmi/Config.in"
+	source "package/libraw1394/Config.in"
+	source "package/librta/Config.in"
+	source "package/librtas/Config.in"
+	source "package/librtlsdr/Config.in"
+	source "package/libserial/Config.in"
+	source "package/libserialport/Config.in"
+	source "package/libsigrok/Config.in"
+	source "package/libsigrokdecode/Config.in"
+	source "package/libsoc/Config.in"
+	source "package/libss7/Config.in"
+	source "package/libusb/Config.in"
+	source "package/libusb-compat/Config.in"
+	source "package/libusbgx/Config.in"
+	source "package/libv4l/Config.in"
+	source "package/libxkbcommon/Config.in"
+	source "package/mraa/Config.in"
+	source "package/mtdev/Config.in"
+	source "package/ne10/Config.in"
+	source "package/neardal/Config.in"
+	source "package/owfs/Config.in"
+	source "package/pcsc-lite/Config.in"
+	source "package/tslib/Config.in"
+	source "package/urg/Config.in"
+	source "package/wiringpi/Config.in"
+endmenu
+
+menu "Javascript"
+	source "package/angularjs/Config.in"
+if BR2_PACKAGE_ANGULARJS
+menu "External AngularJS plugins"
+	source "package/angular-websocket/Config.in"
+endmenu
+endif
+	source "package/bootstrap/Config.in"
+	source "package/explorercanvas/Config.in"
+	source "package/flot/Config.in"
+	source "package/jquery/Config.in"
+if BR2_PACKAGE_JQUERY
+menu "External jQuery plugins"
+	source "package/jquery-datetimepicker/Config.in"
+	source "package/jquery-keyboard/Config.in"
+	source "package/jquery-mobile/Config.in"
+	source "package/jquery-sidebar/Config.in"
+	source "package/jquery-sparkline/Config.in"
+	source "package/jquery-ui/Config.in"
+	source "package/jquery-ui-themes/Config.in"
+	source "package/jquery-validation/Config.in"
+endmenu
+endif
+	source "package/jsmin/Config.in"
+	source "package/json-javascript/Config.in"
+endmenu
+
+menu "JSON/XML"
+	source "package/benejson/Config.in"
+	source "package/cjson/Config.in"
+	source "package/expat/Config.in"
+	source "package/ezxml/Config.in"
+	source "package/jansson/Config.in"
+	source "package/jose/Config.in"
+	source "package/jsmn/Config.in"
+	source "package/json-c/Config.in"
+	source "package/json-for-modern-cpp/Config.in"
+	source "package/json-glib/Config.in"
+	source "package/jsoncpp/Config.in"
+	source "package/libbson/Config.in"
+	source "package/libfastjson/Config.in"
+	source "package/libjson/Config.in"
+	source "package/libroxml/Config.in"
+	source "package/libucl/Config.in"
+	source "package/libxml2/Config.in"
+	source "package/libxmlpp/Config.in"
+	source "package/libxmlrpc/Config.in"
+	source "package/libxslt/Config.in"
+	source "package/libyaml/Config.in"
+	source "package/mxml/Config.in"
+	source "package/pugixml/Config.in"
+	source "package/rapidjson/Config.in"
+	source "package/rapidxml/Config.in"
+	source "package/raptor/Config.in"
+	source "package/tinyxml/Config.in"
+	source "package/tinyxml2/Config.in"
+	source "package/valijson/Config.in"
+	source "package/xerces/Config.in"
+	source "package/yajl/Config.in"
+	source "package/yaml-cpp/Config.in"
+endmenu
+
+menu "Logging"
+	source "package/eventlog/Config.in"
+	source "package/glog/Config.in"
+	source "package/liblog4c-localtime/Config.in"
+	source "package/liblogging/Config.in"
+	source "package/log4cplus/Config.in"
+	source "package/log4cpp/Config.in"
+	source "package/log4cxx/Config.in"
+	source "package/opentracing-cpp/Config.in"
+	source "package/zlog/Config.in"
+endmenu
+
+menu "Multimedia"
+	source "package/bitstream/Config.in"
+	source "package/kvazaar/Config.in"
+	source "package/libaacs/Config.in"
+	source "package/libamcodec/Config.in"
+	source "package/libass/Config.in"
+	source "package/libbdplus/Config.in"
+	source "package/libbluray/Config.in"
+	source "package/libdcadec/Config.in"
+	source "package/libdvbcsa/Config.in"
+	source "package/libdvbpsi/Config.in"
+	source "package/libdvbsi/Config.in"
+	source "package/libdvdcss/Config.in"
+	source "package/libdvdnav/Config.in"
+	source "package/libdvdread/Config.in"
+	source "package/libebml/Config.in"
+	source "package/libhdhomerun/Config.in"
+	source "package/libimxvpuapi/Config.in"
+	source "package/libmatroska/Config.in"
+	source "package/libmms/Config.in"
+	source "package/libmpeg2/Config.in"
+	source "package/libogg/Config.in"
+	source "package/libopenh264/Config.in"
+	source "package/libplayer/Config.in"
+	source "package/libtheora/Config.in"
+	source "package/libvpx/Config.in"
+	source "package/libyuv/Config.in"
+	source "package/live555/Config.in"
+	source "package/mediastreamer/Config.in"
+	source "package/x264/Config.in"
+	source "package/x265/Config.in"
+endmenu
+
+menu "Networking"
+	source "package/agentpp/Config.in"
+	source "package/alljoyn/Config.in"
+	source "package/alljoyn-base/Config.in"
+	source "package/alljoyn-tcl/Config.in"
+	source "package/alljoyn-tcl-base/Config.in"
+	source "package/azmq/Config.in"
+	source "package/azure-iot-sdk-c/Config.in"
+	source "package/batman-adv/Config.in"
+	source "package/c-ares/Config.in"
+	source "package/canfestival/Config.in"
+	source "package/cgic/Config.in"
+	source "package/cppzmq/Config.in"
+	source "package/curlpp/Config.in"
+	source "package/czmq/Config.in"
+	source "package/daq/Config.in"
+	source "package/filemq/Config.in"
+	source "package/flickcurl/Config.in"
+	source "package/fmlib/Config.in"
+	source "package/freeradius-client/Config.in"
+	source "package/geoip/Config.in"
+	source "package/glib-networking/Config.in"
+	source "package/gssdp/Config.in"
+	source "package/gupnp/Config.in"
+	source "package/gupnp-av/Config.in"
+	source "package/gupnp-dlna/Config.in"
+	source "package/ibrcommon/Config.in"
+	source "package/ibrdtn/Config.in"
+	source "package/libcgi/Config.in"
+	source "package/libcgicc/Config.in"
+	source "package/libcoap/Config.in"
+	source "package/libcpprestsdk/Config.in"
+	source "package/libcurl/Config.in"
+	source "package/libdnet/Config.in"
+	source "package/libeXosip2/Config.in"
+	source "package/libfcgi/Config.in"
+	source "package/libgsasl/Config.in"
+	source "package/libhttpparser/Config.in"
+	source "package/libidn/Config.in"
+	source "package/libiscsi/Config.in"
+	source "package/libldns/Config.in"
+	source "package/libmaxminddb/Config.in"
+	source "package/libmbus/Config.in"
+	source "package/libmemcached/Config.in"
+	source "package/libmicrohttpd/Config.in"
+	source "package/libminiupnpc/Config.in"
+	source "package/libmnl/Config.in"
+	source "package/libmodbus/Config.in"
+	source "package/libnatpmp/Config.in"
+	source "package/libndp/Config.in"
+	source "package/libnet/Config.in"
+	source "package/libnetfilter_acct/Config.in"
+	source "package/libnetfilter_conntrack/Config.in"
+	source "package/libnetfilter_cthelper/Config.in"
+	source "package/libnetfilter_cttimeout/Config.in"
+	source "package/libnetfilter_log/Config.in"
+	source "package/libnetfilter_queue/Config.in"
+	source "package/libnfnetlink/Config.in"
+	source "package/libnftnl/Config.in"
+	source "package/libnice/Config.in"
+	source "package/libnl/Config.in"
+	source "package/liboauth/Config.in"
+	source "package/liboping/Config.in"
+	source "package/libosip2/Config.in"
+	source "package/libpcap/Config.in"
+	source "package/libpjsip/Config.in"
+	source "package/librsync/Config.in"
+	source "package/libshairplay/Config.in"
+	source "package/libshout/Config.in"
+	source "package/libsocketcan/Config.in"
+	source "package/libsoup/Config.in"
+	source "package/libsrtp/Config.in"
+	source "package/libstrophe/Config.in"
+	source "package/libtirpc/Config.in"
+	source "package/libtorrent/Config.in"
+	source "package/libupnp/Config.in"
+	source "package/libupnp18/Config.in"
+	source "package/libupnpp/Config.in"
+	source "package/liburiparser/Config.in"
+	source "package/libvncserver/Config.in"
+	source "package/libwebsock/Config.in"
+	source "package/libwebsockets/Config.in"
+	source "package/lksctp-tools/Config.in"
+	source "package/mongoose/Config.in"
+	source "package/nanomsg/Config.in"
+	source "package/neon/Config.in"
+	source "package/norm/Config.in"
+	source "package/nss-mdns/Config.in"
+	source "package/nss-pam-ldapd/Config.in"
+	source "package/omniorb/Config.in"
+	source "package/openldap/Config.in"
+	source "package/openmpi/Config.in"
+	source "package/openpgm/Config.in"
+	source "package/openzwave/Config.in"
+	source "package/ortp/Config.in"
+	source "package/paho-mqtt-c/Config.in"
+	source "package/qdecoder/Config.in"
+	source "package/qpid-proton/Config.in"
+	source "package/rabbitmq-c/Config.in"
+	source "package/rtmpdump/Config.in"
+	source "package/slirp/Config.in"
+	source "package/snmppp/Config.in"
+	source "package/sofia-sip/Config.in"
+	source "package/thrift/Config.in"
+	source "package/usbredir/Config.in"
+	source "package/zeromq/Config.in"
+	source "package/zmqpp/Config.in"
+	source "package/zyre/Config.in"
+endmenu
+
+menu "Other"
+	source "package/apr/Config.in"
+	source "package/apr-util/Config.in"
+	source "package/argp-standalone/Config.in"
+	source "package/armadillo/Config.in"
+	source "package/atf/Config.in"
+	source "package/bctoolbox/Config.in"
+	source "package/bdwgc/Config.in"
+	source "package/boost/Config.in"
+	source "package/clapack/Config.in"
+	source "package/classpath/Config.in"
+	source "package/cppcms/Config.in"
+	source "package/cracklib/Config.in"
+	source "package/dawgdic/Config.in"
+	source "package/ding-libs/Config.in"
+	source "package/eigen/Config.in"
+	source "package/elfutils/Config.in"
+	source "package/fftw/Config.in"
+	source "package/flann/Config.in"
+	source "package/flatbuffers/Config.in"
+	source "package/gconf/Config.in"
+	source "package/gflags/Config.in"
+	source "package/glibmm/Config.in"
+	source "package/glm/Config.in"
+	source "package/gmp/Config.in"
+	source "package/gsl/Config.in"
+	source "package/gtest/Config.in"
+	source "package/jemalloc/Config.in"
+	source "package/lapack/Config.in"
+	source "package/libargtable2/Config.in"
+	source "package/libatomic_ops/Config.in"
+	source "package/libb64/Config.in"
+	source "package/libbsd/Config.in"
+	source "package/libcap/Config.in"
+	source "package/libcap-ng/Config.in"
+	source "package/libcgroup/Config.in"
+	source "package/libcofi/Config.in"
+	source "package/libcroco/Config.in"
+	source "package/libcrossguid/Config.in"
+	source "package/libcsv/Config.in"
+	source "package/libdaemon/Config.in"
+	source "package/libee/Config.in"
+	source "package/libev/Config.in"
+	source "package/libevdev/Config.in"
+	source "package/libevent/Config.in"
+	source "package/libffi/Config.in"
+	source "package/libgee/Config.in"
+	source "package/libglib2/Config.in"
+	source "package/libglob/Config.in"
+	source "package/libical/Config.in"
+	source "package/libite/Config.in"
+	source "package/liblinear/Config.in"
+	source "package/libloki/Config.in"
+	source "package/libnpth/Config.in"
+	source "package/libnspr/Config.in"
+	source "package/libpfm4/Config.in"
+	source "package/libplatform/Config.in"
+	source "package/libplist/Config.in"
+	source "package/libpthread-stubs/Config.in"
+	source "package/libpthsem/Config.in"
+	source "package/libpwquality/Config.in"
+	source "package/libseccomp/Config.in"
+	source "package/libsigc/Config.in"
+	source "package/libsigsegv/Config.in"
+	source "package/libspatialindex/Config.in"
+	source "package/libtasn1/Config.in"
+	source "package/libtommath/Config.in"
+	source "package/libtpl/Config.in"
+	source "package/libubox/Config.in"
+	source "package/libuci/Config.in"
+	source "package/libunwind/Config.in"
+	source "package/liburcu/Config.in"
+	source "package/libuv/Config.in"
+	source "package/lightning/Config.in"
+	source "package/linux-pam/Config.in"
+if BR2_PACKAGE_LINUX_PAM
+comment "linux-pam plugins"
+	source "package/libpam-radius-auth/Config.in"
+	source "package/libpam-tacplus/Config.in"
+endif
+	source "package/liquid-dsp/Config.in"
+	source "package/lttng-libust/Config.in"
+	source "package/mpc/Config.in"
+	source "package/mpdecimal/Config.in"
+	source "package/mpfr/Config.in"
+	source "package/mpir/Config.in"
+	source "package/msgpack/Config.in"
+	source "package/mtdev2tuio/Config.in"
+	source "package/musl-compat-headers/Config.in"
+	source "package/openblas/Config.in"
+	source "package/orc/Config.in"
+	source "package/p11-kit/Config.in"
+	source "package/poco/Config.in"
+	source "package/protobuf/Config.in"
+	source "package/protobuf-c/Config.in"
+	source "package/qhull/Config.in"
+	source "package/qlibc/Config.in"
+	source "package/riemann-c-client/Config.in"
+	source "package/shapelib/Config.in"
+	source "package/skalibs/Config.in"
+	source "package/sphinxbase/Config.in"
+	source "package/startup-notification/Config.in"
+	source "package/tinycbor/Config.in"
+	source "package/tz/Config.in"
+	source "package/tzdata/Config.in"
+endmenu
+
+menu "Security"
+	source "package/libselinux/Config.in"
+	source "package/libsemanage/Config.in"
+	source "package/libsepol/Config.in"
+	source "package/safeclib/Config.in"
+endmenu
+
+menu "Text and terminal handling"
+	source "package/augeas/Config.in"
+	source "package/enchant/Config.in"
+	source "package/fmt/Config.in"
+	source "package/icu/Config.in"
+	source "package/libcli/Config.in"
+	source "package/libedit/Config.in"
+	source "package/libenca/Config.in"
+	source "package/libestr/Config.in"
+	source "package/libfribidi/Config.in"
+	source "package/libiconv/Config.in"
+	source "package/libunistring/Config.in"
+	source "package/linenoise/Config.in"
+	source "package/ncurses/Config.in"
+	source "package/newt/Config.in"
+	source "package/pcre/Config.in"
+	source "package/pcre2/Config.in"
+	source "package/popt/Config.in"
+	source "package/readline/Config.in"
+	source "package/slang/Config.in"
+	source "package/tclap/Config.in"
+	source "package/ustr/Config.in"
+endmenu
+
+endmenu
+
+menu "Mail"
+	source "package/dovecot/Config.in"
+	source "package/exim/Config.in"
+	source "package/fetchmail/Config.in"
+	source "package/heirloom-mailx/Config.in"
+	source "package/libesmtp/Config.in"
+	source "package/msmtp/Config.in"
+	source "package/mutt/Config.in"
+	source "package/sylpheed/Config.in"
+endmenu
+
+menu "Miscellaneous"
+	source "package/aespipe/Config.in"
+	source "package/bc/Config.in"
+	source "package/clamav/Config.in"
+	source "package/collectd/Config.in"
+	source "package/domoticz/Config.in"
+	source "package/empty/Config.in"
+	source "package/gnuradio/Config.in"
+	source "package/googlefontdirectory/Config.in"
+	source "package/gqrx/Config.in"
+	source "package/gr-osmosdr/Config.in"
+	source "package/gr-iio/Config.in"
+	source "package/gsettings-desktop-schemas/Config.in"
+	source "package/haveged/Config.in"
+	source "package/linux-syscall-support/Config.in"
+	source "package/mcrypt/Config.in"
+	source "package/mobile-broadband-provider-info/Config.in"
+	source "package/proj/Config.in"
+	source "package/qemu/Config.in"
+	source "package/qpdf/Config.in"
+	source "package/shared-mime-info/Config.in"
+	source "package/taskd/Config.in"
+	source "package/wine/Config.in"
+	source "package/xutil_util-macros/Config.in"
+endmenu
+
+menu "Networking applications"
+	source "package/aircrack-ng/Config.in"
+	source "package/aoetools/Config.in"
+	source "package/apache/Config.in"
+	source "package/argus/Config.in"
+	source "package/arp-scan/Config.in"
+	source "package/arptables/Config.in"
+	source "package/asterisk/Config.in"
+	source "package/atftp/Config.in"
+	source "package/autossh/Config.in"
+	source "package/avahi/Config.in"
+	source "package/axel/Config.in"
+	source "package/babeld/Config.in"
+	source "package/bandwidthd/Config.in"
+	source "package/batctl/Config.in"
+	source "package/bcusdk/Config.in"
+	source "package/bind/Config.in"
+	source "package/bluez-tools/Config.in"
+	source "package/bluez_utils/Config.in"
+	source "package/bluez5_utils/Config.in"
+	source "package/bmon/Config.in"
+	source "package/boa/Config.in"
+	source "package/boinc/Config.in"
+	source "package/bridge-utils/Config.in"
+	source "package/bwm-ng/Config.in"
+	source "package/c-icap/Config.in"
+	source "package/c-icap-modules/Config.in"
+	source "package/can-utils/Config.in"
+	source "package/cannelloni/Config.in"
+	source "package/chrony/Config.in"
+	source "package/civetweb/Config.in"
+	source "package/connman/Config.in"
+	source "package/connman-gtk/Config.in"
+	source "package/conntrack-tools/Config.in"
+	source "package/crda/Config.in"
+	source "package/ctorrent/Config.in"
+	source "package/cups/Config.in"
+	source "package/cups-filters/Config.in"
+	source "package/dante/Config.in"
+	source "package/darkhttpd/Config.in"
+	source "package/dhcp/Config.in"
+	source "package/dhcpcd/Config.in"
+	source "package/dhcpdump/Config.in"
+	source "package/dnsmasq/Config.in"
+	source "package/drbd-utils/Config.in"
+	source "package/dropbear/Config.in"
+	source "package/ebtables/Config.in"
+	source "package/ejabberd/Config.in"
+	source "package/ethtool/Config.in"
+	source "package/faifa/Config.in"
+	source "package/fastd/Config.in"
+	source "package/fcgiwrap/Config.in"
+	source "package/flannel/Config.in"
+	source "package/fmc/Config.in"
+	source "package/fping/Config.in"
+	source "package/freeswitch/Config.in"
+	source "package/freeswitch-mod-bcg729/Config.in"
+	source "package/gesftpserver/Config.in"
+	source "package/glorytun/Config.in"
+	source "package/gupnp-tools/Config.in"
+	source "package/gutenprint/Config.in"
+	source "package/hans/Config.in"
+	source "package/hiawatha/Config.in"
+	source "package/hostapd/Config.in"
+	source "package/hplip/Config.in"
+	source "package/httping/Config.in"
+	source "package/ibrdtn-tools/Config.in"
+	source "package/ibrdtnd/Config.in"
+	source "package/ifenslave/Config.in"
+	source "package/ifplugd/Config.in"
+	source "package/iftop/Config.in"
+	source "package/ifupdown/Config.in"
+	source "package/ifupdown-scripts/Config.in"
+	source "package/igd2-for-linux/Config.in"
+	source "package/igh-ethercat/Config.in"
+	source "package/igmpproxy/Config.in"
+	source "package/inadyn/Config.in"
+	source "package/iodine/Config.in"
+	source "package/iperf/Config.in"
+	source "package/iperf3/Config.in"
+	source "package/iproute2/Config.in"
+	source "package/ipsec-tools/Config.in"
+	source "package/ipset/Config.in"
+	source "package/iptables/Config.in"
+	source "package/iptraf-ng/Config.in"
+	source "package/iputils/Config.in"
+	source "package/irssi/Config.in"
+	source "package/iw/Config.in"
+	source "package/janus-gateway/Config.in"
+	source "package/keepalived/Config.in"
+	source "package/kismet/Config.in"
+	source "package/knock/Config.in"
+	source "package/leafnode2/Config.in"
+	source "package/lft/Config.in"
+	source "package/lftp/Config.in"
+	source "package/lighttpd/Config.in"
+	source "package/linknx/Config.in"
+	source "package/links/Config.in"
+	source "package/linphone/Config.in"
+	source "package/linux-zigbee/Config.in"
+	source "package/linuxptp/Config.in"
+	source "package/lldpd/Config.in"
+	source "package/lrzsz/Config.in"
+	source "package/lynx/Config.in"
+	source "package/macchanger/Config.in"
+	source "package/memcached/Config.in"
+	source "package/mii-diag/Config.in"
+	source "package/minidlna/Config.in"
+	source "package/minissdpd/Config.in"
+	source "package/mjpg-streamer/Config.in"
+	source "package/modem-manager/Config.in"
+	source "package/mongrel2/Config.in"
+	source "package/monkey/Config.in"
+	source "package/mosh/Config.in"
+	source "package/mosquitto/Config.in"
+	source "package/mrouted/Config.in"
+	source "package/mtr/Config.in"
+	source "package/nbd/Config.in"
+	source "package/ncftp/Config.in"
+	source "package/ndisc6/Config.in"
+	source "package/netatalk/Config.in"
+	source "package/netcat/Config.in"
+	source "package/netcat-openbsd/Config.in"
+	source "package/netplug/Config.in"
+	source "package/netsnmp/Config.in"
+	source "package/netstat-nat/Config.in"
+	source "package/net-tools/Config.in"
+	source "package/network-manager/Config.in"
+	source "package/nfacct/Config.in"
+	source "package/nftables/Config.in"
+	source "package/nginx/Config.in"
+if BR2_PACKAGE_NGINX
+menu "External nginx modules"
+	source "package/nginx-dav-ext/Config.in"
+	source "package/nginx-naxsi/Config.in"
+	source "package/nginx-upload/Config.in"
+endmenu
+endif
+	source "package/ngircd/Config.in"
+	source "package/ngrep/Config.in"
+	source "package/nload/Config.in"
+	source "package/nmap/Config.in"
+	source "package/noip/Config.in"
+	source "package/ntp/Config.in"
+	source "package/nuttcp/Config.in"
+	source "package/odhcp6c/Config.in"
+	source "package/odhcploc/Config.in"
+	source "package/olsr/Config.in"
+	source "package/open-lldp/Config.in"
+	source "package/open-plc-utils/Config.in"
+	source "package/openntpd/Config.in"
+	source "package/openobex/Config.in"
+	source "package/openssh/Config.in"
+	source "package/openswan/Config.in"
+	source "package/openvpn/Config.in"
+	source "package/p910nd/Config.in"
+	source "package/phidgetwebservice/Config.in"
+	source "package/phytool/Config.in"
+	source "package/pimd/Config.in"
+	source "package/pound/Config.in"
+	source "package/pppd/Config.in"
+	source "package/pptp-linux/Config.in"
+	source "package/privoxy/Config.in"
+	source "package/proftpd/Config.in"
+	source "package/prosody/Config.in"
+	source "package/proxychains-ng/Config.in"
+	source "package/ptpd/Config.in"
+	source "package/ptpd2/Config.in"
+	source "package/pure-ftpd/Config.in"
+	source "package/putty/Config.in"
+	source "package/quagga/Config.in"
+	source "package/rabbitmq-server/Config.in"
+	source "package/radvd/Config.in"
+	source "package/rp-pppoe/Config.in"
+	source "package/rpcbind/Config.in"
+	source "package/rsh-redone/Config.in"
+	source "package/rsync/Config.in"
+	source "package/rtorrent/Config.in"
+	source "package/rtptools/Config.in"
+	source "package/rygel/Config.in"
+	source "package/s6-dns/Config.in"
+	source "package/s6-networking/Config.in"
+	source "package/samba4/Config.in"
+	source "package/sconeserver/Config.in"
+	source "package/ser2net/Config.in"
+	source "package/shairport-sync/Config.in"
+	source "package/shellinabox/Config.in"
+	source "package/smcroute/Config.in"
+	source "package/sngrep/Config.in"
+	source "package/socat/Config.in"
+	source "package/socketcand/Config.in"
+	source "package/softether/Config.in"
+	source "package/spawn-fcgi/Config.in"
+	source "package/spice/Config.in"
+	source "package/spice-protocol/Config.in"
+	source "package/squid/Config.in"
+	source "package/sshpass/Config.in"
+	source "package/sslh/Config.in"
+	source "package/strongswan/Config.in"
+	source "package/stunnel/Config.in"
+	source "package/tcpdump/Config.in"
+	source "package/tcping/Config.in"
+	source "package/tcpreplay/Config.in"
+	source "package/tftpd/Config.in"
+	source "package/thttpd/Config.in"
+	source "package/tinc/Config.in"
+	source "package/tinyhttpd/Config.in"
+	source "package/tn5250/Config.in"
+	source "package/tor/Config.in"
+	source "package/traceroute/Config.in"
+	source "package/transmission/Config.in"
+	source "package/tunctl/Config.in"
+	source "package/tvheadend/Config.in"
+	source "package/udpcast/Config.in"
+	source "package/uhttpd/Config.in"
+	source "package/ulogd/Config.in"
+	source "package/ushare/Config.in"
+	source "package/ussp-push/Config.in"
+	source "package/vde2/Config.in"
+	source "package/vdr/Config.in"
+	source "package/vdr-plugin-vnsiserver/Config.in"
+	source "package/vnstat/Config.in"
+	source "package/vpnc/Config.in"
+	source "package/vsftpd/Config.in"
+	source "package/vtun/Config.in"
+	source "package/wavemon/Config.in"
+	source "package/wget/Config.in"
+	source "package/whois/Config.in"
+	source "package/wireguard/Config.in"
+	source "package/wireless-regdb/Config.in"
+	source "package/wireless_tools/Config.in"
+	source "package/wireshark/Config.in"
+	source "package/wpa_supplicant/Config.in"
+	source "package/wpan-tools/Config.in"
+	source "package/xinetd/Config.in"
+	source "package/xl2tp/Config.in"
+	source "package/xtables-addons/Config.in"
+	source "package/znc/Config.in"
+
+endmenu
+
+menu "Package managers"
+comment "-------------------------------------------------------"
+comment "Please note:                                           "
+comment "- Buildroot does *not* generate binary packages,       "
+comment "- Buildroot does *not* install any package database.   "
+comment "*                                                      "
+comment "It is up to you to provide those by yourself if you    "
+comment "want to use any of those package managers.             "
+comment "*                                                      "
+comment "See the manual:                                        "
+comment "http://buildroot.org/manual.html#faq-no-binary-packages"
+comment "-------------------------------------------------------"
+	source "package/opkg/Config.in"
+	source "package/rpm/Config.in"
+endmenu
+
+menu "Real-Time"
+	source "package/rtai/Config.in"
+	source "package/xenomai/Config.in"
+endmenu
+
+menu "Security"
+	source "package/checkpolicy/Config.in"
+	source "package/paxtest/Config.in"
+	source "package/policycoreutils/Config.in"
+	source "package/refpolicy/Config.in"
+	source "package/restorecond/Config.in"
+	source "package/selinux-python/Config.in"
+	source "package/semodule-utils/Config.in"
+	source "package/setools/Config.in"
+endmenu
+
+menu "Shell and utilities"
+comment "Shells"
+	source "package/bash/Config.in"
+	source "package/dash/Config.in"
+	source "package/mksh/Config.in"
+	source "package/zsh/Config.in"
+comment "Utilities"
+	source "package/at/Config.in"
+	source "package/ccrypt/Config.in"
+	source "package/crudini/Config.in"
+	source "package/dialog/Config.in"
+	source "package/dtach/Config.in"
+	source "package/easy-rsa/Config.in"
+	source "package/file/Config.in"
+	source "package/gnupg/Config.in"
+	source "package/gnupg2/Config.in"
+	source "package/inotify-tools/Config.in"
+	source "package/lockfile-progs/Config.in"
+	source "package/logrotate/Config.in"
+	source "package/logsurfer/Config.in"
+	source "package/pdmenu/Config.in"
+	source "package/pinentry/Config.in"
+	source "package/ranger/Config.in"
+	source "package/screen/Config.in"
+	source "package/sudo/Config.in"
+	source "package/terminology/Config.in"
+	source "package/time/Config.in"
+	source "package/tmux/Config.in"
+	source "package/which/Config.in"
+	source "package/xmlstarlet/Config.in"
+	source "package/xxhash/Config.in"
+endmenu
+
+menu "System tools"
+	source "package/acl/Config.in"
+	source "package/android-tools/Config.in"
+	source "package/atop/Config.in"
+	source "package/attr/Config.in"
+	source "package/audit/Config.in"
+	source "package/bootutils/Config.in"
+	source "package/cgroupfs-mount/Config.in"
+	source "package/circus/Config.in"
+	source "package/coreutils/Config.in"
+	source "package/cpuload/Config.in"
+	source "package/daemon/Config.in"
+	source "package/dc3dd/Config.in"
+	source "package/dcron/Config.in"
+	source "package/ddrescue/Config.in"
+	source "package/debianutils/Config.in"
+	source "package/docker-containerd/Config.in"
+	source "package/docker-engine/Config.in"
+	source "package/docker-proxy/Config.in"
+	source "package/dsp-tools/Config.in"
+	source "package/efibootmgr/Config.in"
+	source "package/efivar/Config.in"
+	source "package/emlog/Config.in"
+	source "package/ftop/Config.in"
+	source "package/getent/Config.in"
+	source "package/htop/Config.in"
+	source "package/initscripts/Config.in"
+	source "package/iotop/Config.in"
+	source "package/iprutils/Config.in"
+	source "package/irqbalance/Config.in"
+	source "package/keyutils/Config.in"
+	source "package/kmod/Config.in"
+	source "package/kvmtool/Config.in"
+	source "package/libostree/Config.in"
+	source "package/lxc/Config.in"
+	source "package/monit/Config.in"
+	source "package/ncdu/Config.in"
+	source "package/numactl/Config.in"
+	source "package/nut/Config.in"
+	source "package/openvmtools/Config.in"
+	source "package/polkit/Config.in"
+	source "package/powerpc-utils/Config.in"
+	source "package/procps-ng/Config.in"
+	source "package/procrank_linux/Config.in"
+	source "package/psmisc/Config.in"
+	source "package/pwgen/Config.in"
+	source "package/quota/Config.in"
+	source "package/rauc/Config.in"
+	source "package/rsyslog/Config.in"
+	source "package/runc/Config.in"
+	source "package/s6/Config.in"
+	source "package/s6-linux-init/Config.in"
+	source "package/s6-linux-utils/Config.in"
+	source "package/s6-portable-utils/Config.in"
+	source "package/s6-rc/Config.in"
+	source "package/scrub/Config.in"
+	source "package/scrypt/Config.in"
+	source "package/smack/Config.in"
+	source "package/start-stop-daemon/Config.in"
+	source "package/supervisor/Config.in"
+	source "package/swupdate/Config.in"
+	source "package/sysklogd/Config.in"
+	source "package/syslog-ng/Config.in"
+	source "package/systemd/Config.in"
+	source "package/systemd-bootchart/Config.in"
+	source "package/sysvinit/Config.in"
+	source "package/tar/Config.in"
+	source "package/tpm-tools/Config.in"
+	source "package/unscd/Config.in"
+	source "package/util-linux/Config.in"
+	source "package/xen/Config.in"
+	source "package/xvisor/Config.in"
+endmenu
+
+menu "Text editors and viewers"
+	source "package/ed/Config.in"
+	source "package/joe/Config.in"
+	source "package/less/Config.in"
+	source "package/mc/Config.in"
+	source "package/nano/Config.in"
+	source "package/uemacs/Config.in"
+	source "package/vim/Config.in"
+endmenu
+
+endmenu
