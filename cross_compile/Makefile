@@ -5,20 +5,26 @@
 
 BROOT_PATH=../buildroot-2018.02.2
 CC=$(BROOT_PATH)/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabi-gcc
-LDFLAGS=-Wall -g -lc -ldl -lm -lz -lusb-1.0 -lserialport -lxml2 -llzma -liio
+LDFLAGS=-Wall -g3 -lc -ldl -lm -lz -lusb-1.0 -lserialport -lxml2 -llzma -liio
 LDPATH=-L$(BROOT_PATH)/output/target/lib32 -L$(BROOT_PATH)/output/target/usr/lib
 # location of iio.h
 INCPATH=-I/home/jgutel/gits/libiio_zynq
 
+all: sampTxRx sampCw
+
+smiTxRx:
+	$(CC) -o sampTxRx ./src/fileStreamSample.c $(LDFLAGS) $(LDPATH) $(INCPATH)
+
+smiCw:
+	$(CC) -o sampCw ./src/cwStreamSample.c $(LDFLAGS) $(LDPATH) $(INCPATH)
+
 iiostream:
-	$(CC) -o iiostream ad9361-iiostream.c $(LDFLAGS) $(LDPATH) $(INCPATH)
+	$(CC) -o iiostream ./src/ad9361-iiostream.c $(LDFLAGS) $(LDPATH) $(INCPATH)
 
 hello_world:
 	$(CC) -o hello hello.c -g
 
-all:iiostream hello_world
-
 .PHONY: clean
 
 clean:
-	rm -f *~ *.o hello iiostream
+	rm -f *~ *.o hello iiostream sampTxRx sampCw
