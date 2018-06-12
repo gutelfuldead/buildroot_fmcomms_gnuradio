@@ -12,10 +12,10 @@ INCPATH=-I/home/jgutel/gits/libiio_zynq
 
 all: sampTxRx sampCw
 
-smiTxRx:
+sampTxRx:
 	$(CC) -o sampTxRx ./src/fileStreamSample.c $(LDFLAGS) $(LDPATH) $(INCPATH)
 
-smiCw:
+sampCw:
 	$(CC) -o sampCw ./src/cwStreamSample.c $(LDFLAGS) $(LDPATH) $(INCPATH)
 
 iiostream:
