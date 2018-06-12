@@ -16,7 +16,7 @@ cp ./config_files/package_config $BROOTPATH/package/Config.in
 
 # copy new packages
 cp -r ./packages/gr-iio packages/libad9361-iio $BROOTPATH/package
-cp -r ./packages/librta $BROOTPATH/package/librta
+cp -r ./packages/librta $BROOTPATH/package
 
 # add patches
 cp -r ./packages/gnuradio_patches/* $BROOTPATH/package/gnuradio
