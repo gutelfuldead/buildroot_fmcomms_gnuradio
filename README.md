@@ -90,6 +90,8 @@ libncurses5-dev
 
 * gr-iio (git commit `7079c1a60206fba4b37beb239bf25438ec8d9778`)
 
+* librta (git commit `93ea6760ec6f07c4530cabcba17ea6a6e17b98b3`)
+
 * libiio Updated to use v0.15
 
 * gnuradio modified packages enabled

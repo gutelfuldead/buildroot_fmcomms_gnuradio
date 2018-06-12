@@ -25,6 +25,13 @@
 #include <stdio.h>
 #include <iio.h>
 
+/**
+ * This is used to transfer for the entire transmit sample buffer to the hardware
+ * buffer using memcpy; alternatively the samples will be iteratively loaded into
+ * the hardware buffer
+ */
+#define USE_MEMCPY_FOR_BUFFER 1
+
 /* helper macros */
 #define MHZ(x) ((long long)(x*1000000.0 + .5))
 #define GHZ(x) ((long long)(x*1000000000.0 + .5))
@@ -264,35 +271,33 @@ int main (int argc, char **argv)
 	/* Capture the sample tx data */
 	/******************************/
 	{ // File Scope
-		FILE *f = fopen("qpskwithfilt_30.72M.txt", "r");
+		FILE *f = fopen("./waveforms/qpskwithfilt_30.72M.txt", "r");
 		if (f == NULL){
 			printf("ERROR opening file\n");
 			shutdown();
 		}
 		int i = 0;
 		float sampI0, sampQ0, sampI1, sampQ1;
-		int idxI=0,idxQ=0;
+
 		while(fscanf(f, "%f,%f,%f,%f", &sampI0, &sampQ0, &sampI1, &sampQ1)>0){
-			int16_t tmpI=(int16_t)(sampI0*amplitude);
-			int16_t tmpQ=(int16_t)(sampQ0*amplitude);
-	
-			iio_channel_convert_inverse(tx0_i, &txI[i], &tmpI);
-			iio_channel_convert_inverse(tx0_q, &txQ[i], &tmpQ);
-			iio_channel_convert_inverse(tx0_i, &txIleave[i*2+0], &tmpI);
-			iio_channel_convert_inverse(tx0_q, &txIleave[i*2+1], &tmpQ);
-		//	txI[idxI++]=(int16_t)(sampI1*amplitude);
-		//	txQ[idxQ++]=(int16_t)(sampQ1*amplitude);
+			const int16_t tmpI_ch0=(int16_t)(sampI0*amplitude);
+			const int16_t tmpQ_ch0=(int16_t)(sampQ0*amplitude);
+			/* Channel 1 is not used in this sample but it is in the waveform file */
+			// const int16_t tmpI_ch1=(int16_t)(sampI1*amplitude);
+			// const int16_t tmpQ_ch1=(int16_t)(sampQ1*amplitude);
+			iio_channel_convert_inverse(tx0_i, &txI[i], &tmpI_ch0);
+			iio_channel_convert_inverse(tx0_q, &txQ[i], &tmpQ_ch0);
+			iio_channel_convert_inverse(tx0_i, &txIleave[i*2+0], &tmpI_ch0);
+			iio_channel_convert_inverse(tx0_q, &txIleave[i*2+1], &tmpQ_ch0);
 			i++;
 		}
 		fclose(f);
-		printf("Loaded %d i/q samples (I==%d;Q==%d)\n\r",i*nChannels,idxI,idxQ);
+		printf("Loaded %d i/q samples (I==%d;Q==%d)\n\r",i*nChannels,i,i);
 	}
+
 	printf("* Starting IO streaming (press CTRL+C to cancel)\n");
-
-
 	while (!stop)
 	{
-		int i;
 		ssize_t nbytes_rx, nbytes_tx;
 		void *p_dat, *p_end;
 		ptrdiff_t p_inc;
@@ -302,26 +307,26 @@ int main (int argc, char **argv)
 		if (nbytes_rx < 0) { printf("Error refilling buf %d\n",(int) nbytes_rx); shutdown(); }
 
 		/* PROCESS RX DATA */
-		#if 0
 		p_inc = iio_buffer_step(rxbuf);
 		p_end = iio_buffer_end(rxbuf);
 		for (p_dat = iio_buffer_first(rxbuf, rx0_i); p_dat < p_end; p_dat += p_inc) {
-			const int16_t i = ((int16_t*)p_dat)[0]; // Real (I)
-			const int16_t q = ((int16_t*)p_dat)[1]; // Imag (Q)
-			/* currently do nothing with them ... */
+			int16_t i = ((int16_t*)p_dat)[0]; // Real (I)
+			int16_t q = ((int16_t*)p_dat)[1]; // Imag (Q)
+			/* currently do nothing with them ... this is just to stop compiler warnings */
+			i = q;
+			q = i;
 		}
-		#endif
 		
-		#if 1  
-		/* FILL TX BUFFER AND LOAD IT */
-		p_inc = iio_buffer_step(txbuf);
-		p_end = iio_buffer_end(txbuf);
-		for (p_dat = iio_buffer_first(txbuf, tx0_i), i = 0; p_dat < p_end; p_dat += p_inc) {
-			((int16_t*)p_dat)[0] = (txI[i]   << 4); // Real (I)
-			((int16_t*)p_dat)[1] = (txQ[i++] << 4); // Imag (Q)
-		}
+		#ifdef USE_MEMCPY_FOR_BUFFER
+			memcpy(iio_buffer_start(txbuf),txIleave,sizeof(txIleave));
 		#else
-		memcpy(iio_buffer_start(txbuf),txIleave,sizeof(txIleave));
+			/* FILL TX BUFFER */
+			p_inc = iio_buffer_step(txbuf);
+			p_end = iio_buffer_end(txbuf);
+			for (p_dat = iio_buffer_first(txbuf, tx0_i), i = 0; p_dat < p_end; p_dat += p_inc) {
+				((int16_t*)p_dat)[0] = (txI[i]);   // Real (I)
+				((int16_t*)p_dat)[1] = (txQ[i++]); // Imag (Q)
+			}
 		#endif
 		nbytes_tx = iio_buffer_push(txbuf);
 		if (nbytes_tx < 0) { printf("Error pushing buf %d\n", (int) nbytes_tx); shutdown(); }
