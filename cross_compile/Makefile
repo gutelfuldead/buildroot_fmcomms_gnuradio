@@ -5,7 +5,7 @@
 
 BROOT_PATH=../buildroot-2018.02.2
 CC=$(BROOT_PATH)/output/host/usr/bin/arm-buildroot-linux-uclibcgnueabi-gcc
-LDFLAGS=-Wall -g3 -lc -ldl -lm -lz -lusb-1.0 -lserialport -lxml2 -llzma -liio
+LDFLAGS=-Wall -g3 -lc -ldl -lm -lz -lusb-1.0 -lserialport -lxml2 -llzma -liio -lrt
 LDPATH=-L$(BROOT_PATH)/output/target/lib32 -L$(BROOT_PATH)/output/target/usr/lib
 ROOTFS_FILE_PATH=../rootfs_overlay/home/fmcomms/c_example_code
 

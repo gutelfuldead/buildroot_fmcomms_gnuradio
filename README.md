@@ -24,7 +24,13 @@ This repo creates the rootfs buildroot linux filesystem which installs basic too
 │   ├── package_config
 │   └── users.desc
 ├── cross_compile
-│   └── Makefile
+│   ├── inc
+│   │   └── iio.h
+│   ├── Makefile
+│   └── src
+│       ├── ad9361-iiostream.c
+│       ├── cwStreamSample.c
+│       └── fileStreamSample.c
 ├── gnuradio_designs
 │   └── qpsk_ber_fmcomms
 │       ├── ber_simulation.py
@@ -46,9 +52,12 @@ This repo creates the rootfs buildroot linux filesystem which installs basic too
 │   ├── libad9361-iio
 │   │   ├── Config.in
 │   │   └── libad9361-iio.mk
-│   └── libiio_patch
-│       ├── libiio.hash
-│       └── libiio.mk
+│   ├── libiio_patch
+│   │   ├── libiio.hash
+│   │   └── libiio.mk
+│   └── librta
+│       ├── Config.in
+│       └── librta.mk
 ├── pcstream
 │   └── pc_stream.grc
 ├── populate_buildroot.sh
@@ -63,7 +72,37 @@ This repo creates the rootfs buildroot linux filesystem which installs basic too
         └── fmcomms
             ├── c_example_code
             │   ├── ad9361-iiostream.c
-            │   └── iiostream
+            │   ├── cwStreamSample.c
+            │   ├── fileStreamSample.c
+            │   ├── iiostream
+            │   ├── README
+            │   ├── sampCw
+            │   ├── sampTxRx
+            │   └── waveforms
+            │       ├── 10.txt
+            │       ├── 11.txt
+            │       ├── 1M_10M_nyq.txt
+            │       ├── chirp.mat
+            │       ├── LTE10.mat
+            │       ├── LTE15.mat
+            │       ├── LTE20.mat
+            │       ├── LTE5.mat
+            │       ├── LTE_E_TM3.1_64QAM_10MHz.mat
+            │       ├── mat_to_c.py
+            │       ├── modem_qpsk_20MHz.mat
+            │       ├── msk_20M.txt
+            │       ├── qam16_20M.txt
+            │       ├── qpsk
+            │       │   ├── qpsk_tx_data_8x.txt
+            │       │   └── qpsk_tx_raw_2msps.mat
+            │       ├── qpsknofilt_30M.txt
+            │       ├── qpskwithfilt_30.72M.txt
+            │       ├── sinewave_0.3_2ch.mat
+            │       ├── sinewave_0.3.mat
+            │       ├── sinewave_0.6_2ch.mat
+            │       ├── sinewave_0.6.mat
+            │       ├── sinewave_0.9_2ch.mat
+            │       └── sinewave_0.9.mat
             └── gnuradio
                 ├── loopback_tcp_wbfm_stream.grc
                 ├── loopback_tcp_wbfm_stream.py
@@ -71,7 +110,7 @@ This repo creates the rootfs buildroot linux filesystem which installs basic too
                 ├── sin_f10e3_tcp_wbfm_stream.grc
                 └── sin_f10e3_tcp_wbfm_stream.py
 
-18 directories, 39 files
+23 directories, 73 files
 
 ```
 
@@ -112,7 +151,11 @@ This will create `./buildroot-2018.02.2` subdirectory. To generate the filesyste
 
 `cd buildroot-2018.02.2 && make`
 
+## Cross Compiling
+
 A sample Makefile to generate executables for this target is in `./cross_compile`
+
+Sample code is provided to interact with the AD9361 through the IIO drivers
 
 ## Build Root Output Products
 
@@ -123,7 +166,6 @@ Generated Filesystem,
 Generated uImage (Created from AD Linux Distribution)
 
 `buildroot-2018.02.2/output/images/uImage`
-
 
 ## Setting up SD Card
 
@@ -163,12 +205,12 @@ User fmcomms is in the sudoers file and has access to dialout,sshd groups and ha
 
 ### IIO Stream Example
 
-An example compiled IIO Stream for the AD9361 is included in ~/c_example_code/iiostream
+Sample code for the AD9361 is included in ~/c_example_code. These are compiled with -g3 and can be used with `gui -tui`
 
 ```
 su
 cd ~/c_example_code
-./iiostream
+./sampTxRx
 ```
 
 ### gnuradio
@@ -180,12 +222,6 @@ Scripts are pre-populated to test a loopback wbfm signal and stream the data to 
 Ensure ZedBoard is connected via hub with the PC and the PC is on the appropriate network settings to communicate with the aforementioned zedboard network settings.
 
 Gnuradio example files in: `/home/fmcomms/gnuradio/` to run simply execute the `.py` file
-
---------------------------------------------------------------------------------------
-
-# Cross Compiling on the Target
-
-An example cross compilation Makefile (`example_makefile_cross_compile`) provided which was used to generate the iiostream file.
 
 --------------------------------------------------------------------------------------
 
